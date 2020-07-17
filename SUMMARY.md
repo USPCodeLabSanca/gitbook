@@ -1,5 +1,7 @@
 # Table of contents
 Summary
-* [Initial page](README.md)
-* [Desenvolvimento Web Básico (HTML, CSS, JS)](/courses/basic_webdev/basic_webdev.md)
+* [Learn](README.md)
+* [Desenvolvimento Web Básico](/courses/basic_webdev/basic_webdev.md)
+* [Desenvolvimento Web Avançado](/courses/basic_webdev/basic_webdev.md)
+
   
