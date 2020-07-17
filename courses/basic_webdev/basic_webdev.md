@@ -1,4 +1,4 @@
 # Desenvolvimento Web Básico
-
-* [HTML](/courses/basic_webdev/html.md)
+Curso de HTML, CSS e Javascript.
+* [HTML](/courses/basic_webdev/html/html.md)
   
