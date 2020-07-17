@@ -1,7 +1,7 @@
 # Table of contents
-Summary
-* [Learn](README.md)
-* [Desenvolvimento Web Básico](/courses/basic_webdev/basic_webdev.md)
-* [Desenvolvimento Web Avançado](/courses/basic_webdev/basic_webdev.md)
 
-  
+* [Learn](README.md)
+* [Desenvolvimento Web Básico](basic_webdev/README.md)
+  * [HTML \(Criado via gitbook\)](basic_webdev/html-criado-via-gitbook.md)
+* [Desenvolvimento Web Avançado](basic_webdev-1.md)
+
