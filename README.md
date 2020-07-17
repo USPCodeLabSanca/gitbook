@@ -1,4 +1,3 @@
 # Learn
-
-Compilado de cursos.
+uclsanca.gitbook.io/learn/
 
