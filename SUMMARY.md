@@ -1,4 +1,6 @@
 # Table of contents
 
-* [Desenvolvimento Web Basico](/courses/basic_webdev/README.md)
-    * [HTML](courses/basic_webdev/html/html.md)
+* [Introduction](README.md)
+* [Desenvolvimento Web Basico](basic_webdev/README.md)
+  * [HTML](basic_webdev/html.md)
+
