@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Cursos](README.md)
+* [Learn](README.md)
 * [Desenvolvimento Web Basico](web-basico/README.md)
   * [HTML](web-basico/html/README.md)
     * [Estrutura de um HTML](web-basico/html/estrutura-de-um-html.md)
