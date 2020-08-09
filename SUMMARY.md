@@ -9,4 +9,6 @@
     * [Box Model](web-basico/css/box-model.md)
   * [HTML](web-basico/html.md)
 * [Desenvolvimento Web Avançado](web-avancado.md)
-
+* [Data Science para Web](data-science-para-web/README.md)
+  * [Testing](data-science-para-web/testing.md)
+  * [Web Scraping](data-science-para-web/web-scraping.md)
