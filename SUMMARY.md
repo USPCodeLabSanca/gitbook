@@ -10,7 +10,10 @@
   * [HTML](web-basico/html.md)
 * [Desenvolvimento Web Avançado](web-avancado/README.md)
   * [Node JS](web-avancado/node-js.md)
-* [Data Science para Web](data-science-para-web/README.md)
-  * [Testing](data-science-para-web/testing.md)
-  * [Web Scraping](data-science-para-web/web-scraping.md)
+* [Web Scraping](data-science-para-web/README.md)
+  * [Virtualenv](data-science-para-web/testing.md)
+  * [Python para Limpeza de Dados e Regex](data-science-para-web/web-scraping.md)
+  * [TDD e Pytest](data-science-para-web/tdd-e-pytest.md)
+  * [Parser com Requests e BeautifulSoup](data-science-para-web/parser-com-requests-e-beautifulsoup.md)
+  * [Spider com Scrapy](data-science-para-web/spider-com-scrapy.md)
 
