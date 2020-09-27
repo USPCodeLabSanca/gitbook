@@ -2,14 +2,14 @@
 
 Uma **Virtual Enviroment** é um ambiente isolado que contém versão e pacotes instalados de um projeto em Python.
 
-Seu objetivo é evitar conflitos de dependencia com a versões e pacotes "globais" do python e entre projetos.
+Seu objetivo é **evitar conflitos de dependencia** com a **versões e pacotes entre projetos**.
 
 Usualmente, há uma virtual environment por projeto, que:
 
-- É "externa" ao código: Não se codifica dentro da virtualenv, que é uma pasta no mesmo nível do projeto. 
-- Não deve ser incluída no fluxo de git: Adiciona-se a pasta ao `.gitignore`.
+- **É "externa" ao código**: Não se codifica dentro da virtualenv, que é uma pasta no mesmo nível do projeto. 
+- **Não deve ser incluída no fluxo de git**: Adiciona-se a pasta ao `.gitignore`.
 
-Os nomes dos pacotes utilizados devem ser salvos em um `requirements.txt`. Usualmente, é o único arquivo necessário para criar um ambiente baseado em uma lista de dependências pré-definidas.
+Os **nomes dos pacotes utilizados devem ser salvos em um `requirements.txt`**. Usualmente, é o único **arquivo** necessário para **criar um ambiente baseado em uma lista de dependências** pré-definidas.
 
 ## Instalar Virtualenv
 
@@ -72,4 +72,5 @@ Sai do ambiente e remove indicativo ```$ (virtualenv_name)``` do terminal.
 
 ## Recomendações de estudo sobre virtualenv
 [Artigo de Vinícius Ramos - PythonAcademy](https://pythonacademy.com.br/blog/python-e-virtualenv-como-programar-em-ambientes-virtuais)
-[Documentação] (https://virtualenv.pypa.io/en/latest/index.html)
+
+[Documentação](https://virtualenv.pypa.io/en/latest/index.html)
