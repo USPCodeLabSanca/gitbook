@@ -2,7 +2,8 @@
 
 * [Learn](README.md)
 * [Desenvolvimento Web Basico](web-basico/README.md)
-  * [Javascript](web-basico/javascript.md)
+  * [Javascript](web-basico/javascript/README.md)
+    * [Objetos](web-basico/javascript/objetos.md)
   * [CSS](web-basico/css/README.md)
     * [Seletores](web-basico/css/seletores.md)
     * [Cores](web-basico/css/cores.md)
