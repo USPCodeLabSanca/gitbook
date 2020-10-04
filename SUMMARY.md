@@ -6,6 +6,7 @@
     * [Introdução ao Javascript](web-basico/javascript/introducao-ao-javascript.md)
     * [Estruturas de Decisão e Repetição](web-basico/javascript/estruturas-de-decisao-e-repeticao.md)
     * [Objetos](web-basico/javascript/objetos.md)
+    * [Datas](web-basico/javascript/datas.md)
   * [CSS](web-basico/css/README.md)
     * [Seletores](web-basico/css/seletores.md)
     * [Cores](web-basico/css/cores.md)
