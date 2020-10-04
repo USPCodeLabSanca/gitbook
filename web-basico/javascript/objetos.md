@@ -4,7 +4,7 @@ description: 'O que são objetos, e pra que servem?'
 
 # Objetos
 
-### O que são objetos?
+## O que são objetos?
 
 Objetos em JavaScript são uma estrutura que associa chaves com valores. Pode-se fazer a analogia de objetos com um dicionário: da mesma forma que cada palavra num dicionário tem um significado, cada chave num objeto tem um valor. Objetos são definidos da seguinte forma:
 
@@ -56,11 +56,11 @@ objetoComDuasChaves.chave1 = 42;
 objetoComDuasChaves.novaChave = 'Olá, mundo!';
 ```
 
-### Para o que servem objetos?
+## Para o que servem objetos?
 
 Objetos podem inicialmente parecer desnecessários ou inúteis, pois eles não representam diretamente um dado, e sim um grupo de dados. Aqui, vamos discutir alguns dos mais comuns usos de objetos em JavaScript:
 
-#### **Agrupar dados**
+### **Agrupar dados**
 
 Um dos usos mais comuns de objetos em JavaScript é agrupar vários dados relacionados a uma entidade. Por exemplo, se nosso programa for lidar com um vários dados de um usuário \(como nome, senha, email, telefone, etc...\), podemos agrupar essas informações num objeto só:
 
@@ -82,21 +82,21 @@ Organizando nossos dados dentro de um objeto, fica muito mais claro que as vari�
 
 Outra vantagem que ganhamos com agrupamento é que, se houvessem informações de vários usuários diferentes, cada um com seu nome, email e senha, seria muito mais difícil misturar sem querer as informações dos usuários. Cada usuário teria o seu próprio objeto, que armazena os dados desse usuário.
 
-#### **Reduzir quantidade de variáveis declaradas**
+### **Reduzir quantidade de variáveis declaradas**
 
 Ao invés de criar múltiplas variáveis, cada uma com um dado diferente, podemos agrupar tudo num objeto só \(como exemplificado no ponto acima\). Com menos variáveis criadas, reduzimos as chances de, sem querer, declarar duas variáveis com o mesmo nome \(o que pode causar bugs bem difíceis de se encontrar\).
 
 Retomando o exemplo anterior, ao invés de declarar três variáveis com nomes extremamente genéricos \(`name`, `email` e `password`\), declaramos apenas uma \(`user`\), e liberamos as outras três variáveis para serem usadas em outro lugar.
 
-#### **Dicionário**
+### **Dicionário**
 
 Um Dicionário é uma estrutura de dados. Ela é descrita exatamente como são os objetos de JavaScript: um conjunto de associações de chave-valor. Dicionários são conhecidos por ter tempo de leitura e de escrita constante \(logo, muito rápidos\). Assim, se você tem uma coleção de dados muito grande, onde você terá que rapidamente buscar por algo específico, você pode armazenar esses dados num objeto \(onde a chave é o ID do dado, e o valor é o dado em si\) para rápida busca.
 
-### Objetos e passagem por referência
+## Objetos e passagem por referência
 
 Uma das mais importantes peculiaridades dos objetos no JavaScript é que eles são o único tipo de valor que, quando atribuídos a outra variável, não são copiados para essa variável, apenas a sua referência é passada.
 
-#### O que é passagem por referência?
+### O que é passagem por referência?
 
 Num computador, o valor de toda variável é armazenado em um espaço específico da memória. Cada variável tem reservado o seu espaço na memória.
 
@@ -104,7 +104,7 @@ Num computador, o valor de toda variável é armazenado em um espaço específic
 
 "Passagem por referência" é quando ao invés de copiar o valor de um lugar da memória para outro, o programa faz com que as duas variáveis apontem para o mesmo espaço na memória. Então, a expressão `a = b` faz com que a variável `a` aponte para o mesmo lugar da memória que a variável `b`.
 
-#### Exemplo de passagem por referência
+### Exemplo de passagem por referência
 
 ```javascript
 // ------- Passagem por valor -------
@@ -129,7 +129,7 @@ Acima temos um exemplo de passagem por valor e passagem por referência. Na pass
 
 Na passagem por referência \(entre `obj1` e `obj2`\) definimos um objeto, e atribuímos `obj2` para `obj1`. Essa atribuição faz com que a variável `obj2` aponte para o mesmo objeto de `obj1`. Assim, ao realizar a atribuição `obj2.num = 20`, tanto `obj1` quanto `obj2` enxergam `num` como `2`. Por fim, ao imprimir `obj1.num` e `obj2.num`, temos o mesmo valor.
 
-#### Por quê passagem por referência é importante?
+### Por quê passagem por referência é importante?
 
 Na tradicional "passagem por valor", como o valor de uma variável é copiado \(logo, cada variável tem o seu valor independente\), se uma variável aplicar uma mudança no seu valor, a outra variável continua com o seu valor intacto, pois as cópias não são relacionadas.
 
@@ -137,7 +137,7 @@ Entretanto, na "passagem por referência", como as duas variáveis apontam para 
 
 Com essas características em mente, há uma clara vantagem na passagem por referência: não há nenhum custo de performance ao se atribuir objetos de uma variável à outra. Suponhamos que exista um objeto `obj` que contém um milhão de pares chave-valor. Caso atribuíssemos esse objeto para outra variável \(`const obj2 = obj`\), se houvesse passagem por valor, seria necessário duplicar todos os pares chave-valor contidos no objeto. Mas nesse caso, como a passagem é por referência, essa operação tem um custo negligenciável.
 
-### Resumo
+## Resumo
 
 Neste capítulo vimos o básico de objetos:
 
