@@ -44,3 +44,5 @@ Funções mais úteis do ES6 [de acordo com 5000 programadores](https://ponyfoo.
 ![Ecmascript functions](js_intro_img3.png)
 
 ## Criando Código em JS
+
+Resto do conteúdo aqui https://pdfhost.io/v/TZkuEvDP5_javascriptpdf.pdf
