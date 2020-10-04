@@ -1,2 +1,2 @@
-# Learn
+# Initial page
 
