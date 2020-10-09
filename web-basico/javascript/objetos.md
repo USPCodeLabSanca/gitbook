@@ -38,14 +38,14 @@ Podemos acessar os valores destes objetos da seguinte forma:
 // imprime 'valor1', que é o valor associado à chave1
 console.log(objetoComDuasChaves.chave1);
 
-// imprime 'valor1', igual ao método acima
+// imprime 'valor1', igual ao método de cima
 console.log(objetoComDuasChaves['chave1']);
 ```
 
 Assim, se quisermos acessar o valor de uma chave 'key' que está dentro de um objeto 'obj', podemos simplesmente escrever `obj.key`. Essa mesma sintaxe também é usada para atualizar valores, ou adicionar valores novos, como por exemplo:
 
 ```javascript
-// Trocamos o valor antigo 'valor1', associado à chave1, por 'novo valor'
+// Trocamos o valor anrigo 'valor1' por 'novo valor', associado à chave1
 objetoComDuasChaves.chave1 = 'novo valor';
 
 // Agora, o valor 42 está associado à chave1.
@@ -56,16 +56,16 @@ objetoComDuasChaves.chave1 = 42;
 objetoComDuasChaves.novaChave = 'Olá, mundo!';
 ```
 
-## Para que servem objetos?
+## Para o que servem objetos?
 
-Objetos podem inicialmente parecer desnecessários ou inúteis, pois eles não representam diretamente um dado, mas sim um grupo de dados. Aqui, vamos discutir alguns dos mais comuns usos de objetos em JavaScript:
+Objetos podem inicialmente parecer desnecessários ou inúteis, pois eles não representam diretamente um dado, e sim um grupo de dados. Aqui, vamos discutir alguns dos mais comuns usos de objetos em JavaScript:
 
 ### **Agrupar dados**
 
-Um dos usos mais comuns de objetos em JavaScript é agrupar vários dados relacionados a uma entidade. Por exemplo, se nosso programa for lidar com vários dados de um usuário \(como nome, senha, email, telefone, etc...\), podemos agrupar essas informações num objeto só:
+Um dos usos mais comuns de objetos em JavaScript é agrupar vários dados relacionados a uma entidade. Por exemplo, se nosso programa for lidar com um vários dados de um usuário \(como nome, senha, email, telefone, etc...\), podemos agrupar essas informações num objeto só:
 
 ```javascript
-// Sem um objeto
+// Sem objetos
 let name = 'joão';
 let password = 'senha123';
 let email = 'joaopedro@gmail.com';
@@ -78,7 +78,7 @@ let user = {
 };
 ```
 
-Organizando nossos dados dentro de um objeto, fica muito mais claro que as variáveis `name`, `email` ou `password` estão associadas a um usuário e, ainda mais importante, estão associadas ao mesmo usuário.
+Organizando nossos dados dentro de um objeto, fica muito mais claro que as variáveis `name`, `email` ou `password` estão associadas a um usuário, e ainda mais importante, estão associadas ao mesmo usuário.
 
 Outra vantagem que ganhamos com agrupamento é que, se houvessem informações de vários usuários diferentes, cada um com seu nome, email e senha, seria muito mais difícil misturar sem querer as informações dos usuários. Cada usuário teria o seu próprio objeto, que armazena os dados desse usuário.
 
@@ -90,7 +90,7 @@ Retomando o exemplo anterior, ao invés de declarar três variáveis com nomes e
 
 ### **Dicionário**
 
-Um Dicionário é uma estrutura de dados. Ela é descrita exatamente como são os objetos de JavaScript: um conjunto de associações de chave-valor. Dicionários são conhecidos por terem tempo de leitura e de escrita constante \(logo, muito rápidos\). Assim, se você tem uma coleção de dados muito grande, onde você terá que rapidamente buscar por algo específico, você pode armazenar esses dados num objeto \(onde a chave é o ID do dado, e o valor é o dado em si\) para uma busca rápida.
+Um Dicionário é uma estrutura de dados. Ela é descrita exatamente como são os objetos de JavaScript: um conjunto de associações de chave-valor. Dicionários são conhecidos por ter tempo de leitura e de escrita constante \(logo, muito rápidos\). Assim, se você tem uma coleção de dados muito grande, onde você terá que rapidamente buscar por algo específico, você pode armazenar esses dados num objeto \(onde a chave é o ID do dado, e o valor é o dado em si\) para rápida busca.
 
 ## Objetos e passagem por referência
 
@@ -117,7 +117,7 @@ console.log(num2); // 20
 
 // ------- Passagem por referência -------
 let obj1 = { num: 10 };
-let obj2 = obj1; // Objetos sofrem passagem por referência
+let obj2 = obj2; // Objetos sofrem passagem por referência
 
 obj2.num = 20;
 
@@ -127,9 +127,9 @@ console.log(obj2.num); // 20
 
 Acima temos um exemplo de passagem por valor e passagem por referência. Na passagem por valor \(entre `num1` e `num2`\) note que mudar o valor de uma variável \(`num2`\) não faz a outra variável \(`num1`\) mudar de valor também. Assim, ao imprimir as duas variáveis, temos dois valores diferentes \(`10` e `20`\).
 
-Na passagem por referência \(entre `obj1` e `obj2`\), definimos um objeto \(`obj2`\) e atribuímos `obj1` para ele. Essa atribuição faz com que a variável `obj2` aponte para o mesmo objeto de `obj1`. Assim, ao realizar a atribuição `obj2.num = 20`, tanto `obj1` quanto `obj2` enxergam `num` como `20`. Por fim, ao imprimir `obj1.num` e `obj2.num`, temos o mesmo valor.
+Na passagem por referência \(entre `obj1` e `obj2`\) definimos um objeto, e atribuímos `obj2` para `obj1`. Essa atribuição faz com que a variável `obj2` aponte para o mesmo objeto de `obj1`. Assim, ao realizar a atribuição `obj2.num = 20`, tanto `obj1` quanto `obj2` enxergam `num` como `2`. Por fim, ao imprimir `obj1.num` e `obj2.num`, temos o mesmo valor.
 
-### Por que passagem por referência é importante?
+### Por quê passagem por referência é importante?
 
 Na tradicional "passagem por valor", como o valor de uma variável é copiado \(logo, cada variável tem o seu valor independente\), se uma variável aplicar uma mudança no seu valor, a outra variável continua com o seu valor intacto, pois as cópias não são relacionadas.
 
