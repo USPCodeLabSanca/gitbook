@@ -43,7 +43,7 @@ Tanto o Google Chrome quanto Node utilizam a mesma JS Engine, o V8.
 * Sigla para European Computer Manufacturers Association
 * **ECMA é uma Instituição de padronização** altamente respeitada que já padronizou outras linguagens como o C\#
 * Lançam periodicamente novas versões do ECMAScript com **novas funcionalidades** do JS. 
-* Versões demoram para serem implementadas nos browsers. Ferramentas como o 
+* Versões demoram para serem implementadas nos browsers. Ferramentas como o
 
   **Babel.js transpilam código** de especificação nova para o dito **Vanila.js \(Javascript "Puro"**\).
 
@@ -61,4 +61,5 @@ Funções mais úteis do ES6 [de acordo com 5000 programadores](https://ponyfoo.
 
 ## Criando Código em JS
 
-Resto do conteúdo aqui https://pdfhost.io/v/TZkuEvDP5_javascriptpdf.pdf
+Resto do conteúdo aqui [https://pdfhost.io/v/TZkuEvDP5\_javascriptpdf.pdf](https://pdfhost.io/v/TZkuEvDP5_javascriptpdf.pdf)
+
