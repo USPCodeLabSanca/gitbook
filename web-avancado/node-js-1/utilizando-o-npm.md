@@ -70,7 +70,7 @@ Como o package.json é atualizado a cada pacote instalado. Caso a pasta node\_mo
 npm install
 ```
 
-Que todas os pacotes configurados no package.json serão instalados e a pasta node\_modules será criada.
+Que todos os pacotes configurados no package.json serão instalados e a pasta node\_modules será criada.
 
 Para desinstalar algum pacote do repositório npm:
 
