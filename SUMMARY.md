@@ -4,7 +4,7 @@
 * [Desenvolvimento Web Basico](web-basico/README.md)
   * [HTML](web-basico/html/README.md)
     * [O que é HTML?](web-basico/html/o-que-e-html.md)
-    * [O que são TAG's?](web-basico/html/o-que-sao-tags.md)
+    * [O que são tag's?](web-basico/html/o-que-sao-tags.md)
     * [Principais TAG's](web-basico/html/principais-tags/README.md)
       * [Formatação](web-basico/html/principais-tags/formatacao.md)
       * [Básicas](web-basico/html/principais-tags/basicas.md)
