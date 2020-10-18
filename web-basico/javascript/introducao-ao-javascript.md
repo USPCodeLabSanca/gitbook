@@ -65,5 +65,15 @@ console.log('Hello World!')
 {% endtab %}
 {% endtabs %}
 
+O código acima escreve `Hello World!" no console do navegador. 
+## Console
+Uma ferramenta de desenvolvimento embutida no navegador. Permite ver a saída de scripts linkados ao html ou mesmo escrever código. 
+* No **Google Chrome** e **Firefox**, é acessível via `Ctrl Shift I`
+* Também pode ser acessado com `Right Click` -> `Inspect`
 
+![Inspect](../../.gitbook/assets/js_intro_img4.png)
+![Console](../../.gitbook/assets/js_intro_img_5.png)
 
+É importante notar que a única maneira de **escrever código persistente** é utilizando arquivos `.js`. Códigos feitos a partir do console do navegador **não são salvos** em lugar algum, sendo portanto perdidos quando se encerra o browser. 
+### `console.log`
+Imprime o resultado de uma **expressão em javascript** no console. Tente imprimir seu próprio nome!
