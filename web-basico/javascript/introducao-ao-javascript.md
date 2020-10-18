@@ -31,7 +31,7 @@ Versões demoram para serem implementadas nos browsers. Ferramentas como o **Bab
 
 ![Imagem de Kostas Diakogiannis](../../.gitbook/assets/js_intro_img2.png)
 
-![Funções mais úteis do ES6 de acordo com 5000 programadores. Pesquisa de Nicolás Bevacqua](../../.gitbook/assets/js_intro_img3.png)
+![Funcionalidades mais úteis do ES6 de acordo com 5000 programadores. Pesquisa de Nicolás Bevacqua](../../.gitbook/assets/js_intro_img3.png)
 
 ## Criando Código em JS
 
@@ -130,3 +130,107 @@ Os comandos `var`, `let` e `const` permitem declarar variáveis.
   ```
 
   ¹ \[Extra\]: const em objetos imutabiliza apenas sua referência e não conteúdo. `Object.freeze` imutabiliza um objeto, mas objetos podem tem outros objetos como atributos, o que só imutabiliza as referências dos objetos da "primeira camada". É necessário aplicar `Object.freeze`recursivamente para criar objetos verdadeiramente imutáveis. Verificar [Este artigo](https://stackoverflow.com/questions/34776846/how-to-freeze-nested-objects-in-javascript)
+
+### Tipagem
+Javascript possui tipagem **Dinâmica**:
+- Não é possível declarar o tipo da variável, que é atribuído automaticamente.
+- É possível modificar o tipo de uma variável.
+- O comando `typeof()` permite descobrir o tipo atual.
+
+#### Number
+Armazena números, sejam eles inteiros ou floats.
+
+```javascript
+let inteiro = 3
+let float = 3.5
+
+console.log(typeof(inteiro), typeof(float)) //number number
+```
+#### Strings
+Armazenam qualquer text entre parênteses simples ou duplos. 
+
+```javascript
+let my_string = 'olá mundo'
+console.log(typeof(my_string)) //string
+```
+
+Confira a aula 2 (Strings) para maiores informações sobre o tema. 
+
+#### Boolean
+Armazena veracidade de expressões, que pode ser:
+- `true`, equivalente a **1**
+- `false`, equivalente a **0**
+
+```javascript
+let verdadeiro = true
+console.log(verdadeiro, typeof(verdadeiro)) //true "boolean"
+```
+
+São normalmente utilizadas em conjunto a outros operadores lógicos: 
+- `!` representa NOT
+- `&&` representa AND
+- `||` representa OR
+
+![Tabela de operações lógicas](../../.gitbook/assets/js_intro_img6.png)
+
+```javascript
+let verdadeiro = true
+let falso = false
+
+console.log('!v', !verdadeiro)
+console.log('!f', !falso)
+
+console.log('v&&v: ', verdadeiro && verdadeiro)
+console.log('v&&f: ',verdadeiro && falso)
+console.log('f&&f: ', falso && falso)
+
+console.log('v||v: ', verdadeiro || verdadeiro)
+console.log('v||f: ',verdadeiro || falso)
+console.log('f||f: ', falso || falso)
+```
+
+imprime
+
+```java
+!v false
+!f true
+
+v&&v:  true
+v&&f:  false
+f&&f:  false
+
+v||v:  true
+v||f:  true
+f||f:  false
+```
+
+#### Verificação de igualdade
+- `==` Verifica se operandos tem o mesmo valor, independente do tipo.
+- `===` Verifica se operandos tem o mesmo valor e tipo.
+
+```javascript
+console.log(1 == '1')      //true
+console.log(1 === '1')     //false
+console.log(1 === 1)       //true
+
+console.log(true == 1)     //true
+console.log(true === 1)    //false
+console.log(true === true) //true
+```
+
+#### undefined vs null
+**undefined** Representa o acesso a uma variável existente mas não inicializada.
+
+```javascript
+let nao_inicializada
+console.log(nao_inicializada, typeof(nao_inicializada)) // undefined undefined
+```
+
+Já **null NÃO É TIPO!** é apenas o estado de um objeto que propositalmente não tem conteúdo.
+
+```javascript
+a = null
+console.log(a, typeof(a))//null object
+```
+
+**Tudo em JS que não é um dos tipos primitivos acima listados é objeto. Isto será estudado mais a frente.**
