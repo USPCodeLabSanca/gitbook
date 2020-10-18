@@ -18,6 +18,7 @@
     * [Cores](web-basico/css/cores.md)
     * [Box Model](web-basico/css/box-model.md)
   * [Javascript](web-basico/javascript/README.md)
+    * [Arrow Functions](web-basico/javascript/arrow-functions.md)
     * [Introdução ao Javascript](web-basico/javascript/introducao-ao-javascript.md)
     * [Estruturas de Decisão e Repetição](web-basico/javascript/estruturas-de-decisao-e-repeticao.md)
     * [Objetos](web-basico/javascript/objetos.md)
