@@ -2,7 +2,7 @@
 
 Os próximos tópicos irão mostrar as princinpais TAG que são utilizadas. Você pode conferir a lista completa de TAG que existem em: [https://www.w3schools.com/tags/](https://www.w3schools.com/tags/)
 
-### Sumário
+## Sumário
 
 * Formatação
   * &lt;h1 até h6&gt;

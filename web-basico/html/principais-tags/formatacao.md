@@ -2,11 +2,11 @@
 
 **&lt;h1&gt;&lt;/h1&gt;** — Permite que coloque um titulo no corpo da sua página. O número depois do "h" podem variar de 1 a 6. Quanto menor o número, menor o tamanho da fonte do seu título.
 
-**&lt;p&gt;&lt;/p&gt;**  — Permite que você coloque um parágrafo no corpo da sua página.
+**&lt;p&gt;&lt;/p&gt;** — Permite que você coloque um parágrafo no corpo da sua página.
 
-**&lt;br&gt;** — Permite colocar uma única quebra de linha. Útil para escrever endereços ou poemas. Essa é uma **tag vazia**, ou seja, ela não tem tag de fechamento. 
+**&lt;br&gt;** — Permite colocar uma única quebra de linha. Útil para escrever endereços ou poemas. Essa é uma **tag vazia**, ou seja, ela não tem tag de fechamento.
 
-#### Exemplo
+## Exemplo
 
 Abaixo mostramos um exemplo de como essas TAG devem ser escritas. Na aba "Código" está o código, e na aba "Resultado" está a página resultante.
 

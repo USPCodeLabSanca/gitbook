@@ -1,6 +1,6 @@
 # Atributos
 
-Atributos em HTML são utilizados para promover informações adicionais a TAG. Eles sempre ****são utilizados na **tag de início**.
+Atributos em HTML são utilizados para promover informações adicionais a TAG. Eles sempre **\*\*são utilizados na** tag de início\*\*.
 
 Atributos normalmente estão no seguinte formato: **nome="valor"**. Por exemplo,
 
@@ -10,7 +10,7 @@ Atributos normalmente estão no seguinte formato: **nome="valor"**. Por exemplo,
 
 O atributo "src" diz onde está a imagem no computar para que a tag "img" mostre na página.
 
-#### Atributos mais usados
+## Atributos mais usados
 
 **id** - É utilizado para dar um "id" \(uma identidade\) a tag. Esse atributo é útil para referenciar uma tag no CSS.
 

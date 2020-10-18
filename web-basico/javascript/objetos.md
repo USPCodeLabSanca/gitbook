@@ -38,7 +38,7 @@ Podemos acessar os valores destes objetos da seguinte forma:
 // imprime 'valor1', que é o valor associado à chave1
 console.log(objetoComDuasChaves.chave1);
 
-// imprime 'valor1', igual ao método acima
+// imprime 'valor1', igual à forma acima
 console.log(objetoComDuasChaves['chave1']);
 ```
 

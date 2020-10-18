@@ -4,13 +4,13 @@ description: Que horas são?
 
 # Datas
 
-### Introdução
+## Introdução
 
 Datas fazem parte do nosso dia a dia e, portanto, são frequentemente usadas em desenvolvimento de software. Em Javascript, você pode ter que criar um site com um calendário ou uma agenda, entre outras coisas. Essas aplicações podem precisar de controle de dias, horas, fuso horário e fazer cálculos com base nesses dados.
 
 Para isso vamos usar o objeto padrão do Javascript para lidar com datas e horários: o `Date`!
 
-### O Objeto Date
+## O Objeto Date
 
 O objeto `Date` é padrão do Javascript, ou seja, não é preciso baixar nenhuma biblioteca/dependência para usá-lo. Ele possui vários métodos para manipular e formatar datas.
 
@@ -41,7 +41,7 @@ const timestamp = agora.getTime(); // 1601836303000
 
 O timestamp 1601836303000 representa a mesma data do primeiro trecho de código.
 
-### Construtor
+## Construtor
 
 Ha diferentes forma de criar um objeto de `Date` em Javascript, dependendo de quais valores são passados no construtor:
 
@@ -52,7 +52,7 @@ Ha diferentes forma de criar um objeto de `Date` em Javascript, dependendo de qu
 | new Date\(date string\) | Data baseada na string |
 | new Date\(ano, mes, dia, horas, minutos, segundos, milissegundos\) | Data baseada nos parâmetros |
 
-### Lendo dados de um `Date` com `get`
+## Lendo dados de um `Date` com `get`
 
 Você pode precisar de partes especificas da um `Date`, como o dia ou o ano, e para isso temos vários métodos. Os métodos abaixo retornam seus correspondentes valores em relação ao **fuso horário local** do seu sistema.
 
@@ -85,7 +85,7 @@ else {
 }
 ```
 
-### Modificando um `Date` com `set`
+## Modificando um `Date` com `set`
 
 Para cada método `get` acima existe um `set` correspondente que modifica aquela parte da informação do `Date`.
 
@@ -123,7 +123,7 @@ const ano = agora.getFullYear();
 agora.setFullYear(ano + 1);
 ```
 
-### UTC
+## UTC
 
 UTC é uma sigla para Coordinated Universal Time \(Tempo Universal Coordenado\), que é um padrão de fusos.
 
@@ -138,9 +138,9 @@ Para resolver esse tipo de problema, todos os métodos _get_ e _set_ tem um resp
 * setUTCFullYear
 * ...
 
-Usando os métodos UTC, o resultado da execução é sempre o mesmo,  independente da região da máquina que está executando o código.
+Usando os métodos UTC, o resultado da execução é sempre o mesmo, independente da região da máquina que está executando o código.
 
-### Formas de exibir/formatar um `Date`
+## Formas de exibir/formatar um `Date`
 
 Existem várias formas diferentes para exibir um `Date`, dependendo para quem ou onde a informação será exibida:
 
@@ -157,9 +157,9 @@ Existem várias formas diferentes para exibir um `Date`, dependendo para quem ou
 
 Os métodos com `Locale` são referentes à região da máquina e, portanto, podem variar em seus resultados.
 
-### Conclusão
+## Conclusão
 
 Vimos como inicializar um `Date`, como ler \(_get_\) e modificar \(_set_\) suas informações e como exibí-lo.
 
-Para mais informações, cheque a [documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) 
+Para mais informações, cheque a [documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
