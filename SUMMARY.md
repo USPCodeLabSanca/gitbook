@@ -22,6 +22,7 @@
   * [Javascript](web-basico/javascript/README.md)
     * [Introdução ao Javascript](web-basico/javascript/introducao-ao-javascript.md)
     * [Estruturas de Decisão e Repetição](web-basico/javascript/estruturas-de-decisao-e-repeticao.md)
+    * [Funções](web-basico/javascript/funcoes.md)
     * [Objetos](web-basico/javascript/objetos.md)
     * [Datas](web-basico/javascript/datas.md)
 * [Desenvolvimento Web Avançado](web-avancado/README.md)

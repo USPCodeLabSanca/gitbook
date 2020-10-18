@@ -1,3 +1,7 @@
+---
+description: Que horas são?
+---
+
 # Datas
 
 ### Introdução
@@ -151,7 +155,7 @@ Existem várias formas diferentes para exibir um `Date`, dependendo para quem ou
 | toLocaleDateString\(\) | 10/4/2020 |
 | toLocaleTimeString\(\) | 4:42:05 PM |
 
-Os métodos com`Locale` são referentes à região da máquina e, portanto, podem variar em seus resultados.
+Os métodos com `Locale` são referentes à região da máquina e, portanto, podem variar em seus resultados.
 
 ### Conclusão
 
