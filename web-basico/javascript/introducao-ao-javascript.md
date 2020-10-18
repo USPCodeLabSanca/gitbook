@@ -29,9 +29,9 @@ Versões demoram para serem implementadas nos browsers. Ferramentas como o **Bab
 
 * A **ECMAScript2015 ou ES6** é a versão que utilizaremos, por ter sido implementada na grande maioria dos browsers sem necessidade de transpilação.
 
-![Imagem de [Kostas Diakogiannis](https://www.goconqr.com/c/64835/course_modules/108563-es6-next-generation-javascript)](../../.gitbook/assets/js_intro_img2.png)
+![Imagem de Kostas Diakogiannis](../../.gitbook/assets/js_intro_img2.png)
 
-![Funções mais úteis do ES6 [de acordo com 5000 programadores](https://ponyfoo.com/articles/javascript-developer-survey-results)](../../.gitbook/assets/js_intro_img3.png)
+![Funções mais úteis do ES6 de acordo com 5000 programadores. Pesquisa de Nicolás Bevacqua](../../.gitbook/assets/js_intro_img3.png)
 
 ## Criando Código em JS
 
@@ -69,10 +69,53 @@ Uma ferramenta de desenvolvimento embutida no navegador. Permite ver a saída de
 * No **Google Chrome** e **Firefox**, é acessível via `Ctrl Shift I`
 * Também pode ser acessado com `Right Click` -> `Inspect`
 
-![Inspect](../../.gitbook/assets/js_intro_img4.png)
+![Ctrl Shift I ou Botão Direito->Inspecionar](../../.gitbook/assets/js_intro_img4.png)
 
-![Console](../../.gitbook/assets/js_intro_img_5.png)
+![Aba Console das ferramentes de desenvolvedor](../../.gitbook/assets/js_intro_img_5.png)
 
 É importante notar que a única maneira de **escrever código persistente** é utilizando arquivos `.js`. Códigos feitos a partir do console do navegador **não são salvos** em lugar algum, sendo portanto perdidos quando se encerra o browser. 
 ### `console.log`
-Imprime o resultado de uma **expressão em javascript** no console. Tente imprimir seu próprio nome!
+Imprime o resultado de uma **expressão em javascript** no console.
+```js
+console.log(3+4)            // Imprime 7
+console.log("Hello World") //Imprime Hello World
+```
+
+### Declaração de variáveis
+Os comandos `var`, `let` e `const` permitem declarar variáveis.
+
+- `var`: **Legado**. Possui escopo da **função na qual foi declarada**, o que pode gerar efeitos colaterais indesejados. 
+  ```javascript
+    function usesVar(){
+      var outside_block = 1
+
+      if (outside_block == 1){
+          var inside_block = 2
+      }
+
+      console.log(inside_block)
+  }
+  usesVar()
+  ```
+  A função **funciona e imprime 2**. Na prática, o comportamento é indesejado, pois seria mais **seguro** que unidades declaradas dentro de blocos (no caso, o **condicional if**) existissem apenas dentro deles. 
+
+- `let`: **Introduzida na ES6. Melhor prática!**. Possui escopo do **bloco, instrução ou expressão** no qual foi declarada. 
+  ```javascript
+  function usesLet(){
+      let outside_block = 1
+
+      if (outside_block == 1){
+          let inside_block = 2
+      }
+
+      console.log(inside_block)
+  }
+
+  usesLet()
+  ```
+  lança o seguinte erro: 
+
+  ![Variáveis declaradas com let geram menos efeitos colaterais no código](../../.gitbook/assets/js_intro_img6.png)
+
+
+
