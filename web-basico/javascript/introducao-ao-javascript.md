@@ -29,13 +29,9 @@ Versões demoram para serem implementadas nos browsers. Ferramentas como o **Bab
 
 * A **ECMAScript2015 ou ES6** é a versão que utilizaremos, por ter sido implementada na grande maioria dos browsers sem necessidade de transpilação.
 
-![Ecmascript](../../.gitbook/assets/js_intro_img2.png)
+![Imagem de [Kostas Diakogiannis](https://www.goconqr.com/c/64835/course_modules/108563-es6-next-generation-javascript)](../../.gitbook/assets/js_intro_img2.png)
 
-Imagem de [Kostas Diakogiannis](https://www.goconqr.com/c/64835/course_modules/108563-es6-next-generation-javascript)
-
-Funções mais úteis do ES6 [de acordo com 5000 programadores](https://ponyfoo.com/articles/javascript-developer-survey-results)
-
-![Ecmascript functions](../../.gitbook/assets/js_intro_img3.png)
+![Funções mais úteis do ES6 [de acordo com 5000 programadores](https://ponyfoo.com/articles/javascript-developer-survey-results)](../../.gitbook/assets/js_intro_img3.png)
 
 ## Criando Código em JS
 
