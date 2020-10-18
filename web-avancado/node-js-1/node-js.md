@@ -2,15 +2,15 @@
 
 ### Introdução
 
-O Node JS é um ambiente de javascript assíncrono que é totalmente server-side, isto é, suas funções podem ser feitas totalmente sem a ajuda de um browser.
+O Node JS é um interpretador de javascript totalmente independente do navegador, isto é, suas funções podem ser feitas totalmente sem a ajuda de um browser.
 
-Ele foi desenvolvido em 2009 no Chrome v8, uma engine escrita em C++ feita pela Google. Usada em aplicações relacionadas a Web, além de implementar o ECMAScript e o WebAssembly.
+Ele foi desenvolvido em 2009 a partir do Chrome v8, uma engine escrita em C++ feita pela Google para interpretar e rodar códigos escritos em Javascript. O Node é comumente usado em aplicações relacionadas a Web.
 
-Como mencionado, o node trabalha de forma assíncrona, isto é, é feito por uma thread única \(ou single-thread\). Dessa forma, os comandos e requisições vão ser tratados só por uma thread, ou como já explicado, o event-loop.
+O Node trabalha de forma assíncrona, isto é, os comandos e requisições vão ser tratados por um processo único, chamado event-loop. Nele, quaisquer requisições feitas pela aplicação são colocadas em uma pilha, onde que são tratadas uma a uma pelo event loop. Assim, como as requisições são tratadas por um só processo, não há problema que a execução deste processo bloqueie outras execuções, até mesmo a do navegador.
 
 ### Gerenciadores de Pacotes 
 
-Gerenciadores de pacotes, como npm ou yarn, são mecanismos utilizados para instalar, atualizar ou remover componentes. Esses componentes são disponibilizados publicamente em repositórios online, com gerenciamento de dependência ou versão do pacote a ser utilizado. Caso se interesse pelo NPM, há uma lista de componentes que podem ser encontrada em [https://npmjs.org/](https://npmjs.org/). Lá, o ecossistema é público, podendo publicar os seus próprios pacotes.  Além disso, esses podem ser acessados via uma ferramenta CLI do NPM.
+Gerenciadores de pacotes, como npm ou yarn, são mecanismos utilizados para instalar, atualizar ou remover pacotes. Esses pacotes são disponibilizados publicamente em repositórios online, com gerenciamento de dependência ou versão a ser utilizada pela aplicação, e funcionam como auxiliadores no desenvolvimento de aplicativos usando NodeJS. Caso se interesse pelo Node Package Manager \(NPM\), que é o maior repositórios de software do mundo, há uma lista de pacotes que podem ser encontrada em [https://npmjs.org/](https://npmjs.org/). Lá, o ecossistema é público, podendo publicar os seus próprios pacotes.  Além disso, esses podem ser acessados via uma ferramenta de Command Line Inteface\(CLI\) do NPM.
 
 ### Instalando
 
@@ -20,7 +20,7 @@ Há algumas formas de instalar o Node, dependendo do seu sistema operacional. Ca
 sudo apt-get install nodejs
 ```
 
-No Windows ou Mac, pode ser acessado o site do nodejs, onde pode ser encontrado os arquivos de instalação do node.
+No Windows ou Mac, pode ser acessado o site do nodejs, onde pode ser encontrado os arquivos de instalação do node: [https://nodejs.org/en/](https://nodejs.org/en/)
 
 Obs: No site do Node, pode ser encontrado arquivos de instalação para Linux, caso não queira instalar pelo terminal.
 
