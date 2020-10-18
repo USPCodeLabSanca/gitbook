@@ -73,7 +73,7 @@ let teste2 = function(parametro) {
 
 No trecho acima a função `teste1` roda sem problemas, enquanto a `teste2` da erro. Essa diferença é devida a forma de declarar a função, para a `teste1` a associação da função e seu identificador é feita antes da execução do código, enquanto para a `teste2` é feito durante a execução do código, ou seja, na linha 2, a variável `teste2` ainda não foi definida e a `teste1` sim
 
-##  Parâmetros
+## Parâmetros
 
 ```javascript
 function ola(nome) {

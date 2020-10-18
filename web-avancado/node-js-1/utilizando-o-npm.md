@@ -1,21 +1,18 @@
 # Utilizando o NPM
 
-### Instalando NPM na sua máquina
+## Instalando NPM na sua máquina
 
-O NPM, como mencionado no capítulo anterior, é um gerenciador de pacotes. Seu objetivo é facilitar o uso de algumas bibliotecas e frameworks ligados ao NodeJS.  
-
+O NPM, como mencionado no capítulo anterior, é um gerenciador de pacotes. Seu objetivo é facilitar o uso de algumas bibliotecas e frameworks ligados ao NodeJS.
 
 Para instalar o NPM, tudo o que precisa fazer \(em linha de comando\) é rodar o seguinte comando:
 
 ```text
 sudo apt-get install npm
-
 ```
 
-Com isso, a instalação irá acontecer devidamente.  
+Com isso, a instalação irá acontecer devidamente.
 
-
-### Inicializando um projeto com NPM
+## Inicializando um projeto com NPM
 
 Para inicializar o uso do NPM em uma pasta, terá que fazer:
 
@@ -23,22 +20,19 @@ Para inicializar o uso do NPM em uma pasta, terá que fazer:
 npm init
 ```
 
-Logo em seguida, irá pedir que insira algumas informações, mas se deixá-las em branco, como mostrado na imagem abaixo \(só ir apertando a tecla Enter ou inserir -y no comando acima\), o sistema irá deixar a pasta no padrão.  
-
+Logo em seguida, irá pedir que insira algumas informações, mas se deixá-las em branco, como mostrado na imagem abaixo \(só ir apertando a tecla Enter ou inserir -y no comando acima\), o sistema irá deixar a pasta no padrão.
 
 ![](../../.gitbook/assets/npm_init.png)
 
-Dessa forma, o npm irá preparar sua pasta para documentar\(no package.json\) e receber as libraries do ecossistema npm.  
+Dessa forma, o npm irá preparar sua pasta para documentar\(no package.json\) e receber as libraries do ecossistema npm.
 
-
-### Arquivo package.json
+## Arquivo package.json
 
 O arquivo package.json é um arquivo chave do projeto. Nele, você ver várias configurações associadas ao projeto, como o nome do projeto, sua descrição, os scripts de inicialização do projeto, as dependências \(os pacotes instalados no projeto\), a licença utilizada e, principalmente, os autores do projeto.
 
-### Instalando pacotes
+## Instalando pacotes
 
-Para instalar algum pacote do ecossistema do NPM, a maioria dos pacotes podem ser instalados via o comando:  
-
+Para instalar algum pacote do ecossistema do NPM, a maioria dos pacotes podem ser instalados via o comando:
 
 ```text
 npm install <nome_do_pacote>
@@ -56,11 +50,9 @@ Caso queira instalar algum pacote globalmente, então:
 npm install -g <nome_do_pacote>
 ```
 
-Caso o pacote não siga esse padrão, é só procurar no site npm.org, onde existe uma gama de pacotes disponibilizados.  
+Caso o pacote não siga esse padrão, é só procurar no site npm.org, onde existe uma gama de pacotes disponibilizados.
 
-
-Os pacotes instalados vão ser colocadas numa pasta chamada node\_modules:  
-
+Os pacotes instalados vão ser colocadas numa pasta chamada node\_modules:
 
 ![O pacote instalado na pasta node\_modules](../../.gitbook/assets/node_mod_dir.png)
 
@@ -78,5 +70,5 @@ Para desinstalar algum pacote do repositório npm:
 npm uninstall <nome_do_pacote>
 ```
 
-Com os comandos mostrados, deseja-se ter total controle dos repositórios em que se utiliza as libraries do ecossistema NPM. 
+Com os comandos mostrados, deseja-se ter total controle dos repositórios em que se utiliza as libraries do ecossistema NPM.
 

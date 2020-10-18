@@ -2,7 +2,7 @@
 
 **&lt;a&gt;&lt;/a&gt;** — Essa TAG define um hiperlink, ou seja, ela é usada para linkar uma página a outra. Para definir qual link que a TAG deve encaminhar, vamos usar o atributo "href".
 
-#### Exemplo
+## Exemplo
 
 Abaixo mostramos um exemplo de como essas TAG devem ser escritas. Na aba "Código" está o código, e na aba "Resultado" está a página resultante.
 

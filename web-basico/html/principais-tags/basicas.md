@@ -8,11 +8,11 @@
 
 **&lt;body&gt;&lt;/body&gt;** — Contém todo o conteúdo que você quer mostrar ao público que visita sua página, seja texto, imagens, vídeos, jogos, faixas de áudio tocáveis, entre outros.
 
-**&lt;!--** Isso é um comentário **--&gt;**  — Faz um comentário no código. Não aparece na sua página.
+**&lt;!--** Isso é um comentário **--&gt;** — Faz um comentário no código. Não aparece na sua página.
 
 **&lt;!DOCTYPE html&gt;** — Apesar de não ser uma TAG, é necessário que você escreva no início do seu arquivo para indicar ao navegador que tipo de arquivo ele deve esperar.
 
-#### Exemplo
+## Exemplo
 
 Abaixo mostramos um exemplo de como essas TAG devem ser escritas. Na aba "Código" está o código, e na aba "Resultado" está a página resultante.
 

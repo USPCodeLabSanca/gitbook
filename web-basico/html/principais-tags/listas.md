@@ -1,6 +1,6 @@
 # Listas
 
-As principais listas utilizadas em HTML são as listas ornadenadas e as desordenas. 
+As principais listas utilizadas em HTML são as listas ornadenadas e as desordenas.
 
 Abaixo temos as instruções de como trocar uma lâmpada. Isso é uma lista ordenada.
 
@@ -23,7 +23,7 @@ Abaixo temos uma lista de supermecado. Isso é uma lista desordenada.
 
 **&lt;ul&gt;&lt;/ul&gt;** — Essa TAG define uma lista desordenada.
 
-#### Exemplo
+## Exemplo
 
 Abaixo mostramos um exemplo de como essas TAG devem ser escritas. Na aba "Código" está o código, e na aba "Resultado" está a página resultante.
 
