@@ -10,11 +10,11 @@
 
 **&lt;!--** Isso é um comentário **--&gt;** — Faz um comentário no código. Não aparece na sua página.
 
-**&lt;!DOCTYPE html&gt;** — Apesar de não ser uma tag, é necessário que você escreva no início do seu arquivo para indicar ao navegador que tipo de arquivo ele deve esperar.
+**&lt;!DOCTYPE html&gt;** — Apesar de não ser uma TAG, é necessário que você escreva no início do seu arquivo para indicar ao navegador que tipo de arquivo ele deve esperar.
 
 ## Exemplo
 
-Abaixo mostramos um exemplo de como essas tags devem ser escritas. Na aba "Código" está o código, e na aba "Resultado" está a página resultante.
+Abaixo mostramos um exemplo de como essas TAG devem ser escritas. Na aba "Código" está o código, e na aba "Resultado" está a página resultante.
 
 {% tabs %}
 {% tab title="Código" %}

@@ -1,6 +1,6 @@
-# O que são tags?
+# O que são tag's?
 
-Você irá escrever o HTML por meio de tags. Elas serão responsáveis por informar ao navegador o que deve ser feito naquela posição com aquele conteúdo.
+Você irá escrever o HTML por meio de tag's. Elas serão responsáveis por informar ao navegador o que deve ser feito naquela posição com aquele conteúdo.
 
 Por exemplo, se queremos que o título da nossa página seja "USPCodeLab, o melhor grupo", vamos escrever o seguinte:
 

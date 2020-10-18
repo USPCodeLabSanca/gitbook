@@ -23,5 +23,5 @@ Outra tag interessante de você utilizar no código está abaixo.
 <meta charset=”UTF-8”>
 ```
 
-Ela deve ser colocado no &lt;head&gt;, e indica ao navegador qual tabela de caractéres você está usando. No caso, indicamos a [Unicode](https://home.unicode.org/), que é a tabela mais usada universalmente.
+Ela deve ser colocada como filha da tag &lt;head&gt; e indica ao navegador qual tabela de caractéres você está usando. No caso, indicamos a [Unicode](https://home.unicode.org/), que é a tabela mais usada universalmente.
 
