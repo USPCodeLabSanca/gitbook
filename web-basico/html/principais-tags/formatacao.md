@@ -8,7 +8,7 @@
 
 ## Exemplo
 
-Abaixo mostramos um exemplo de como essas TAG devem ser escritas. Na aba "Código" está o código, e na aba "Resultado" está a página resultante.
+Abaixo mostramos um exemplo de como essas tags devem ser escritas. Na aba "Código" está o código, e na aba "Resultado" está a página resultante.
 
 {% tabs %}
 {% tab title="Código" %}
