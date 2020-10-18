@@ -33,7 +33,9 @@ Versões demoram para serem implementadas nos browsers. Ferramentas como o **Bab
 
 Imagem de [Kostas Diakogiannis](https://www.goconqr.com/c/64835/course_modules/108563-es6-next-generation-javascript)
 
-Funções mais úteis do ES6 [de acordo com 5000 programadores](https://ponyfoo.com/articles/javascript-developer-survey-results) ![Ecmascript functions](../../.gitbook/assets/js_intro_img3.png)
+Funções mais úteis do ES6 [de acordo com 5000 programadores](https://ponyfoo.com/articles/javascript-developer-survey-results)
+
+![Ecmascript functions](../../.gitbook/assets/js_intro_img3.png)
 
 ## Criando Código em JS
 
@@ -71,8 +73,9 @@ Uma ferramenta de desenvolvimento embutida no navegador. Permite ver a saída de
 * No **Google Chrome** e **Firefox**, é acessível via `Ctrl Shift I`
 * Também pode ser acessado com `Right Click` -> `Inspect`
 
- ![Inspect](../../.gitbook/assets/js_intro_img4.png)
- ![Console](../../.gitbook/assets/js_intro_img_5.png)
+![Inspect](../../.gitbook/assets/js_intro_img4.png)
+
+![Console](../../.gitbook/assets/js_intro_img_5.png)
 
 É importante notar que a única maneira de **escrever código persistente** é utilizando arquivos `.js`. Códigos feitos a partir do console do navegador **não são salvos** em lugar algum, sendo portanto perdidos quando se encerra o browser. 
 ### `console.log`
