@@ -6,7 +6,7 @@ description: O que são e como usar eventos em JavaScript.
 
 ### O que são eventos?
 
-Eventos são, essencialmente, qualquer coisa que pode acontecer em um momento indeterminado \(ex: usuário clicka num botão, uma tecla do teclado é pressionada, informações do servidor chegam, etc...\). Em JavaScript, podemos escrever código que é executando quando um evento acontece através de um _Event Listener_ \(ouvidor de eventos\). Um _Event Listener_ é uma estrutura que, quando acontece um evento, executa uma função específica. Veja esse exemplo:
+Eventos são, essencialmente, qualquer coisa que pode acontecer em um momento indeterminado \(ex: usuário clica num botão, uma tecla do teclado é pressionada, informações do servidor chegam, etc...\). Em JavaScript, podemos escrever código que é executando quando um evento acontece através de um _Event Listener_ \(ouvidor de eventos\). Um _Event Listener_ é uma função que é executada quando um evento específico ocorre. Veja esse exemplo:
 
 ```javascript
 // Seleciona um botão com ID 'button'.
