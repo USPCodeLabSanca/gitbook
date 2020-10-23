@@ -4,11 +4,7 @@ description: O que são e como usar Arrow Functions
 
 # Arrow Functions
 
-
-
-
-
-### O que são Arrow functions?
+## O que são Arrow functions?
 
 _Arrow function_ é o termo dado para uma sintaxe específica de declaração de funções. Exemplo:
 
@@ -24,9 +20,9 @@ const arrowFunction = (arg1, arg2) => {
 }
 ```
 
-A sintaxe geral de uma _Arrow Function_ é uma lista de argumentos entre parêntesis, uma flecha "=&gt;", e um bloco de código \(entre chaves\). Então, uma _Arrow Function_ que recebe dois argumentos \(nomeados "A" e "B"\), e retorna a soma deles, pode ser declarada assim: `(A, B) => { return A + B }`.
+A sintaxe geral de uma _Arrow Function_ é uma lista de argumentos entre parênteses, uma flecha "=&gt;", e um bloco de código \(entre chaves\). Então, uma _Arrow Function_ que recebe dois argumentos \(nomeados "A" e "B"\), e retorna a soma deles, pode ser declarada assim: `(A, B) => { return A + B }`.
 
-Note no bloco de código acima que, diferente da declaração usual de funções, a declaração dessa _arrow function_ começou com a declaração de uma variável, que então recebeu a função em si. Isso é porquê as _Arrow Functions_ não tem um nome, e precisão então ser guardadas em variáveis. Esse comportamento só é possível porquê, em JavaScript, funções são um tipo de valor \(como números ou strings\), que pode ser atribuído para qualquer variável \(essa propriedade também é conhecida como _Functions as First Class Citizens_\).
+Note no bloco de código acima que, diferente da declaração usual de funções, a declaração dessa _arrow function_ começou com a declaração de uma variável, que então recebeu a função em si. Isso acontece porque as _Arrow Functions_ não tem um nome, e precisam, então, ser guardadas em variáveis. Esse comportamento só é possível porque, em JavaScript, funções são um tipo de valor \(como números ou strings\), que pode ser atribuído para qualquer variável \(essa propriedade também é conhecida como _Functions as First Class Citizens_\).
 
 Como _Arrow Functions_ são apenas um tipo de função, elas podem ser chamadas da exata mesma forma que funções normais. Usando o bloco acima de exemplo, as chamadas podem ser feitas assim:
 
@@ -37,9 +33,9 @@ funcaoNormal('valor1', 'valor2');
 arrowFunction('valor1', 'valor2');
 ```
 
-### Por que usar Arrow Functions?
+## Por que usar Arrow Functions?
 
-#### Não usa um nome
+### Não usa um nome
 
 Como _Arrow Functions_ não necessariamente precisam ser nomeadas, elas podem ser mais facilmente usadas como argumentos de outras funções. Um exemplo claro disso é com o `setTimeout`:
 
@@ -59,7 +55,7 @@ setTimeout(() => {
 
 Com uma _Arrow Function_, não precisamos nomear a função de callback do `setTimeout`. Assim, não "sujamos" o nosso escopo de variáveis com um nome que poderia ser evitado, e ainda conseguimos deixar o código relativo ao `setTimeout` dentro da chamada deste, potencialmente facilitando a legibilidade.
 
-#### A Arrow Function pode ser atribuída à uma variável constante
+### A Arrow Function pode ser atribuída à uma variável constante
 
 Na declaração usual de funções, é possível "redeclarar" funções, como no seguinte exemplo:
 
@@ -75,7 +71,7 @@ function fun (arg) {
 }
 ```
 
-No código acima, a função "fun" é declarada duas vezes. Quando isso acontece, o JavaScript ignora a primeira declaração, e todas as chamadas posterioes à função "fun" se referenciarão à segunda declaração. Isso se deve porquê a declaração de funções em JavaScript usa, internamente, o mesmo comportamento do `var`. O bloco acima é \(aproximadamente\) equivalente ao seguinte:
+No código acima, a função "fun" é declarada duas vezes. Quando isso acontece, o JavaScript ignora a primeira declaração, e todas as chamadas posterioes à função "fun" se referenciarão à segunda declaração. Isso se deve porque a declaração de funções em JavaScript usa, internamente, o mesmo comportamento do `var`. O bloco acima é \(aproximadamente\) equivalente ao seguinte:
 
 ```javascript
 var fun = function (arg) {
@@ -104,25 +100,25 @@ const fun = (arg) => {
 
 Assim, códigos que usam _Arrow Functions_ são ligeiramente mais seguros.
 
-### Atalhos de Arrow Functions
+## Atalhos de Arrow Functions
 
 Há algumas formas mais curtas de declarar algumas _Arrow Functions_ específicas.
 
-#### Apenas um argumento
+### Apenas um argumento
 
-Se a sua _Arrow Function_ só recebe um argumento, pode-se emitir os parêntesis da lista de argumentos, como por exemplo:
+Se a sua _Arrow Function_ só recebe um argumento, pode-se emitir os parênteses da lista de argumentos, como por exemplo:
 
 ```javascript
 // Arrow function usual
 const fun = (arg) => { /* code */ }
 
-// Com parêntesis omitidos
+// Com parênteses omitidos
 const fun = arg => { /* code */ }
 ```
 
-É sempre importante lembrar que isso só é possível se ela tiver **exatamente** um argumento. Para qualquer outro número de argumentos, são necessários parêntesis.
+É sempre importante lembrar que isso só é possível se ela tiver **exatamente** um argumento. Para qualquer outro número de argumentos, são necessários parênteses.
 
-#### Apenas uma expressão de retorno
+### Apenas uma expressão de retorno
 
 Se a sua _Arrow Function_ só precisa retornar uma única operação \(uma soma, subtração, ou chamada de função\), você pode emitir as chaves e o `return` do bloco, como por exemplo:
 
@@ -136,7 +132,7 @@ const fun = (a, b) => a + b
 
 As duas declarações acima são equivalentes. Sempre que as chaves de uma _Arrow Function_ são omitidas, a expressão que estiver logo em seguida da flecha será o retorno da _Arrow Function_.
 
-#### Um argumento e uma expressão
+### Um argumento e uma expressão
 
 É possível misturar os dois casos anteriores, caso a sua _Arrow Function_ tenha exatamente um argumento e uma expressão de retorno, como por exemplo:
 
@@ -144,17 +140,17 @@ As duas declarações acima são equivalentes. Sempre que as chaves de uma _Arro
 // Arrow Function usual
 const fun = (arg) => { return arg ** 2; }
 
-// Arrow Function com parêntesis e chaves omitidas
+// Arrow Function com parênteses e chaves omitidas
 const fun = arg => arg ** 2
 ```
 
-### Por quê não usar Arrow Functions?
+## Por que não usar Arrow Functions?
 
-#### A declaração das funções não é tão clara
+### A declaração das funções não é tão clara
 
 O maior argumento contra o uso de `Arrow Functions` se refere à legibilidade. Para muitos, a declaração de uma _Arrow Function_ não é tão evidente quanto a declaração de uma função usual. É argumentado que, como a declaração de uma _Arrow Function_ normalmente começa com a declaração de uma variável \(como "`const nomeDaFuncao =`"\), é mais difícil de separar a declaração de uma variável normal da de uma _Arrow Function_. Em contraste, quando uma linha começa com a palavra "`function`", já é evidente que estamos declarando uma função usual, o que ajuda a ler códigos muito grandes.
 
-#### Não usa um nome
+### Não usa um nome
 
 O fato de uma _Arrow Function_ não usar um nome é tanto uma vantagem quanto um perigo. Veja o seguinte exemplo:
 
@@ -192,7 +188,7 @@ setInterval(checkForNewAlarms, 1000);
 
 Aqui fica muito mais evidente que esse código está relacionado à alarmes, e que esses alarmes são buscados de um servidor. É claro que existem muitas maneiras de se aumentar a legibilidade de um código, mas a simples atribuição de nomes é, em geral, suficiente.
 
-### Resumo
+## Resumo
 
 Nesse capítulo vimos sobre _Arrow Functions_:
 

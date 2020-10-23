@@ -10,7 +10,7 @@ Para instalar o NPM, tudo o que precisa fazer \(em linha de comando\) é rodar o
 sudo apt-get install npm
 ```
 
-Com isso, a instalação irá acontecer devidamente.
+Com isso, a instalação irá acontecer devidamente. Caso o Node tenha sido instalado corretamente, o NPM pode ter sido instalado junto.
 
 ## Inicializando um projeto com NPM
 
@@ -50,6 +50,8 @@ Caso queira instalar algum pacote globalmente, então:
 npm install -g <nome_do_pacote>
 ```
 
+Isso faz com que o pacote possa ser acessível pelo sistema sem precisar instalá-lo em cada repositório/projeto que criar. Diferente de um pacote instalado localmente, em que é só acessível pelo repositório atual.
+
 Caso o pacote não siga esse padrão, é só procurar no site npm.org, onde existe uma gama de pacotes disponibilizados.
 
 Os pacotes instalados vão ser colocadas numa pasta chamada node\_modules:
@@ -70,5 +72,5 @@ Para desinstalar algum pacote do repositório npm:
 npm uninstall <nome_do_pacote>
 ```
 
-Com os comandos mostrados, deseja-se ter total controle dos repositórios em que se utiliza as libraries do ecossistema NPM.
+Com os comandos mostrados, deseja-se ter total controle dos repositórios em que se utilizam os pacotes do ecossistema NPM.
 
