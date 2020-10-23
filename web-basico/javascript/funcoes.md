@@ -6,7 +6,7 @@ description: Reutilizando código
 
 ## O que são
 
-A palavra função tem muitos significados na programação e ele varia um pouco dependendo do contexto ou linguagem. Para o JS consideramos como função uma serie de instruções \(linhas de código\) que podem ser executadas/invocadas uma ou mais vezes e que pode receber dados de entrada \(inputs ou argumentos\) e pode dar dados de saída \(outputs ou valor de retorno\).
+A palavra função tem muitos significados na programação e ela varia um pouco dependendo do contexto ou linguagem. Para o JavaScript consideramos como função uma serie de instruções \(linhas de código\) que podem ser executadas/invocadas uma ou mais vezes e que pode receber dados de entrada \(inputs ou argumentos\) e pode dar dados de saída \(outputs ou valor de retorno\).
 
 ## Sintaxe Padrão
 
@@ -17,7 +17,7 @@ function nomeDaSuaFuncao(parametro) {
 }
 ```
 
-O exemplo acima é uma `declaração` de função, ou seja somente com aquele trecho de código JS a função não é executada, apenas se torna disponível para ser executada. A associação do identificador `nomeDaSuaFuncao` e da função em si acontece antes da execução, quando declarada desta forma.
+O exemplo acima é uma **declaração** de função, ou seja somente com esse trecho de código a função não é executada, apenas se torna disponível para ser executada. A associação do identificador `nomeDaSuaFuncao` e da função em si acontece antes da execução, quando declarada desta forma.
 
 Outra forma possível de declarar uma função:
 
@@ -29,7 +29,7 @@ let nomeDaSuaFuncao = function(parametro) {
 };
 ```
 
-Dessa forma a função é atribuída a variável `nomaDaSuaFuncao` em tempo de execução. Note que as funções em JS são variáveis e isso traz muita flexibilidade.
+Dessa forma a função é atribuída a variável `nomaDaSuaFuncao` em tempo de execução. Note que as funções em JavaScript são variáveis e isso traz muita flexibilidade.
 
 ### Executando uma função
 
@@ -54,7 +54,7 @@ let numeroTeste = 42;
 numeroTeste(); // Uncaught TypeError: numeroTeste is not a function
 ```
 
-No exemplo acima tentamos rodar uma função usando uma variável que não é uma função, essa operação da erro, certifique de rodar apenas variáveis que funções no seu código.
+No exemplo acima tentamos rodar uma função usando uma variável que não é uma função, essa operação da erro. Certifique-se de rodar apenas variáveis que funções no seu código.
 
 ```javascript
 teste1() // tudo certo
@@ -71,7 +71,7 @@ let teste2 = function(parametro) {
 };
 ```
 
-No trecho acima a função `teste1` roda sem problemas, enquanto a `teste2` da erro. Essa diferença é devida a forma de declarar a função, para a `teste1` a associação da função e seu identificador é feita antes da execução do código, enquanto para a `teste2` é feito durante a execução do código, ou seja, na linha 2, a variável `teste2` ainda não foi definida e a `teste1` sim
+No trecho acima a função `teste1` roda sem problemas, enquanto a `teste2` da erro. Essa diferença é devida a forma de declarar a função. Para a `teste1` a associação da função e seu identificador é feita antes da execução do código, enquanto para a `teste2` é feito durante a execução do código, ou seja, na linha 2, a variável `teste2` ainda não foi definida e a `teste1` sim
 
 ## Parâmetros
 
@@ -111,7 +111,7 @@ console.log(msg);   // Ola, João!
 
 Você so pode retornar um único valor em uma função com o `return`, e todo código depois dele não é executado. Se quiser retornar mais de um valor você pode usar um _objeto_ ou _array_.
 
-Quando o `return` não é usado explicitamente ele é chamado quando a função termina e retorna o valor padrão, que é `undefined`:
+Quando o `return` não é chamado explicitamente até o fim da função, ela retorna o valor padrão, que é `undefined`:
 
 ```javascript
 // function ola(nome) {
