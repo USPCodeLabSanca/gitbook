@@ -1,5 +1,5 @@
 ---
-description: O que são objetos e pra que servem?
+description: 'O que são objetos, e pra que servem?'
 ---
 
 # Objetos
