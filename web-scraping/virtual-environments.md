@@ -1,17 +1,17 @@
 # Virtual Environments
 
-Uma **Virtual Enviroment** é um ambiente isolado que contém versão e pacotes instalados de um projeto em Python.
+Uma **virtual environment** \(traduzindo, ambiente virtual\) é um ambiente isolado que contém pacotes instalados de um projeto em Python \(bem como suas versões\).
 
-Seu objetivo é **evitar conflitos de dependencia** com a **versões e pacotes entre projetos**.
+Seu objetivo é **evitar conflitos de dependência** com **pacotes \(e suas versões\) entre projetos**.
 
 Usualmente, há uma virtual environment por projeto, que:
 
-* **É "externa" ao código**: Não se codifica dentro da virtualenv, que é uma pasta no mesmo nível do projeto. 
+* **É "externa" ao código**: as informações da virtualenv são guardadas em uma pasta com o seu nome. Portanto, não se codifica dentro desta pasta.
 * **Não deve ser incluída no fluxo de git**: Adiciona-se a pasta ao `.gitignore`.
 
 Os **nomes dos pacotes utilizados devem ser salvos em um `requirements.txt`**. Usualmente, é o único **arquivo** necessário para **criar um ambiente baseado em uma lista de dependências** pré-definidas.
 
-## Instalar Virtualenv
+## Instalar virtualenv
 
 ```bash
 pip install virtualenv
@@ -25,7 +25,7 @@ pip install virtualenv
 virtualenv --python='/usr/local/bin/python3' virtualenv_name
 ```
 
-### Alternativa 2: Shortcut
+### Alternativa 2: Shortcut \(Atalho\)
 
 ```bash
 virtualenv -p $(which python3) virtualenv_name
