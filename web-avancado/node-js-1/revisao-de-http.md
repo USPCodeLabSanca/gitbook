@@ -2,9 +2,7 @@
 
 O protocolo HTTP é um protocolo de comunicação da internet, sendo o HTTP uma das principais maneiras de se tratar trocas de informação quando se trata de desenvolvimento web
 
-A comunicação do HTTP é feita no modelo **cliente-servidor.** Este modelo é dividido em duas partes: o cliente, que pede que o servidor execute alguma função, isto é, faz uma requisição  ao servidor; e o servidor, que recebe essas re
-
-quisições, executa funções específicas e retorna ao cliente uma resposta de como procedeu a requisição.
+A comunicação do HTTP é feita no modelo **cliente-servidor.** Este modelo é dividido em duas partes: o cliente, que pede que o servidor execute alguma função, isto é, faz uma requisição  ao servidor; e o servidor, que recebe essas requisições, executa funções específicas e retorna ao cliente uma resposta de como procedeu a requisição.
 
 ### Formato da Requisição
 
@@ -39,7 +37,7 @@ O body é o corpo da requisição. Nele você envia qualquer tipo de informaçã
 
 ### Headers da Requisição
 
-Headers são inforrmações adicionais referentes a requisição. Mostra, por exemplo, que software foi utilizado pra realizar a requisição, qual é o tipo de conteúdo está sendo aceito na requisição, entre outros.
+Headers são informações adicionais referentes a requisição. Mostra, por exemplo, que software foi utilizado pra realizar a requisição, qual é o tipo de conteúdo está sendo aceito na requisição, entre outros.
 
 ### Resposta da Requisição
 
