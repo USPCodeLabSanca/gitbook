@@ -1,13 +1,9 @@
-# Principais TAG's
+# Principais tags
 
-Os próximos tópicos irão mostrar as princinpais TAG que são utilizadas. Você pode conferir a lista completa de TAG que existem em: [https://www.w3schools.com/tags/](https://www.w3schools.com/tags/)
+Os próximos tópicos irão mostrar as princinpais tags que são utilizadas. Você pode conferir a lista completa de tags que existem em: [https://www.w3schools.com/tags/](https://www.w3schools.com/tags/)
 
 ## Sumário
 
-* Formatação
-  * &lt;h1 até h6&gt;
-  * &lt;br&gt;
-  * &lt;p&gt;
 * Básicas
   * &lt;html&gt;
   * &lt;head&gt;
@@ -15,9 +11,14 @@ Os próximos tópicos irão mostrar as princinpais TAG que são utilizadas. Voc�
   * &lt;title&gt;
   * &lt;!-- --&gt;
   * &lt;!DOCTYPE html&gt; 
+* Formatação
+  * &lt;h1 até h6&gt;
+  * &lt;br&gt;
+  * &lt;p&gt;
 * Entrada de Dados
   * &lt;input&gt;
   * &lt;button&gt;
+  * &lt;form&gt;
 * Listas
   * &lt;ol&gt;
   * &lt;ul&gt;

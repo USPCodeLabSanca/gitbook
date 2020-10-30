@@ -1,10 +1,10 @@
 # Link
 
-**&lt;a&gt;&lt;/a&gt;** — Essa TAG define um hiperlink, ou seja, ela é usada para linkar uma página a outra. Para definir qual link que a TAG deve encaminhar, vamos usar o atributo "href".
+**&lt;a&gt;&lt;/a&gt;** — Essa tag define um hiperlink, ou seja, ela é usada para linkar uma página a outra. Para definir qual link que a tag deve encaminhar, vamos usar o atributo "href".
 
 ## Exemplo
 
-Abaixo mostramos um exemplo de como essas TAG devem ser escritas. Na aba "Código" está o código, e na aba "Resultado" está a página resultante.
+Abaixo mostramos um exemplo de como essas tags devem ser escritas. Na aba "Código" está o código, e na aba "Resultado" está a página resultante.
 
 {% tabs %}
 {% tab title="Código" %}

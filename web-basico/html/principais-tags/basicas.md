@@ -1,8 +1,8 @@
 # Básicas
 
-**&lt;html&gt;&lt;/html&gt;** — Esse elemento envolve todo o conteúdo da página e às vezes é conhecido como o elemento raiz.
+**&lt;html&gt;&lt;/html&gt;** — Esse elemento envolve todo o conteúdo da página e  é conhecido como o elemento raiz.
 
-**&lt;head&gt;&lt;/head&gt;** — Esse elemento age como um recipiente de tudo o que você deseja incluir em uma página HTML que não é o conteúdo que você quer mostrar para quem vê sua página. Isso inclui coisas como palavras-chave e uma descrição que você quer que apareça nos resultados de busca, CSS para dar estilo ao conteúdo, declarações de conjuntos de caracteres, e mais.
+**&lt;head&gt;&lt;/head&gt;** — Esse elemento age como um recipiente de tudo o que você deseja incluir em uma página HTML que não é o conteúdo que você quer mostrar para quem vê sua página. Por exemplo, palavras-chave, uma descrição que você quer que apareça nos resultados de busca, importação de arquivos externos, declarações de conjuntos de caracteres, e mais.
 
 **&lt;title&gt;&lt;/title&gt;** — Indica o título da sua página, que é o título que aparece no topo de browser quando sua página carrega, e é usado para descrever a página quando você a coloca nos favoritos.
 
@@ -10,11 +10,11 @@
 
 **&lt;!--** Isso é um comentário **--&gt;** — Faz um comentário no código. Não aparece na sua página.
 
-**&lt;!DOCTYPE html&gt;** — Apesar de não ser uma TAG, é necessário que você escreva no início do seu arquivo para indicar ao navegador que tipo de arquivo ele deve esperar.
+**&lt;!DOCTYPE html&gt;** — Apesar de não ser uma tag, é necessário que você escreva no início do seu arquivo para indicar ao navegador que tipo de arquivo ele deve esperar.
 
 ## Exemplo
 
-Abaixo mostramos um exemplo de como essas TAG devem ser escritas. Na aba "Código" está o código, e na aba "Resultado" está a página resultante.
+Abaixo mostramos um exemplo de como essas tags devem ser escritas. Na aba "Código" está o código, e na aba "Resultado" está a página resultante.
 
 {% tabs %}
 {% tab title="Código" %}
@@ -22,7 +22,7 @@ Abaixo mostramos um exemplo de como essas TAG devem ser escritas. Na aba "Códig
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Exemplo</html>
+    <title>Exemplo</title>
 </head>
 <body>
     <!-- Será que isso aparece? -->

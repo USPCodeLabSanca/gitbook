@@ -4,7 +4,7 @@ description: O que são e como usar eventos em JavaScript.
 
 # Eventos
 
-### O que são eventos?
+## O que são eventos?
 
 Eventos são, essencialmente, qualquer coisa que pode acontecer em um momento indeterminado \(ex: usuário clica num botão, uma tecla do teclado é pressionada, informações do servidor chegam, etc...\). Em JavaScript, podemos escrever código que é executando quando um evento acontece através de um _Event Listener_ \(ouvidor de eventos\). Um _Event Listener_ é uma função que é executada quando um evento específico ocorre. Veja esse exemplo:
 
@@ -26,7 +26,7 @@ Aqui, vemos a chamada de `button.addEventListener`. Todos os objetos do DOM impl
 
 Na esmagadora maioria das páginas web, queremos poder responder a ações do usuário. Por isso, eventos são uma parte vital da web moderna.
 
-### O objeto de eventos
+## O objeto de eventos
 
 A função que é chamada quando um evento é disparado recebe exatamente um argumento: um objeto de evento. Esse objeto contém informações relacionadas ao evento, e algumas funções que podem modificar o comportamento desse evento. Veja esse exemplo:
 
@@ -47,7 +47,7 @@ Veja que agora a função do evento recebe um argumento, que usamos para descobr
 
 O objeto de eventos também possui algumas funções que podem modificar o seu comportamento. Entre elas, a mais popular é, sem dúvida, a "`preventDefault`".
 
-#### `preventDefault()`
+### `preventDefault()`
 
 Essa é uma função disponível dentro de qualquer tipo de objeto de eventos. Quando chamada, a função impede o browser de realizar as ações "padrão" que ele realizaria com esse evento. Por exemplo, quando o usuário clica numa tag de âncora \("`<a>`"\), ele é redirecionado para o link que foi especificado na propriedade `href` dela, a não ser que algum _Event Listener_ chame a função `preventDefault` no objeto de eventos do click. Veja esse exemplo:
 
@@ -77,7 +77,7 @@ anchor.addEventListener('click', event => {
 
 Aqui, nós verificamos se o usuário tem permissão de acessar uma página antes de permitir ele de realizar esse acesso.
 
-### Uma peculiaridade dos eventos de teclado
+## Uma peculiaridade dos eventos de teclado
 
 Alguns eventos tem um disparo bastante óbvio. Por exemplo, ao clicar num botão, o evento "`click`" é disparado no botão. Entretanto, eventos de teclado dependem de um requisito mais sutil: foco.
 
@@ -95,7 +95,7 @@ const button = document.getElementById('button-id');
 button.focus();
 ```
 
-### Removendo _Event Listeners_
+## Removendo _Event Listeners_
 
 Já aprendemos a adicionar _Event Listeners_, mas as vezes precisamos poder remover eles. Para isso, usamos a função `removeEventListener`. Veja o exemplo:
 
@@ -113,11 +113,11 @@ button.removeEventListener('click', sayHi);
 
 Basta chamar a função `removeEventListener` no objeto, com o primeiro argumento sendo o tipo do evento que você quer remover \(no caso, um evento de 'click'\), e o segundo argumento a função que você usou para ser executada com esse evento \(no caso, a função "`sayHi`"\).
 
-### Duas outras formas de se ouvir por eventos
+## Duas outras formas de se ouvir por eventos
 
 Existem duas outras formas de se escutar por eventos no JavaScript, mas que são desencorajadas.
 
-#### Por atributos no HTML
+### Por atributos no HTML
 
 Todas as tags HTML podem receber um atributo para cada evento, com o nome da função em JavaScript para ser executada quando o evento acontece. Veja esse exemplo:
 
@@ -151,7 +151,7 @@ Essa forma de se ouvir por eventos não é muito recomendada por três principai
 2. **Dificulta remover o** _**Event Listener**_ **no futuro**: As vezes, queremos poder remover funções que estão ouvindo por eventos \(como mostrado acima\). Com essa forma de _Event Listeners_, bem mais difícil de remover.
 3. **Menos suporte de sua IDE**: A maioria das ferramentas modernas de desenvolvimento web tem funções que permitem verificar quando você está cometendo um claro erro \(ex: referenciando uma variável inexistente\). Essa verificação não é muito bem feita quando você usa eventos por atributos, porquê é muito difícil da sua IDE saber exatamente quais funções são visíveis para os eventos dos elementos HTML. Então, se você errar o nome da função, ou o nome do atributo do evento, a sua IDE não tem como te ajudar.
 
-#### pela propriedade `oneventname`
+### pela propriedade `oneventname`
 
 Os objetos DOM no JavaScript possuem uma propriedade para cada evento. Veja esse exemplo:
 
@@ -184,7 +184,7 @@ button.onclick = () => alert("Fui clickado de novo");
 
 No código acima, clickar no botão resulta em apenas a mensagem "Fui clickado de novo" aparecer num alert para o usuário. Em projetos maiores, com muitos eventos acontecendo, é bem comum sobrescrever, sem querer, alguns eventos usando esse método, e não há nenhuma forma de permitir dois eventos no mesmo tipo do objeto. Isso pode ser uma fonte de bugs bastante difícil de encontrar.
 
-### Alguns dos eventos mais conhecidos
+## Alguns dos eventos mais conhecidos
 
 Existem centenas de diferentes tipos de eventos \(você pode ver uma lista [aqui](https://developer.mozilla.org/en-US/docs/Web/Events)\), mas alguns são mais usados que outros. Aqui vai uma lista dos mais famosos, para que você tenha uma ideia do que pode ser feito com _Event Listeners_:
 
@@ -202,9 +202,9 @@ Existem centenas de diferentes tipos de eventos \(você pode ver uma lista [aqui
 
 Lembrando que eventos diferentes podem ter objetos de eventos diferentes, que contém informações diferentes. Os eventos relacionados ao mouse contém informações sobre a posição do mouse, e quais botões estão pressionados. Os eventos relacionados ao teclado contém informações sobre quais teclas estavam pressionadas. E cada um dos demais eventos tem as suas informações especificas.
 
-### _Event Bubbling_
+## _Event Bubbling_
 
-#### O que é _Event Bubbling_
+### O que é _Event Bubbling_
 
 Os eventos na web raramente são disparados em um só elemento. Em geral, um click do usuário dispara vários eventos de "`click`" em múltiplos elementos. Isso acontece por causa de um comportamento chamado _Event Bubbling_. Esse termo significa que quando um evento é disparado em um elemento, esse elemento primeiro processa o evento \(chama todos os _Event Listeners_ que foram criados com o "`addEventListener`"\), para depois disparar o mesmo evento para o elemento pai. Esse processo acontece recursivamente até atingir o elemento raiz do documento \(normalmente a tag "`<html>`"\). Veja esse exemplo:
 
@@ -250,7 +250,7 @@ Todo esse processo é chamado _Event Bubbling_, e ele acontece com a maioria dos
 
 Com esse conhecimento, se quisermos capturar qualquer tecla que o usuário pressionar, seria necessário apenas criar um _Event Listener_ de teclas na raiz do documento \(normalmente o elemento "`<html>`"\), ao invés de criar um _Event Listener_ pra cada elemento do documento.
 
-#### Como impedir um evento de sofrer _Bubbling_
+### Como impedir um evento de sofrer _Bubbling_
 
 É uma situação bem rara, mas é possível que seja desejável impedir um evento de sofrer _Bubbling_ \(impedir o evento se ser disparado no pai do elemento\). Para isso, o objeto de eventos possui uma função especial: `stopPropagation`. Veja esse exemplo:
 
@@ -289,7 +289,7 @@ Aqui, todos os elementos do documento recebem um _Event Listener_ que simplesmen
 > "click na div"
 ```
 
-### Resumo
+## Resumo
 
 Aqui, tivemos uma introdução extensa sobre eventos, que discutiu os seguintes tópicos:
 
