@@ -66,7 +66,7 @@ Abaixo mostramos um exemplo de como essas tags devem ser escritas. Na aba "Códi
 {% endtab %}
 
 {% tab title="Exemplo" %}
-![](../../../.gitbook/assets/image%20%281%29.png)
+![](../../../.gitbook/assets/image%20%283%29.png)
 {% endtab %}
 {% endtabs %}
 

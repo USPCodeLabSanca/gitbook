@@ -1,8 +1,10 @@
 # Atributos
 
-Atributos em HTML são utilizados para promover informações adicionais à tag. Eles sempre **\*\*são utilizados na** tag de início\*\*.
+Atributos em HTML são utilizados para promover informações adicionais à tag. Eles sempre são utilizados ****na tag de início, como mostra o exemplo abaixo.
 
-Atributos normalmente estão no seguinte formato: **nome="valor"**. Por exemplo,
+![](../../.gitbook/assets/image%20%282%29.png)
+
+Os atributos estão no seguinte formato: **nome="valor"**. O valor deve **sempre** estar entre aspas, mesmo que não seja uma string. Por exemplo,
 
 ```markup
 <img src="img_girl.jpg">

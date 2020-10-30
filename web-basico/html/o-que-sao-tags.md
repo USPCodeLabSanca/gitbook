@@ -15,6 +15,6 @@ Agora podemos observar a estrutura de uma tag.
 Portanto, nos utilizamos "&lt; &gt;" para defirmos qual tag vamos usar; utlizamos a "/" para declaramos que essa é a nossa tag de fechamento; entre as tag iremos colocar o contéudo que a tag pede.
 
 {% hint style="info" %}
-Algumas tag's não necessitam ser fechadas. Elas são chamadas de **tag vazia**.
+Algumas tags não necessitam ser fechadas. Elas são chamadas de **tag vazia**.
 {% endhint %}
 
