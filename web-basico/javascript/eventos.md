@@ -6,11 +6,11 @@ description: O que são e como usar eventos em JavaScript.
 
 ## O que são eventos?
 
-Eventos são, essencialmente, qualquer coisa que pode acontecer em um momento indeterminado \(ex: usuário clica num botão, uma tecla do teclado é pressionada, informações do servidor chegam, etc...\). Em JavaScript, podemos escrever código que é executando quando um evento acontece através de um _Event Listener_ \(ouvidor de eventos\). Um _Event Listener_ é uma função que é executada quando um evento específico ocorre. Veja esse exemplo:
+Eventos são, essencialmente, qualquer coisa que pode acontecer em um momento indeterminado \(ex: usuário clica num botão, uma tecla do teclado é pressionada, informações do servidor chegam, etc...\). Em JavaScript, podemos escrever código que é executado quando um evento acontece através de um _Event Listener_ \(ouvidor de eventos\). Um _Event Listener_ é uma função que é executada quando um evento específico ocorre. Veja esse exemplo:
 
 ```javascript
-// Seleciona um botão com ID 'button'.
-const button = document.getElementById('button');
+// Seleciona um botão com ID 'button-id'.
+const button = document.getElementById('button-id');
 
 // Adiciona um "Event Listener" ao botão, que "ouve" o evento de click do mouse.
 // Quando o usuário clickar nesse botão, a função sayHi será chamada, e aparecerá "hi" para o usuário.
@@ -31,7 +31,7 @@ Na esmagadora maioria das páginas web, queremos poder responder a ações do us
 A função que é chamada quando um evento é disparado recebe exatamente um argumento: um objeto de evento. Esse objeto contém informações relacionadas ao evento, e algumas funções que podem modificar o comportamento desse evento. Veja esse exemplo:
 
 ```javascript
-// Seleciona um botão com ID 'button'.
+// Seleciona um botão com ID 'button-id'.
 const button = document.getElementById('button-id');
 
 // Aqui, ao invés de declarar uma função separada do evento, e "linkar" os dois juntos depois,
@@ -43,7 +43,7 @@ button.addEventListener('keydown', event => {
 });
 ```
 
-Veja que agora a função do evento recebe um argumento, que usamos para descobrir qual tecla o usuário apertou. Cada tipo de evento \(_MouseEvent_, _KeyboardEvent_, _FocusEvent_, etc...\) gera um objeto de eventos com informações diferentes. Por exemplo, os eventos de mouse tem informações da posição do mouse na tela, os eventos de teclado tem informações sobre as teclas pressionadas, os eventos de foco tem informações de qual elemento recebeu foco, e qual perdeu o foco.
+Veja que agora a função do evento recebe um argumento, que usamos para descobrir qual tecla o usuário apertou. Cada tipo de evento \(_MouseEvent_, _KeyboardEvent_, _FocusEvent_, etc...\) gera um objeto de eventos com informações diferentes. Por exemplo, os eventos de mouse tem informações da posição do mouse na tela, os eventos de teclado tem informações sobre as teclas pressionadas, os eventos de foco tem informações de qual elemento recebeu foco e qual perdeu o foco.
 
 O objeto de eventos também possui algumas funções que podem modificar o seu comportamento. Entre elas, a mais popular é, sem dúvida, a "`preventDefault`".
 
@@ -60,7 +60,7 @@ anchor.addEventListener('click', event => {
 });
 ```
 
-O exemplo acima descreve exatamente a situação de um link que, quando clicado, não faz nada \(ao invés de redirecionar o usuário\). Isso é extremamente útil, porquê agora nós podemos fazer o que quisermos quando o usuário clicar nesse link. Veja agora um exemplo mais realista:
+O exemplo acima descreve exatamente a situação de um link que, quando clicado, não faz nada \(ao invés de redirecionar o usuário\). Isso é extremamente útil, porque agora nós podemos fazer o que quisermos quando o usuário clicar nesse link. Veja agora um exemplo mais realista:
 
 ```javascript
 const anchor = document.getElementById('anchor-link');
@@ -68,7 +68,7 @@ const anchor = document.getElementById('anchor-link');
 anchor.addEventListener('click', event => {
     // Não implementamos essas funções, mas fingimos que elas existem em outro lugar.
     if (!isUserLoggedIn() || !doesUserHaveAccesstToPage()) {
-        // Mostra uma mensagem para o usuário, e impede o redirecionamento do browser.
+        // Mostra uma mensagem para o usuário e impede o redirecionamento do browser.
         alert ('Você não tem acesso a essa página!');
         event.preventDefault();
     }
@@ -148,10 +148,10 @@ Veja que, no exemplo acima, o botão tem um atributo "`onclick`", que recebe uma
 Essa forma de se ouvir por eventos não é muito recomendada por três principais motivos:
 
 1. **Requer que a sua função de eventos esteja declarada no escopo global**: Com código modular o suficiente, é possível \(e até bastante provável\) que nós queiramos registrar funções não globais a nossos eventos. Além disso, se você começar a declarar todas as suas funções de eventos no escopo global, é bem possível que a você acabe dando o mesmo nome pra duas funções diferentes, causando bugs difíceis de encontrar.
-2. **Dificulta remover o** _**Event Listener**_ **no futuro**: As vezes, queremos poder remover funções que estão ouvindo por eventos \(como mostrado acima\). Com essa forma de _Event Listeners_, bem mais difícil de remover.
-3. **Menos suporte de sua IDE**: A maioria das ferramentas modernas de desenvolvimento web tem funções que permitem verificar quando você está cometendo um claro erro \(ex: referenciando uma variável inexistente\). Essa verificação não é muito bem feita quando você usa eventos por atributos, porquê é muito difícil da sua IDE saber exatamente quais funções são visíveis para os eventos dos elementos HTML. Então, se você errar o nome da função, ou o nome do atributo do evento, a sua IDE não tem como te ajudar.
+2. **Dificulta remover o** _**Event Listener**_ **no futuro**: As vezes, queremos poder remover funções que estão ouvindo por eventos \(como mostrado acima\). Com essa forma de _Event Listeners_ fica bem mais difícil de se remover.
+3. **Menos suporte de sua IDE**: A maioria das ferramentas modernas de desenvolvimento web tem funções que permitem verificar quando você está cometendo um claro erro \(ex: referenciando uma variável inexistente\). Essa verificação não é muito bem feita quando você usa eventos por atributos porque é muito difícil da sua IDE saber exatamente quais funções são visíveis para os eventos dos elementos HTML. Então, se você errar o nome da função, ou o nome do atributo do evento, a sua IDE não tem como te ajudar.
 
-### pela propriedade `oneventname`
+### Pela propriedade `oneventname`
 
 Os objetos DOM no JavaScript possuem uma propriedade para cada evento. Veja esse exemplo:
 
@@ -170,7 +170,7 @@ button.onclick = sayHi;
 
 Aqui, ao invés de adicionar o _Event Listener_ através da função `addEventListener`, nós simplesmente atribuímos a função para a propriedade `onclick` do botão. Quando o botão é clicado, ele verifica se há uma função em sua propriedade `onclick`, e se tiver, ele a executa. Isso também funciona com outras propriedades de outros eventos. Mais especificamente, qualquer propriedade que começa com "`on`" e termina com o nome de um evento \(ex: "`onmousedown`", "`oufocus`", "`oukeydown`", etc...\).
 
-Esse método pode parece mais simples, mas tem um problema fatal: **Permite apenas um** _**Event Listener**_ **por tipo de evento**. Com o `addEventListener`, nós podemos adicionar quantos eventos do mesmo tipo quisermos. Entretanto, com esse método só conseguimos adicionar um por vês, pois subsequentes tentativas sobrescrevem os eventos anteriores. Veja esse exemplo:
+Esse método pode parece mais simples, mas tem um problema fatal: **permite apenas um** _**Event Listener**_ **por tipo de evento**. Com o `addEventListener`, nós podemos adicionar quantos eventos do mesmo tipo quisermos. Entretanto, com esse método só conseguimos adicionar um por vez, pois subsequentes tentativas sobrescrevem os eventos anteriores. Veja esse exemplo:
 
 ```javascript
 const button = document.getElementById('button-id');
