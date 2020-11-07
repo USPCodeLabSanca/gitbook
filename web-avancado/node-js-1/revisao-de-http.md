@@ -63,7 +63,7 @@ O status code é um código que mostra o que aconteceu com a requisição após 
 
 Descreve informações adicionais referente a requisição, como o tamanho da resposta, qual é o tipo de conteúdo, quando foi aceita a requisição, entre outros.
 
-### Conteúdo da Requisição
+### Conteúdo da Resposta
 
 Descreve o que foi retornado pelo servidor após a requisição ser enviada pelo cliente. 
 
