@@ -15,6 +15,7 @@
       * [Organização](web-basico/html/principais-tags/organizacao.md)
       * [Multimídia](web-basico/html/principais-tags/multimidia.md)
     * [A estrutura básica](web-basico/html/a-estrutura-basica.md)
+    * [Exercícios](web-basico/html/exercicios.md)
   * [CSS](web-basico/css/README.md)
     * [Seletores](web-basico/css/seletores.md)
     * [Cores](web-basico/css/cores.md)
