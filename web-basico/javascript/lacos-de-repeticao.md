@@ -1,6 +1,6 @@
 # Laços de Repetição
 
-É recorrente a situação onde se deseja repetir o mesmo algoritmo diversas vezes, com condição determinada condição de parada e variações pré-definidas em algumas das variáveis (processo conhecido como **iteração**). Por exemplo, a impressão da tabuada do 7:
+É recorrente a situação onde se deseja **repetir o mesmo algoritmo** diversas vezes, com determinada **condição de parada** e variações pré-definidas em algumas das variáveis (processo conhecido como **iteração**). Por exemplo, a impressão da tabuada do 7:
 
 ```
 7x1 = 7
@@ -57,10 +57,11 @@ Para resolver o problema da tabuada, basta quebrá-lo em condição inicial, par
 - Atualização: multiplicando +=1
 
 ```js
-let n = Number(prompt())
-for(let i = 0; i < n; i++){
+let parada = Number(prompt())
+
+for(let multiplicando = 0; multiplicando < parada; multiplicando++){
     let resultado = 7 * i
-    console.log("7x" + i + " = " + resultado)
+    console.log("7x" + multiplicando + " = " + resultado)
 }
 ```
 
