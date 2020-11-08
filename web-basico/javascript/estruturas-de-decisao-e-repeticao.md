@@ -2,7 +2,7 @@
 description: 'If, else'
 ---
 
-# Estruturas de Decisão e Repetição
+# Estruturas de Decisão
 
 Permitem implementar uma **condição lógica** que define se um **bloco de código** será executado ou não.
 
