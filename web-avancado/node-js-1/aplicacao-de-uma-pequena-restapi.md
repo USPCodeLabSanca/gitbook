@@ -190,5 +190,37 @@ app.delete('/item', (req, res) => {
 })
 ```
 
-Com todas as funcionalidades feitas, você poderá acessar
+Com todas as funcionalidades feitas, a nossa aplicação simples está bem feita e pode ser utilizada.
+
+#### Testando a aplicação
+
+Iremos utilizar o postman para testar a aplicação e mostrar como que a api reage com as requisições feitas.
+
+Primeiro, iremos iniciar a aplicação:
+
+```bash
+npm start
+```
+
+E, com a aplicação inicializada, podemos começar a utilizar o postman:
+
+Primeiro, iremos usar o método post na URL [http://localhost:5000/item/](http://localhost:5000/item/), que requer um corpo para fazer a requisição como mostrado na imagem abaixo:
+
+![Postman p&#xF3;s requisi&#xE7;&#xE3;o POST](../../.gitbook/assets/post_items2.png)
+
+Acima, ns enviamos um corpo em JSON na URL mencionada usando o método POST. Então, como resposta, recebemos um objeto JSON, que mostra o que foi adicionado.
+
+Depois de adicionar mais alguns itens, podemos ver a lista inteira usando o método GET na URL [http://localhost:5000/item/all](http://localhost:5000/item/all), como visto abaixo: 
+
+![Requisi&#xE7;&#xE3;o GET feita para ver a lista](../../.gitbook/assets/get_all.png)
+
+Se quisermos remover um dos itens, precisamos fazer a requisição DELETE na URL [http://localhost:5000/item/](http://localhost:5000/item/), mas para reconhecer qual item deve ser retirado, precisamos colocar um query string \(reconhecido pelo ? após a URL\). Como nosso identificador dos itens é o parâmetro title, nós colocamos qual item com o title deve ser retirado. Abaixo, mostramos um exemplo:   
+
+![Postman ap&#xF3;s uma requisi&#xE7;&#xE3;o DELETE](../../.gitbook/assets/delete_item.png)
+
+E, se vermos, como está a lista atual, vemos que não tem mais o item03:
+
+![Como fica a lista ap&#xF3;s uma requisi&#xE7;&#xE3;o DELETE](../../.gitbook/assets/get_all2.png)
+
+Com isso, podemos ver todas as requisições, e como elas funcionam e mostrar como nossa API reage a elas.
 
