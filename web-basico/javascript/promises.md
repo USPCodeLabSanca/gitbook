@@ -4,7 +4,9 @@ Promises \(Promessas\) é um tópico muito importante e que causa muita confusã
 
 De forma bem simplificada, quando uma função demora um tempo indeterminado para ser concluída, invés dela parar a execução do seu código, ela retorna uma promessa de que ela vai acabar de executar e te retornar o valor que você quer usar.
 
-Uma função que retorna uma promessa invés de esperar até a função terminar é chamada de assíncrona, já que ela não trava a execução do código
+Uma função que retorna uma promessa invés de esperar até a função terminar é chamada de assíncrona, já que ela não trava a execução do código.
+
+São uma alternativa em relação aos \[callbacks\]\([https://uclsanca.gitbook.io/learn/web-basico/javascript/funcoes\#callbacks](https://uclsanca.gitbook.io/learn/web-basico/javascript/funcoes#callbacks)\) que vimos no capitulo de \[Funções\]\([https://uclsanca.gitbook.io/learn/web-basico/javascript/funcoes](https://uclsanca.gitbook.io/learn/web-basico/javascript/funcoes#callbacks)\)
 
 Vamos ver um trecho em pseudo código para tentar exemplificar a situação
 
