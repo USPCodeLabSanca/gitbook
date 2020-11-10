@@ -6,7 +6,7 @@ De forma bem simplificada, quando uma função demora um tempo indeterminado par
 
 Uma função que retorna uma promessa invés de esperar até a função terminar é chamada de assíncrona, já que ela não trava a execução do código.
 
-São uma alternativa em relação aos \[callbacks\]\([https://uclsanca.gitbook.io/learn/web-basico/javascript/funcoes\#callbacks](https://uclsanca.gitbook.io/learn/web-basico/javascript/funcoes#callbacks)\) que vimos no capitulo de \[Funções\]\([https://uclsanca.gitbook.io/learn/web-basico/javascript/funcoes](https://uclsanca.gitbook.io/learn/web-basico/javascript/funcoes#callbacks)\)
+São uma alternativa em relação aos \[callbacks\]\([../funcoes\#callbacks](https://uclsanca.gitbook.io/learn/web-basico/javascript/funcoes#callbacks)\) que vimos no capitulo de \[Funções\]\([../javascript/funcoes](https://uclsanca.gitbook.io/learn/web-basico/javascript/funcoes#callbacks)\)
 
 Vamos ver um trecho em pseudo código para tentar exemplificar a situação
 
