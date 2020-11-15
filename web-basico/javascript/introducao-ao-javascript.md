@@ -97,6 +97,8 @@ Javascript possui tipagem **Dinâmica**:
 * É possível modificar o tipo de uma variável.
 * O comando `typeof()` permite descobrir o tipo atual.
 
+Na prática, em javascript, **tipos são associados aos valores e não às variáveis**. 
+
 ### Number
 
 Armazena números, sejam eles inteiros ou floats.
