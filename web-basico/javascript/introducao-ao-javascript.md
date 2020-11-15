@@ -63,7 +63,7 @@ Uma ferramenta de desenvolvimento embutida no navegador. Permite ver a saída de
 
 ![Aba Console das ferramentes de desenvolvedor](../../.gitbook/assets/js_intro_img_5.png)
 
-É importante notar que a única maneira de **escrever código persistente** é utilizando arquivos `.js`. Códigos feitos a partir do console do navegador **não são salvos** em lugar algum, sendo portanto perdidos quando se encerra o browser.
+A vantagem do console é sua praticidade: É possível testar código ou mesmo performar sobre páginas e acessar suas variáveis sem lidar com arquivos. Entretanto, é importante notar que a única maneira de **escrever código persistente** (Acessível após execução) é utilizando arquivos `.js`. Códigos feitos a partir do console do navegador **não são salvos** em lugar algum, sendo portanto perdidos quando se encerra o browser.
 
 ### `console.log`
 
@@ -74,7 +74,7 @@ console.log(3+4)            // Imprime 7
 console.log("Hello World") //Imprime Hello World
 ```
 
-### Declaração de variáveis: var vs let vs const
+## Declaração de variáveis: var vs let vs const
 
 Os comandos `var`, `let` e `const` permitem declarar variáveis.
 
@@ -128,7 +128,7 @@ Os comandos `var`, `let` e `const` permitem declarar variáveis.
 
   ¹ \[Extra\]: const em objetos imutabiliza apenas sua referência e não conteúdo. `Object.freeze` imutabiliza um objeto, mas objetos podem tem outros objetos como atributos, o que só imutabiliza as referências dos objetos da "primeira camada". É necessário aplicar `Object.freeze`recursivamente para criar objetos verdadeiramente imutáveis. Verificar [Este artigo](https://stackoverflow.com/questions/34776846/how-to-freeze-nested-objects-in-javascript)
 
-### Tipagem
+## Tipagem
 
 Javascript possui tipagem **Dinâmica**:
 
@@ -136,7 +136,7 @@ Javascript possui tipagem **Dinâmica**:
 * É possível modificar o tipo de uma variável.
 * O comando `typeof()` permite descobrir o tipo atual.
 
-#### Number
+### Number
 
 Armazena números, sejam eles inteiros ou floats.
 
@@ -147,7 +147,7 @@ let float = 3.5
 console.log(typeof(inteiro), typeof(float)) //number number
 ```
 
-#### Strings
+### Strings
 
 Armazenam qualquer text entre parênteses simples ou duplos.
 
@@ -158,7 +158,7 @@ console.log(typeof(my_string)) //string
 
 Confira a aula 2 \(Strings\) para maiores informações sobre o tema.
 
-#### Boolean
+### Boolean
 
 Armazena veracidade de expressões, que pode ser:
 
@@ -224,7 +224,7 @@ console.log(true === 1)    //false
 console.log(true === true) //true
 ```
 
-#### undefined vs null
+### undefined vs null
 
 **undefined** Representa o acesso a uma variável existente mas não inicializada.
 
