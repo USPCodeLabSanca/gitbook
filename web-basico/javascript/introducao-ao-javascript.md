@@ -195,12 +195,12 @@ let nao_inicializada
 console.log(nao_inicializada, typeof(nao_inicializada)) // undefined undefined
 ```
 
-Já **null NÃO É TIPO!** é apenas o estado de um objeto que propositalmente não tem conteúdo.
+`null` é o estado de um objeto que propositalmente não tem conteúdo.
 
 ```javascript
 a = null
 console.log(a, typeof(a))//null object
 ```
-
+Para mais detalhes sobre `typeof(null)`, leia [artigo da Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 **Tudo em JS que não é um dos tipos primitivos acima listados é objeto. Isto será estudado mais a frente.**
 
