@@ -138,7 +138,7 @@ São normalmente utilizadas em conjunto a outros operadores lógicos:
 * `&&` representa AND
 * `||` representa OR
 
-![Tabela de opera&#xE7;&#xF5;es l&#xF3;gicas](../../.gitbook/assets/js_intro_img6.png)
+![Tabela de opera&#xE7;&#xF5;es l&#xF3;gicas. Fonte: NIOS](../../.gitbook/assets/js_intro_table.png)
 
 ```javascript
 let verdadeiro = true
