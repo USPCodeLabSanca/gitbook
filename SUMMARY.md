@@ -35,6 +35,7 @@
       * [Tratamento de erros com promises](web-basico/javascript/promises/promises-e-erros.md)
     * [Eventos](web-basico/javascript/eventos.md)
     * [Datas](web-basico/javascript/datas.md)
+    * [Armazenamento persistente](web-basico/javascript/armazenamento-persistente.md)
 * [Desenvolvimento Web Avançado](web-avancado/README.md)
   * [Node JS](web-avancado/node-js-1/README.md)
     * [Introdução ao Node](web-avancado/node-js-1/node-js.md)
