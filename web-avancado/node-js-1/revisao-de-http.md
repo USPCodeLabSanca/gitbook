@@ -27,9 +27,11 @@ Os métodos são ações que mostram o que deve acontecer pela requisição:
 A URL é geralmente descreve onde que vai ser feito a requisição, normalmente é composto por:
 
 * Host - Descreve o endereço do servidor a ser feito a requisição
-* Port \(ou porta\) - Descreve o ponto de entrada para acessar a aplicação no servidor
+* Port \(ou porta\) - Descreve o ponto de entrada para acessar a aplicação no servidor. Essa parte é opcional, normalmente, a porta padrão é 80.
 * Path \(ou caminho\) - Descreve onde vai ser solicitado algum recurso da aplicação
-* Query - Dados que são enviados junto a, normalmente, uma requisição GET
+* Query - Dados que são enviados junto a, normalmente, uma requisição GET.
+
+Em seguida, irei mostrar a imagem
 
 ### Body da Requisição
 
@@ -56,7 +58,7 @@ O status code é um código que mostra o que aconteceu com a requisição após 
 * 1XX - Mostra que a requisição foi recebida, mas nada foi feito ainda.
 * 2XX - A requisição foi aceita e teve sucesso.
 * 3XX - A requisição precisa ser redirecionada para que a requisição tenha sucesso.
-* 4XX - O formato da requisição enviada pelo cliente está errada.
+* 4XX - Aconteceu algum erro por parte da requisição feita pelo cliente.
 * 5XX - O servidor teve problemas ao realizar a requisição e não pode proceder.
 
 ### Headers de Resposta
