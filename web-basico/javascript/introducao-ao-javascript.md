@@ -1,4 +1,4 @@
-# Introdução ao Javascript
+# Introdução ao Javascript - Básico
 
 ## O que é Javascript?
 
