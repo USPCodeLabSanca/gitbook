@@ -29,7 +29,7 @@ let nomeDaSuaFuncao = function(parametro) {
 };
 ```
 
-Dessa forma a função é atribuída a variável `nomaDaSuaFuncao` em tempo de execução. 
+Dessa forma a função é atribuída a variável `nomaDaSuaFuncao` em tempo de execução.
 
 Note que as funções em JavaScript são variáveis normais e isso traz muita flexibilidade. Em muitas outras linguagens de programação, as funções são um tipo a parte, já no Javascript elas são valores como qualquer outro, ou seja, podemos reatribuir uma variável que era uma função com qualquer outro valor valido.
 
@@ -88,7 +88,7 @@ let teste2 = function(parametro) {
 
 No trecho acima a função `teste1` roda sem problemas, enquanto a `teste2` da erro. Essa diferença é devida a forma de declarar a função. Para a `teste1` a associação da função e seu identificador é feita antes da execução do código, enquanto para a `teste2` é feito durante a execução do código, ou seja, na linha 2, a variável `teste2` ainda não foi definida e a `teste1` sim
 
-Esse processo é chamado de **hoisting** \(caso tenha curiosidade veja mais sobre ele [aqui](https://developer.mozilla.org/pt-BR/docs/Glossario/Hoisting)\), ****de maneira simplificada, é quando o Javascript leva algumas de suas variáveis para o topo do código para que você consiga ter acesso a elas mesmo antes da sua declaração
+Esse processo é chamado de **hoisting** \(caso tenha curiosidade veja mais sobre ele [aqui](https://developer.mozilla.org/pt-BR/docs/Glossario/Hoisting)\), _\*\*_de maneira simplificada, é quando o Javascript leva algumas de suas variáveis para o topo do código para que você consiga ter acesso a elas mesmo antes da sua declaração
 
 ## Parâmetros
 
@@ -157,7 +157,7 @@ As referencias de funções, independente de como foram declaradas, são variáv
 
 No trecho abaixo a função `rodarFuncao` recebe 3 argumentos.
 
-Ela tenta executar o primeiro argumento como uma função, já que uma função é uma variável como qualquer outra e se ele não for uma função vai dar erro. 
+Ela tenta executar o primeiro argumento como uma função, já que uma função é uma variável como qualquer outra e se ele não for uma função vai dar erro.
 
 O segundo e terceiro argumento da função `rodarFuncao` vão ser passados como parâmetros para a função que ela executa \(o primeiro parâmetro\)
 

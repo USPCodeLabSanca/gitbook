@@ -2,21 +2,21 @@
 
 Neste módulo o foco será em mostrar uma API simples que mostra o básico do que se pode fazer com o node.
 
-### O que é restAPI?
+## O que é restAPI?
 
 Uma restAPI é uma arquitetura que acessa vários endpoints \(caminhos de uma URL\) diferentes com vários métodos HTTPs para criar uma aplicação.
 
-### Gerenciadores de requisições
+## Gerenciadores de requisições
 
-Gerenciadores de requisições são plataformas que  fazem requisições, eles servem para entender como sua aplicação se comporta quando se faz algumas requisições para as funcionalidades da API. 
+Gerenciadores de requisições são plataformas que fazem requisições, eles servem para entender como sua aplicação se comporta quando se faz algumas requisições para as funcionalidades da API.
 
-### Exemplo
+## Exemplo
 
 A fim deste exemplo, a aplicação que será feita é uma lista encadeada que permite a inserção de novos itens\(ou nós\), e permite também que sejam visualizados ou deletados da lista.
 
-#### Configuração do repositório
+### Configuração do repositório
 
-Para  começar, iremos criar um repositório e navegar para ele:
+Para começar, iremos criar um repositório e navegar para ele:
 
 ```bash
 mkdir app
@@ -29,7 +29,7 @@ Então preparar o repositório como um repositório node/npm:
 npm init -y
 ```
 
- Após isso, iremos instalar o express, que é uma biblioteca que facilita a disponibilização das URLs \(endpoints\) para que o cliente possa usar:
+Após isso, iremos instalar o express, que é uma biblioteca que facilita a disponibilização das URLs \(endpoints\) para que o cliente possa usar:
 
 ```bash
 npm i express
@@ -95,11 +95,11 @@ Então, no final, o package.json ficará:
 }
 ```
 
-#### Codificando a API
+### Codificando a API
 
 Agora, iremos realmente fazer as funcionalidades da api, todas elas irão estar colocadas no arquivo index.js do nosso repositório.
 
-Primeiro, iremos importar todas as dependências que necessitamos para fazer a aplicação e colocar a porta de entrada de nossa aplicação em uma variável:  
+Primeiro, iremos importar todas as dependências que necessitamos para fazer a aplicação e colocar a porta de entrada de nossa aplicação em uma variável:
 
 ```javascript
 const express = require('express')
@@ -192,7 +192,7 @@ app.delete('/item', (req, res) => {
 
 Com todas as funcionalidades feitas, a nossa aplicação simples está bem feita e pode ser utilizada.
 
-#### Testando a aplicação
+### Testando a aplicação
 
 Iremos utilizar o postman para testar a aplicação e mostrar como que a api reage com as requisições feitas.
 
@@ -210,11 +210,11 @@ Primeiro, iremos usar o método post na URL [http://localhost:5000/item/](http:/
 
 Acima, ns enviamos um corpo em JSON na URL mencionada usando o método POST. Então, como resposta, recebemos um objeto JSON, que mostra o que foi adicionado.
 
-Depois de adicionar mais alguns itens, podemos ver a lista inteira usando o método GET na URL [http://localhost:5000/item/all](http://localhost:5000/item/all), como visto abaixo: 
+Depois de adicionar mais alguns itens, podemos ver a lista inteira usando o método GET na URL [http://localhost:5000/item/all](http://localhost:5000/item/all), como visto abaixo:
 
 ![Requisi&#xE7;&#xE3;o GET feita para ver a lista](../../.gitbook/assets/get_all.png)
 
-Se quisermos remover um dos itens, precisamos fazer a requisição DELETE na URL [http://localhost:5000/item/](http://localhost:5000/item/), mas para reconhecer qual item deve ser retirado, precisamos colocar um query string \(reconhecido pelo ? após a URL\). Como nosso identificador dos itens é o parâmetro title, nós colocamos qual item com o title deve ser retirado. Abaixo, mostramos um exemplo:   
+Se quisermos remover um dos itens, precisamos fazer a requisição DELETE na URL [http://localhost:5000/item/](http://localhost:5000/item/), mas para reconhecer qual item deve ser retirado, precisamos colocar um query string \(reconhecido pelo ? após a URL\). Como nosso identificador dos itens é o parâmetro title, nós colocamos qual item com o title deve ser retirado. Abaixo, mostramos um exemplo:
 
 ![Postman ap&#xF3;s uma requisi&#xE7;&#xE3;o DELETE](../../.gitbook/assets/delete_item.png)
 

@@ -1,14 +1,12 @@
 # Exercícios
 
-Abaixo vamos apresentar alguns exercícios para você treinar HTML. Na aba "Exercício X" \(sendo X o número do exercício\) tem o que você deve executar. E na aba "Resposta" o código completo para você conferir. 
+Abaixo vamos apresentar alguns exercícios para você treinar HTML. Na aba "Exercício X" \(sendo X o número do exercício\) tem o que você deve executar. E na aba "Resposta" o código completo para você conferir.
 
 {% tabs %}
 {% tab title="Exercício 1" %}
 Faça uma página HTML que exiba o seguinte resultado:
 
 ![](https://lh4.googleusercontent.com/8sPOsprum_9YzTxdtE8jG3Ivebvmqe-uFq7fdZwq0per9decwRCngVE-nTg-EqJJldeHuLdms1zP832edY8l_5u_mA3X4XHXfhGTsERW7rqQESUTUOeMdfezob5z25fGcO1dtqsNN9s)
-
-  
 {% endtab %}
 
 {% tab title="Resposta" %}
@@ -21,18 +19,18 @@ Faça uma página HTML que exiba o seguinte resultado:
 <body>
   <h1>No Meio do Caminho</h1>
   <p>
-    	No meio do caminho tinha uma pedra<br>
-		tinha uma pedra no meio do caminho<br>
-		tinha uma pedra<br>
-		no meio do caminho tinha uma pedra<br>
+        No meio do caminho tinha uma pedra<br>
+        tinha uma pedra no meio do caminho<br>
+        tinha uma pedra<br>
+        no meio do caminho tinha uma pedra<br>
     </p>
-	<p>
-		Nunca me esquecerei desse acontecimento<br>
-		na vida de minhas retinas tão fatigadas<br>
-		Nunca me esquecerei que no meio do caminho<br>
-		tinha uma pedra<br>
-		tinha uma pedra no meio do caminho<br>
-		no meio do caminho tinha uma pedra
+    <p>
+        Nunca me esquecerei desse acontecimento<br>
+        na vida de minhas retinas tão fatigadas<br>
+        Nunca me esquecerei que no meio do caminho<br>
+        tinha uma pedra<br>
+        tinha uma pedra no meio do caminho<br>
+        no meio do caminho tinha uma pedra
   </p>
   <p>Carlos Drummond de Andrade</p>
 </body>
@@ -46,8 +44,6 @@ Faça uma página HTML que exiba o seguinte resultado:
 Faça uma página HTML que exiba o seguinte resultado:
 
 ![](https://lh4.googleusercontent.com/9BdWfPgLIA2i3G9K0V3RCpCCJ2gaFNRJI35aL0Qw06IvTg0aWu4gJ1LTQ7P8WvEuRHCKVcmuvdJcQmLJ3cIBVZqH_lECWeNPODO8h8vW5kGXJnfUHytbenux3aUfhPLXB-Pk84Gp5L0)
-
-  
 {% endtab %}
 
 {% tab title="Resposta" %}
@@ -61,7 +57,7 @@ Faça uma página HTML que exiba o seguinte resultado:
     <h1>Lista de Afazeres</h1>
     <ol>
         <li>Segunda-Feira
-         	<ul>
+             <ul>
               <li>Terminar o projeto</li>
               <li>Pular corda</li>
             </ul>
@@ -91,7 +87,7 @@ Faça uma página HTML que exiba o seguinte resultado:
 
 ![](https://lh5.googleusercontent.com/eXT8vSGYp3171vJIcgWZRQ2n5gyapLpxfk76PoWsZRPZHCoBLFuJpD2KaqLJRZBpDrqbz0dy_0CXgdU422ww3-8NsYTGOUe5yzj7LilKS2Sdfm4dXegQ9FjPWHs_gz6iHxP4W5VVIuw)
 
-Obs: pode ser a foto de qualque cachorro.  
+Obs: pode ser a foto de qualque cachorro.
 {% endtab %}
 
 {% tab title="Resposta" %}
@@ -106,10 +102,10 @@ Obs: pode ser a foto de qualque cachorro.
   <img src=".assets/cachorro" alt="um cachorro preto e branco utilizando um laço na cabeça">
   <p>
     Lições do melhor amigo.<br>
-		Se um cachorro fosse seu professor você aprenderia habilidades assim:<br>
-		- Quando alguém que você ama chegar em casa, corra ao seu encontro;<br>
-		- Não morda se um rosnado resolver a situação;<br>
-		- Não importa quantas vezes o outro magoar você, volte e faça as pazes.<br>
+        Se um cachorro fosse seu professor você aprenderia habilidades assim:<br>
+        - Quando alguém que você ama chegar em casa, corra ao seu encontro;<br>
+        - Não morda se um rosnado resolver a situação;<br>
+        - Não importa quantas vezes o outro magoar você, volte e faça as pazes.<br>
   </p>
 </body>
 </html>
