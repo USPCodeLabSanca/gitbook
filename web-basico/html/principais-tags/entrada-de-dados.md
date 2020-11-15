@@ -18,7 +18,6 @@
     </form>
 </body>
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -32,7 +31,7 @@
 **&lt;button&gt;** — Essa tag é utilizada para criar um elemento clicável, ou seja, um botão!
 
 {% hint style="info" %}
-Porque existe uma tag de botão se é possível criar o mesmo efeito com a tag &lt;input&gt;? 
+Porque existe uma tag de botão se é possível criar o mesmo efeito com a tag &lt;input&gt;?
 
 Dentro da tag &lt;button&gt; é possível colocar texto e outras tag \(como &lt;img&gt;\).
 {% endhint %}
@@ -61,7 +60,6 @@ Abaixo mostramos um exemplo de como essas tags devem ser escritas. Na aba "Códi
     </form>
 </body>
 </html>
-
 ```
 {% endtab %}
 

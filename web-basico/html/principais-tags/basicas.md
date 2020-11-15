@@ -1,6 +1,6 @@
 # Básicas
 
-**&lt;html&gt;&lt;/html&gt;** — Esse elemento envolve todo o conteúdo da página e  é conhecido como o elemento raiz.
+**&lt;html&gt;&lt;/html&gt;** — Esse elemento envolve todo o conteúdo da página e é conhecido como o elemento raiz.
 
 **&lt;head&gt;&lt;/head&gt;** — Esse elemento age como um recipiente de tudo o que você deseja incluir em uma página HTML que não é o conteúdo que você quer mostrar para quem vê sua página. Por exemplo, palavras-chave, uma descrição que você quer que apareça nos resultados de busca, importação de arquivos externos, declarações de conjuntos de caracteres, e mais.
 
