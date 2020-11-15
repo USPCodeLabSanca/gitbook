@@ -1,11 +1,14 @@
 ---
 description: >-
-  var vs let vs const, Runtime Environment, JS Engine, ECMAScript-ES6. Capítulo destinado a uma explicação mais minuciosa sobre o Javascript. Recomendado para leitores intermediários ou que já programam em outras linguagens.
+  var vs let vs const, Runtime Environment, JS Engine, ECMAScript-ES6. Capítulo
+  destinado a uma explicação mais minuciosa sobre o Javascript. Recomendado para
+  leitores que já programam
 ---
 
 # Introdução ao Javascript - Aprofundado
 
 ## O que é Javascript
+
 Uma Linguagem feita originalmente para os browsers, que são **Runtine Environments \(Ambiente de execução\)**. Cada browser possui sua própria **JS Engine \(Ou interpretador javascript\)**. Não pode ter sua estrutura original modificada pois isso quebraria sites legados, mas recebe constantemente atualizações **\(ES6/ECMAscript2015\)** por instituições de padronização **\(ECMA\)**.
 
 ## Javascript Engine ou Motor Javascript
@@ -38,6 +41,7 @@ Versões demoram para serem implementadas nos browsers. Ferramentas como o **Bab
 ![Funcionalidades mais &#xFA;teis do ES6 de acordo com 5000 programadores. Pesquisa de Nicol&#xE1;s Bevacqua](../../.gitbook/assets/js_intro_img3.png)
 
 ## var vs let vs const
+
 * `var`: **Legado**. Possui escopo da **função na qual foi declarada**, o que pode gerar efeitos colaterais indesejados.
 
   ```javascript
@@ -87,3 +91,4 @@ Versões demoram para serem implementadas nos browsers. Ferramentas como o **Bab
   ```
 
   ¹ \[Extra\]: const em objetos imutabiliza apenas sua referência e não conteúdo. `Object.freeze` imutabiliza um objeto, mas objetos podem tem outros objetos como atributos, o que só imutabiliza as referências dos objetos da "primeira camada". É necessário aplicar `Object.freeze`recursivamente para criar objetos verdadeiramente imutáveis. Verificar [Este artigo](https://stackoverflow.com/questions/34776846/how-to-freeze-nested-objects-in-javascript)
+
