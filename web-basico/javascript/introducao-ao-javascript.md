@@ -1,37 +1,24 @@
 # Introdução ao Javascript - Básico
 
 ## O que é Javascript?
+JavaScript é uma linguagem de programação criada para os **navegadores**. Ela é responsável por permitir a interação entre os usuários e a uma página web. O **HTML** define a **estrutura** da página, o **CSS** a **estilização** e o **Javascript** é quem permite desenvolver **funcionalidades** na página, tornando-a **dinâmica**. 
 
-Uma Linguagem feita originalmente para os browsers, que são **Runtine Environments \(Ambiente de execução\)**. Cada browser possui sua própria **JS Engine \(Ou interpretador javascript\)**. Não pode ter sua estrutura original modificada pois isso quebraria sites legados, mas recebe constantemente atualizações **\(ES6/ECMAscript2015\)** por instituições de padronização **\(ECMA\)**.
+Hoje, é uma das linguagens mais utilizadas do mundo e é a mais importante para o desenvolvimento web. 
 
-## Javascript Engine ou Motor Javascript
+## Por que Javascript e não C, Java ou Python?
+Porque não é possível criar um script em C, Java ou Python diretamente executável pelo browser. Javascript é a **linguagem nativa dos navegadores**. A prática não é incomum na computação: Java/Kotlin são as linguagens nativas do Android e Swift/Objective-C do IOS.
 
-A JS engine **transforma o código .js em código de máquina e o executa**.A própria engine é quem **se comunica com a CPU** e executa o código de máquina. O processo é chamado de interpretação, logo **JS é interpretado**, o que é **diferente da compilação**, onde o compilador \(ex: GCC\) apenas compila o código para código de máquina, que deve ser executado posteriormente pelo próprio usuário.
 
-* Exemplos de JS engines: Chackra\(Edge\) SpiderMonkey\(Firefox\) e **V8\(Google Chrome\)**
+É possível **transpilar** (Transformar um código de uma linguagem para outra) C, Java ou python em Javascript. Mas, no fim das contas, o script final é em javascript e as funcionalidades da linguagem original serão limitadas pelo que Javascript é capaz de executar. O que define se uma linguagem pode ou não ser executada diretamente no navegador é o desejo e esforço dos próprios navegadores em torná-la compatível com o produto. Cada navegador é diferente e, em teoria, seria possível construir um que implemente outra linguagem. Mas, na prática, Javascript se tornou a principal, e, até recentemente, a única.
 
-## Runtime Environment ou Ambiente de Execução
 
-Acrescentam às engines um **ambiente com scripts, bibliotecas e APIS** úteis ao seu contexto.
+Há iniciativas que buscam implementar outras linguagens no Browser. A principal delas é o **Web-Assembly**, criado em **2017**. O projeto é desenvolvido pela W3C (Principal organização de padronização da Web), Mozilla, Microsoft, Google e Apple. Seu objetivo é definir um padrão de formato binário executável pelo navegador, o **wasm**. Seria possível por exemplo compilar C++ em wasm e executá-lo da mesma maneira que se executa Javascript. Além do Javascript, **Web-assembly é a única outra maneira nativa certificada pela W3C para rodar código em navegadores**. O projeto está em fase inicial, mas é extremamente promissor. Já é possivel executar wasm no Mozilla e Chrome, por exemplo.
 
-* O **browser** implementa um runtime environment para **clientes**, e acrescenta por exemplo funções de **manipulação do DOM/HTML** \(`document.getElementById()`\)
-* **Node** é um runtime environment para **servidores**, e acrescenta por exemplo funções de acesso aos **arquivos do sistema** \(`fs.readfile()`\)
 
-![Runtime Environment](../../.gitbook/assets/js_intro_img1.png)
+É importante salientar que o Web-Assembly não tem por objetivo substituir o Javascript, e sim complementá-lo para casos de uso específicos que requerem **operações computacionalmente custosas**. Por exemplo, um editor de imagens online. A imensa maioria das páginas pode ser implementada apenas com Javascript, e não faz sentido aprender wasm antes de se dominar o js. 
 
-Tanto o Google Chrome quanto Node utilizam a mesma JS Engine, o V8.
 
-## ECMA, ES6, ECMAScript2015
-
-Sigla para European Computer Manufacturers Association. **ECMA é uma Instituição de padronização** altamente respeitada que já padronizou outras linguagens como o C\#. Lançam periodicamente novas versões do ECMAScript com **novas funcionalidades** do JS.
-
-Versões demoram para serem implementadas nos browsers. Ferramentas como o **Babel.js transpilam código** de especificação nova para o dito **Vanila.js \(Javascript "Puro"**\).
-
-* A **ECMAScript2015 ou ES6** é a versão que utilizaremos, por ter sido implementada na grande maioria dos browsers sem necessidade de transpilação.
-
-![Imagem de Kostas Diakogiannis](../../.gitbook/assets/js_intro_img2.png)
-
-![Funcionalidades mais &#xFA;teis do ES6 de acordo com 5000 programadores. Pesquisa de Nicol&#xE1;s Bevacqua](../../.gitbook/assets/js_intro_img3.png)
+Por fim, outra grande vantagem do Javascript é sua recente ascenção como linguagem para servidores por meio do **Node**. Ao se aprender uma única linguagem, já é possível criar uma base sólida para desenvolvimento front-end (cliente) e back-end (servidor). 
 
 ## Criando Código em JS
 
