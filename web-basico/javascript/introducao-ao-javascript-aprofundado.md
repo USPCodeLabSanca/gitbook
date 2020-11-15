@@ -1,8 +1,6 @@
 ---
 description: >-
-  Runtime Environment, JS Engine, ECMAScript-ES6. Capítulo destinado a uma explicação mais minuciosa sobre o Javascript. Caso
-  esteja iniciando, não é necessário estudá-lo por enquanto. Recomendado para
-  leitores que já programam em outras linguagens.
+  var vs let vs const, Runtime Environment, JS Engine, ECMAScript-ES6. Capítulo destinado a uma explicação mais minuciosa sobre o Javascript. Recomendado para leitores intermediários ou que já programam em outras linguagens.
 ---
 
 # Introdução ao Javascript - Aprofundado
@@ -38,3 +36,54 @@ Versões demoram para serem implementadas nos browsers. Ferramentas como o **Bab
 ![Imagem de Kostas Diakogiannis](../../.gitbook/assets/js_intro_img2.png)
 
 ![Funcionalidades mais &#xFA;teis do ES6 de acordo com 5000 programadores. Pesquisa de Nicol&#xE1;s Bevacqua](../../.gitbook/assets/js_intro_img3.png)
+
+## var vs let vs const
+* `var`: **Legado**. Possui escopo da **função na qual foi declarada**, o que pode gerar efeitos colaterais indesejados.
+
+  ```javascript
+  function usesVar(){
+    var outside_block = 1
+
+    if (outside_block == 1){
+        var inside_block = 2
+    }
+
+    console.log(inside_block)
+  }
+  usesVar()
+  ```
+
+  A função **funciona e imprime 2**. Na prática, o comportamento é indesejado, pois seria mais **seguro** que unidades declaradas dentro de blocos \(no caso, o **condicional if**\) existissem apenas dentro deles.
+
+* `let`: **ES6: Melhor prática!**. Possui escopo do **bloco, instrução ou expressão** no qual foi declarada.
+
+  ```javascript
+  function usesLet(){
+      let outside_block = 1
+
+      if (outside_block == 1){
+          let inside_block = 2
+      }
+
+      console.log(inside_block)
+  }
+
+  usesLet()
+  ```
+
+  lança o seguinte erro:
+
+  ![](../../.gitbook/assets/js_intro_img6%20%281%29.png)
+
+  Variáveis declaradas com let geram menos efeitos colaterais no código, sendo portanto recomendadas.
+
+* `const`: **ES6: Melhor prática para valores constantes**, pois é imutável¹. Seu escopo é o mesmo de `let`.
+
+  ```text
+  let a = 'a'
+  const b = 'b'
+  a = 'c' // Permite mudança
+  b = 'c' // TypeError: Assignment to constant variable
+  ```
+
+  ¹ \[Extra\]: const em objetos imutabiliza apenas sua referência e não conteúdo. `Object.freeze` imutabiliza um objeto, mas objetos podem tem outros objetos como atributos, o que só imutabiliza as referências dos objetos da "primeira camada". É necessário aplicar `Object.freeze`recursivamente para criar objetos verdadeiramente imutáveis. Verificar [Este artigo](https://stackoverflow.com/questions/34776846/how-to-freeze-nested-objects-in-javascript)

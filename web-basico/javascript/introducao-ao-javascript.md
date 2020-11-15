@@ -76,57 +76,7 @@ console.log("Hello World") //Imprime Hello World
 
 ## Declaração de variáveis: var vs let vs const
 
-Os comandos `var`, `let` e `const` permitem declarar variáveis.
-
-* `var`: **Legado**. Possui escopo da **função na qual foi declarada**, o que pode gerar efeitos colaterais indesejados.
-
-  ```javascript
-  function usesVar(){
-    var outside_block = 1
-
-    if (outside_block == 1){
-        var inside_block = 2
-    }
-
-    console.log(inside_block)
-  }
-  usesVar()
-  ```
-
-  A função **funciona e imprime 2**. Na prática, o comportamento é indesejado, pois seria mais **seguro** que unidades declaradas dentro de blocos \(no caso, o **condicional if**\) existissem apenas dentro deles.
-
-* `let`: **ES6: Melhor prática!**. Possui escopo do **bloco, instrução ou expressão** no qual foi declarada.
-
-  ```javascript
-  function usesLet(){
-      let outside_block = 1
-
-      if (outside_block == 1){
-          let inside_block = 2
-      }
-
-      console.log(inside_block)
-  }
-
-  usesLet()
-  ```
-
-  lança o seguinte erro:
-
-  ![](../../.gitbook/assets/js_intro_img6%20%281%29.png)
-
-  Variáveis declaradas com let geram menos efeitos colaterais no código, sendo portanto recomendadas.
-
-* `const`: **ES6: Melhor prática para valores constantes**, pois é imutável¹. Seu escopo é o mesmo de `let`.
-
-  ```text
-  let a = 'a'
-  const b = 'b'
-  a = 'c' // Permite mudança
-  b = 'c' // TypeError: Assignment to constant variable
-  ```
-
-  ¹ \[Extra\]: const em objetos imutabiliza apenas sua referência e não conteúdo. `Object.freeze` imutabiliza um objeto, mas objetos podem tem outros objetos como atributos, o que só imutabiliza as referências dos objetos da "primeira camada". É necessário aplicar `Object.freeze`recursivamente para criar objetos verdadeiramente imutáveis. Verificar [Este artigo](https://stackoverflow.com/questions/34776846/how-to-freeze-nested-objects-in-javascript)
+Os comandos `var`, `let` e `const` permitem declarar variáveis. `var` é depreciado (Seu uso é contra-indicado). Prefira `let` para variáveis comuns e `const` para constantes (Variáveis que não se modificam). Para uma explicação mais detalhada, confira o capítulo "Introdução ao Javascript - Aprofundado". 
 
 ## Tipagem
 
