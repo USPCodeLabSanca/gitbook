@@ -1,4 +1,4 @@
-# Tratamento de erros com promises
+# Promises vs Callbacks
 
 A função `readFile` do modulo fs \(filesytem\) lê um arquivo e retorna o conteúdo
 

@@ -1,6 +1,6 @@
 # Atributos
 
-Atributos em HTML são utilizados para promover informações adicionais à tag. Eles sempre são utilizados _\*\*_na tag de início, como mostra o exemplo abaixo.
+Atributos em HTML são utilizados para promover informações adicionais à tag. Eles sempre são utilizados \_\*\*\_na tag de início, como mostra o exemplo abaixo.
 
 ![](../../.gitbook/assets/image%20%282%29.png)
 

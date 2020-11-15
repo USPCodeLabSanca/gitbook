@@ -36,7 +36,7 @@ p {
 {% endtab %}
 {% endtabs %}
 
-Se compararmos o resultado sem CSS e com CSS podemos observar que na útima aba o parágrafo está verde. 
+Se compararmos o resultado sem CSS e com CSS podemos observar que na útima aba o parágrafo está verde.
 
 Agora vamos observar nosso CSS de perto:
 
