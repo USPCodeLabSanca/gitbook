@@ -71,12 +71,23 @@ Imprime o resultado de uma **expressão em javascript** no console.
 
 ```javascript
 console.log(3+4)            // Imprime 7
-console.log("Hello World") //Imprime Hello World
+console.log("Hello World") //  Imprime Hello World
 ```
 
 ## Declaração de variáveis: var vs let vs const
+Variáveis são essenciais para armazenamento de dados cujo uso poderá ser feito em diversas etapas do programa. 
 
 Os comandos `var`, `let` e `const` permitem declarar variáveis. `var` é depreciado (Seu uso é contra-indicado). Prefira `let` para variáveis comuns e `const` para constantes (Variáveis que não se modificam). Para uma explicação mais detalhada, confira o capítulo "Introdução ao Javascript - Aprofundado". 
+
+```javascript
+let a = 3
+let b = 4
+let c = a+b
+
+console.log(c) // Imprime 7.
+```
+A diferença deste exemplo exemplo para o anterior é que `c` agora está alocada na memória do programa, e seu conteúdo `7` poderá ser acessado e transformado em qualquer etapa posterior. Simplesmente imprimir `console.log(3+4)` não gera referência nenhuma que permita manipular 7. 
+
 
 ## Tipagem
 
