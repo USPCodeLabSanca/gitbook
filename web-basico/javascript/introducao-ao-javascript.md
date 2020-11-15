@@ -112,7 +112,7 @@ console.log(typeof(inteiro), typeof(float)) //number number
 
 ### Strings
 
-Armazenam qualquer text entre parênteses simples ou duplos.
+Armazenam qualquer text entre aspas simples ou duplas.
 
 ```javascript
 let my_string = 'olá mundo'
