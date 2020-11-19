@@ -137,6 +137,104 @@ Entretanto, na "passagem por referência", como as duas variáveis apontam para 
 
 Com essas características em mente, há uma clara vantagem na passagem por referência: não há nenhum custo de performance ao se atribuir objetos de uma variável à outra. Suponhamos que exista um objeto `obj` que contém um milhão de pares chave-valor. Caso atribuíssemos esse objeto para outra variável \(`const obj2 = obj`\), se houvesse passagem por valor, seria necessário duplicar todos os pares chave-valor contidos no objeto. Mas nesse caso, como a passagem é por referência, essa operação tem um custo negligenciável.
 
+## Copiando objetos
+
+Tendo em mente que atribuir objetos a variáveis apenas faz uma passagem por referência, e não uma cópia do objeto, fica dúvida de como podemos copiar um objeto. Entretanto, a resposta dessa pergunta não é tão clara quando nós começamos a introduzir objetos mais complexos, especificamente, objetos cujos valores são outros objetos. Veja esse exemplo:
+
+```javascript
+const pessoa = {
+    nome: 'Rita oliveira',
+    idade: 22,
+    endereco: {
+        cidade: 'São Carlos',
+        estado: 'São Paulo',
+        pais: 'Brasil'
+    }
+};
+```
+
+Aqui, uma forma bastante intuitiva de copiar o objeto `pessoa` é só criar um novo objeto, e copiar todas as propriedades do objeto antigo no novo, por exemplo:
+
+```javascript
+const pessoaCopia = {};
+pessoaCopia.nome = pessoa.nome;
+pessoaCopia.idade = pessoa.idade;
+pessoaCopia.endereco = pessoa.endereco;
+```
+
+Esse método funciona bem até quando chegamos na propriedade `endereco`. Como o valor de `endereco` é um objeto, quando fazemos `pessoaCopia.endereco = pessoa.endereco`, nós não estamos exatamente copiando o endereço do objeto `pessoa` para o objeto `pessoaCopia`, estamos apenas passando uma referência dele. Isso pode inicialmente parecer inofensivo, mas pode acabar gerando comportamentos indesejados. Veja esse exemplo:
+
+```javascript
+// Pessoa se mudou.
+pessoa.endereco.cidade = "Araraquara";
+
+// Como nós mudamos o valor de `pessoa.endereco.cidade`
+// na linha acima, e o `pessoa.endereco` aponta para o mesmo
+// objeto que `pessoaCopia.endereco` (por referência),
+// o valor de `pessoaCopia.endereco.cidade` vai mudar também.
+// Logo, a linha seguinte imprime "Araraquara".
+console.log(pessoaCopia.endereco.cidade);
+```
+
+Aqui fica bem claro um dos problemas de apenas copiar as propriedades de um objeto em outro. Se nós formos mudar a propriedade de um dos objetos da variável original, a variável cópia também será afetada.
+
+Esse tipo de cópia é chamado _Shallow Copy_ \(cópia rasa\). É a forma mais simples e menos custosa de se copiar objetos. Em contraste, existe o que é chamado de _Deep Copy_ \(cópia profunda\), onde não só as propriedades do objeto são copiadas, como também as propriedades dos objetos que ele contém. No exemplo dado, o equivalente a uma operação de _Deep Copy_ seria:
+
+```javascript
+const pessoaCopiaProfunda = {};
+pessoaCopiaProfunda.nome = pessoa.nome;
+pessoaCopiaProfunda.idade = pessoa.idade;
+pessoaCopiaProfunda.endereco = {};
+pessoaCopiaProfunda.endereco.cidade = pessoa.endereco.cidade;
+pessoaCopiaProfunda.endereco.estado = pessoa.endereco.estado;
+pessoaCopiaProfunda.endereco.pais = pessoa.endereco.pais;
+```
+
+Tendo em mente as diferenças entre _Shallow Copy_ e _Deep Copy_, podemos explorar melhor as ferramentas que o JavaScript nos oferece para resolver esse problema:
+
+### _Shallow Copy_
+
+Como visto nos exemplos acima, _Shallow Copy_ é o ato de copiar apenas as propriedades diretas de um objeto. O JavaScript tem um operador para isso, chamado _Spread Operator_ \(Operador de espalhamento\). Veja um exemplo de seu uso:
+
+```javascript
+const gato = {
+    nome: 'Luna',
+    idade: 3,
+    sexo: 'feminino',
+    guardiao: {
+        nome: 'Lucas Amaral',
+        idade: 34
+    }
+}
+
+const gatoCopia = {...gato};
+```
+
+Se quisermos fazer uma _Shallow Copy_ de um objeto, apenas envolvemos ele em chaves e colocamos uma reticências atrás de seu nome, como visto no exemplo acima: `{...gato}`.
+
+Note que esse é apenas um dos muitos usos para o _Spread Operator_. Caso você tenha curiosidade de saber os outros usos, veja esse [artigo](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
+
+### _Deep Copy_
+
+Como já mencionado,  _Deep Copy_ é a cópia de todas as propriedades de todos os valores de um objeto, e de todos os outros objetos que são valores do objeto raiz. Infelizmente, realizar _Deep Copy_ de um objeto qualquer é algo bastante difícil de fazer, pois esse algoritmo teria que saber como lidar algumas situações bastante específicas e pouco intuitivas \(com por exemplo referências cíclicas, ou referências que aparecem em duas propriedades diferentes\). Entretanto,, há um truque que normalmente usamos quando precisamos copiar profundamente um objeto:
+
+```javascript
+const notebook = {
+    marca: 'Dell',
+    peso: 2.34, // Kg
+    processador: {
+        marca: 'intel',
+        nome: 'i5 3570',
+    }
+};
+
+const notebookCopia = JSON.parse(JSON.stringify(notebook));
+```
+
+Aqui usamos as ferramentas de JSON do JavaScript. A função `JSON.stringify` transforma o objeto em uma string no formato JSON, e a função `JSON.parse` transforma uma string no formato JSON num objeto equivalente. Assim, no exemplo acima nós estamos primeiro transformando o objeto numa string, e depois voltando essa string para um objeto novo, efetivamente copiando ele profundamente.
+
+É importante lembrar que as funções de JSON tem suas limitações: ignora funções e não permite referências cíclicas \(um objeto cuja propriedade aponta para si mesmo\). Note também que essa operação é bastante custosa, e deveria ser usada apenas quando necessário.
+
 ## Resumo
 
 Neste capítulo vimos o básico de objetos:
@@ -144,4 +242,7 @@ Neste capítulo vimos o básico de objetos:
 * Como declarar objetos
 * Como ler e escrever de objetos
 * O que acontece quando atribuímos objetos a várias variáveis
+* Como copiar objetos
+  * _Shallow Copy_
+  * _Deep Copy_
 
