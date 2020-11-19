@@ -6,7 +6,7 @@ description: O que são e como usar eventos em JavaScript.
 
 ## O que são eventos?
 
-Eventos são, essencialmente, qualquer coisa que pode acontecer em um momento indeterminado \(ex: usuário clica num botão, uma tecla do teclado é pressionada, informações do servidor chegam, etc...\). Em JavaScript, podemos escrever código que é executado quando um evento acontece através de um _Event Listener_ \(ouvidor de eventos\). Um _Event Listener_ é uma função que é executada quando um evento específico ocorre. Veja esse exemplo:
+Eventos são, essencialmente, qualquer coisa que pode acontecer em um momento qualquer \(ex: usuário clica num botão, uma tecla do teclado é pressionada, informações do servidor chegam, etc...\). Em JavaScript, podemos escrever código que é executado quando um evento acontece através de um _Event Listener_ \(ouvidor de eventos\). Um _Event Listener_ é um mecanismo que atrela um evento a uma função. Quando o evento em questão é disparado, o _Event Listener_ executa a função que foi atrelada. Veja esse exemplo:
 
 ```javascript
 // Seleciona um botão com ID 'button-id'.
@@ -95,6 +95,8 @@ const button = document.getElementById('button-id');
 button.focus();
 ```
 
+Um dos maiores usos de mudar o foco de um elemento é fazer com que um _Input_ ganhe foco imediatamente assim que a página carregar, poupando um click do usuário. Outro uso frequente é para implementar tecnologias de acessibilidade, e ajudar pessoas que dependem do teclado para navegar nas páginas web.
+
 ## Removendo _Event Listeners_
 
 Já aprendemos a adicionar _Event Listeners_, mas as vezes precisamos poder remover eles. Para isso, usamos a função `removeEventListener`. Veja o exemplo:
@@ -151,7 +153,7 @@ Essa forma de se ouvir por eventos não é muito recomendada por três principai
 2. **Dificulta remover o** _**Event Listener**_ **no futuro**: As vezes, queremos poder remover funções que estão ouvindo por eventos \(como mostrado acima\). Com essa forma de _Event Listeners_ fica bem mais difícil de se remover.
 3. **Menos suporte de sua IDE**: A maioria das ferramentas modernas de desenvolvimento web tem funções que permitem verificar quando você está cometendo um claro erro \(ex: referenciando uma variável inexistente\). Essa verificação não é muito bem feita quando você usa eventos por atributos porque é muito difícil da sua IDE saber exatamente quais funções são visíveis para os eventos dos elementos HTML. Então, se você errar o nome da função, ou o nome do atributo do evento, a sua IDE não tem como te ajudar.
 
-### Pela propriedade `oneventname`
+### Pela propriedade `on[eventname]`
 
 Os objetos DOM no JavaScript possuem uma propriedade para cada evento. Veja esse exemplo:
 
@@ -248,7 +250,7 @@ Assim, após o click do usuário, devemos ter como resultado no console a seguin
 
 Todo esse processo é chamado _Event Bubbling_, e ele acontece com a maioria dos eventos, não só com clicks. Existem alguns eventos que não sofrem esse processo \(mais notáveis os eventos de "`focus`", "`blur`" e "`change`"\), mas a grande maioria dos eventos é afetada por _Bubbling_.
 
-Com esse conhecimento, se quisermos capturar qualquer tecla que o usuário pressionar, seria necessário apenas criar um _Event Listener_ de teclas na raiz do documento \(normalmente o elemento "`<html>`"\), ao invés de criar um _Event Listener_ pra cada elemento do documento.
+Com esse conhecimento, se quisermos capturar qualquer tecla que o usuário pressionar, seria necessário apenas criar um _Event Listener_ de teclas na raiz do documento \(normalmente o elemento "`<body>`"\), ao invés de criar um _Event Listener_ pra cada elemento do documento.
 
 ### Como impedir um evento de sofrer _Bubbling_
 
