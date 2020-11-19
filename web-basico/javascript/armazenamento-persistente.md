@@ -4,21 +4,21 @@ description: Como guardar dados que não se perdem quando o usuário sai da pág
 
 # Armazenamento persistente
 
-## O que é armazenamento persistente?
+### O que é armazenamento persistente?
 
 Sempre que o usuário recarrega a página ou fecha o browser, todo o código JavaScript para completamente de executar, e toda a memória que foi utilizada por ele é limpa, apagando todos os valores de todas as variáveis que existiam. Esse comportamento é essencial para permitir que o usuário acesse várias páginas sem faltar memória em seu computador, mas as vezes as aplicações precisam salvar dados que não serão perdidos quando o usuário for embora. É esse problema que as tecnologias de armazenamento persistente tentam resolver.
 
-O termo "armazenamento persistente" significa, essencialmente, um espaço de memória que é reservado quando o usuário fecha a aplicação. Para isso, temos três principais soluções: _Cookies_, _Local Storage_ e _Session Storage_. Cada uma dessas soluções tem um comportamento diferente, que iremos explorar nesse capítulo.
+O termo "armazenamento persistente" significa, essencialmente, um espaço de memória que é preservado quando o usuário fecha a aplicação. Para isso, temos três principais soluções: _Cookies_, _Local Storage_ e _Session Storage_. Cada uma dessas soluções tem um comportamento diferente, que iremos explorar nesse capítulo.
 
-## Para o que é usado armazenamento persistente?
+### Para o que é usado armazenamento persistente?
 
 Há vários casos de uso para essa tecnologia. Um exemplo é o login de usuários. Quase qualquer plataforma nos permite fazer login apenas no primeiro acesso, sem ter que fazer login de novo toda vez que abrimos a página. Isso só é possível por causa de armazenamento persistente. Outro exemplo é alguns sites que permitem o usuário modificar o seu visual para melhorar a sua experiência \(ex: ativar o modo escuro\). Esses sites salvam as preferências do usuário em uma memória persistente, para que as configurações sejam aplicadas todas as vezes que o usuário voltar para a página. Por fim, mais um exemplo de uso para essa tecnologia é lembrar quais foram os acessos prévios desse usuário, para poder tentar recomendar produtos parecidos com o que ele viu anteriormente \(processo de _User Tracking_\).
 
 Existem infinitas outras aplicações para armazenamento persistente que não foram mencionadas, e isso só mostra o quão importante essa tecnologia é para a web moderna.
 
-## Formas de armazenamento persistente
+### Formas de armazenamento persistente
 
-### _Local Storage_
+#### _Local Storage_
 
 Esse método de armazenamento é essencialmente apenas uma tabela com chaves e valores. As funções de acesso a esse recurso estão na variável `localStorage`. Veja esse exemplo:
 
@@ -26,10 +26,10 @@ Esse método de armazenamento é essencialmente apenas uma tabela com chaves e v
 // Escreve um valor no Local Storage.
 localStorage.setItem('nome-do-item', 'valor-do-item');
 
-// Lê um valor do Local Storage
+// Lê um valor do Local Storage.
 localStorage.getItem('nome-do-item'); // valor-do-item
 
-// Delete um valor do Local Storage.
+// Deleta um valor do Local Storage.
 localStorage.removeItem('nome-do-item');
 ```
 
@@ -43,21 +43,21 @@ O _Local Storage_ não tem nenhuma forma de controle de acesso aos seus dados. Q
 
 O _Local Storage_ pode guardar até 5 MB de informação, independente da quantidade de chaves e valores. Esse valor pode ser configurado pelo browser do cliente.
 
-### Session Storage
+#### Session Storage
 
 Esse método é idêntico ao _Local Storage_, com exceção de que os dados guardados aqui vão expirar assim que a sessão do seu site for encerrada, isto é, quando o browser do seu usuário for fechado, os dados que foram salvos no _Session Storage_ serão deletados.
 
 Essa API é acessada pela variável `sessionStorage`. Veja o exemplo:
 
 ```javascript
-// Escreve um valor no Local Storage.
-localStorage.setItem('nome-do-item', 'valor-do-item');
+// Escreve um valor no Session Storage.
+sessionStorage.setItem('nome-do-item', 'valor-do-item');
 
-// Lê um valor do Session Storage
-localStorage.getItem('nome-do-item'); // valor-do-item
+// Lê um valor do Session Storage.
+sessionStorage.getItem('nome-do-item'); // valor-do-item
 
-// Delete um valor do Session Storage.
-localStorage.removeItem('nome-do-item');
+// Deleta um valor do Session Storage.
+sessionStorage.removeItem('nome-do-item');
 ```
 
 Todas as considerações discutidas na sessão do _Local Storage_ são válidas aqui.
@@ -66,7 +66,7 @@ Todas as considerações discutidas na sessão do _Local Storage_ são válidas 
 
 As limitações do _Session Storage_ são as mesmas do _Local Storage_
 
-### Cookies
+#### Cookies
 
 Essa foi a primeira solução desenvolvida pela web para persistir dados. Cookies se resumem a uma única string que pode ser acessada pela variável "`document.cookie`". Veja um exemplo dessa string:
 
@@ -100,6 +100,8 @@ Para se escrever um novo valor nos _Cookies_, é necessário apenas atribuir o n
 // os cookies antigos, apenas adiciona um par novo.
 document.cookie = "novoNome=novoValor"
 ```
+
+Note que apesar de estarmos atribuindo uma nova string à variável `document.cookie`, não estamos sobrescrevendo todos os cookies da página, e sim criando um único novo cookie. Ao atribuir uma string à variável `document.cookie` só é possível modificar um único cookie por vez. Assim, se tivermos dois cookies já na página, e escrevermos `document.cookie = "novoNome=novoValor"`, não vamos sobrescrever os cookies anteriores.
 
 Além de uma chave e um valor, cookies também tem alguns valores especiais chamados "atributos". Esses valores são usados pra indicar quem pode acessar esse _Cookies_, e até quando eles são válidos. Um dos atributos mais famosos se chama "Max-Age". Esse atributo controla o tempo \(em segundos\) de expiração do cookie, isto é, por quanto tempo esse cookie é válido. Quando esse tempo acaba, o cookie é automaticamente deletado. Veja esse exemplo:
 
@@ -154,27 +156,27 @@ document.cookie = "batata=tomate; Expires=" + expiração.toString();
   * **Lax:** O mesmo que o `Strict`, mas o _Cookie_ também é enviado quando o usuário vai visitar o domínio a partir de um link externo.
   * **None:** Nenhum restrição. O _Cookie_ é enviado em todas as requisições feitas para o seu domínio, independente de onde o usuário estiver.
 
-## Tantas opções, qual escolher?
+### Tantas opções, qual escolher?
 
 Cada uma dessas opções tem suas vantagens e desvantagens, e sua escolha vai geralmente depender do tipo de dado que você quer guardar.
 
-### _Cookies_
+#### _Cookies_
 
 _Cookies_ são bastante difíceis de manipular no browser, tanto na leitura quanto na escrita. As operações ao redor do `document.cookie` dependem de muita manipulação de strings, que abrem margem para possíveis bugs. Além disso, as limitações dos _Cookies_ são mais restritas que as do _Local Storage_ e do _Session Storage_.
 
 Entretanto, há um mecanismo implementado para os _Cookies_ que não tem equivalente para as outras opções: os atributos. Os atributos dos _Cookies_ permitem um controle bem maior sobre quem consegue acessar o que. Isso é extremamente importante quando estamos lidando com dados sensíveis dos nossos usuários, que não devem ser acessadas por ninguém além do usuário em si.
 
-A configuração ideal é sempre usar _Cookies_ com o atributo `Secure` ligado, e com o `SameSite` valendo `Lax` ou `Strict`. Caso seja um dado que só o servidor precisa ler, o atributo `HttpOnly` deve também ser ligado. Essas configurações ajudam a mitigar os efeitos de alguns ataques muito comuns na web \(exemplo: XSS \(Cross Site Scripting\) e CSRF \(Cross Site Request Forgery\)\). Esses ataque não serão estudados agora, mas são importantes.
+A configuração ideal é sempre usar _Cookies_ com o atributo `Secure` ligado, e com o `SameSite` valendo `Lax` ou `Strict`. Caso seja um dado que só o servidor precisa ler, o atributo `HttpOnly` deve também ser ligado. Essas configurações ajudam a mitigar os efeitos de alguns ataques muito comuns na web \(exemplo: XSS \(Cross Site Scripting\) e CSRF \(Cross Site Request Forgery\)\). Esses ataque não serão estudados agora, mas é importante
 
-### _Local Storage_
+#### _Local Storage_
 
-Em contraste aos _Cookies_, o _Local Storage_ é mais simples de usar, e consegue guardar mais informações. Entretanto, como não há limitações sobre os seus recursos, qualquer script que executa na sua página tem acesso ao _Local Storage_, e pode ler e escrever nesses dados. Isso pode ser perigoso caso alguém consiga executar algum script malicioso na sua página \(através de técnicas como XSS\), e pode ser a causa de vazamento de dados de muitos usuários. Logo, o _Local Storage_ é ideal para guardar dados não sensíveis, como por exemplo a preferências de um usuário na página.
+Em contraste aos _Cookies_, o _Local Storage_ é mais simples de usar, e consegue guardar mais informações. Entretanto, como não há limitações sobre os seus recursos, qualquer script que executa na sua página tem acesso ao _Local Storage_, e pode ler e escrever nesses dados. Isso pode ser perigoso caso alguém consiga executar algum script malicioso na sua página \(através de técnicas como XSS\), e pode ser a causa de vazamento de dados de muitos usuários. Logo, o _Local Storage_ é ideal para guardar dados não sensíveis, como por exemplo a preferências de um usuário na página \(se ele prefere tema claro ou escuro, ou o volume que ele deixa os vídeos, etc...\).
 
-### _Session Storage_
+#### _Session Storage_
 
 As vantagens e desvantagens do _Session Storage_ são idênticas às do _Local Storage_, com exceção do fato de que seus dados são mais frequentemente deletados. Por isso o _Session Storage_ tem esse nome: Os dados guardados nele são geralmente relacionados a sessão do usuário. Uma "Sessão" é uma visita do usuário à sua página, então os dados de uma sessão costumam ser válidos até quando o usuário fechar a página. Alguns exemplos desses dados são os itens dentro de um carrinho de compras, ou a página do produto que o usuário estava vendo.
 
-## Resumo do conteúdo
+### Resumo do conteúdo
 
 Aqui abordamos como guardar dados que persistem o recarregar da página. Para isso, vimos três soluções: _Cookies_, _Local Storage_ e _Session Storage_. Cada uma tem a sua forma de ser acessada, e possui suas vantagens e desvantagens, mas um dos pontos mais importantes de se lembrar é que o _Local Storage_ não deveria guardar dados sensíveis, por motivos de segurança.
 
