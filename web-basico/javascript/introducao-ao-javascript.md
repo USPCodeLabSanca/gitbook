@@ -1,4 +1,4 @@
-# Introdução ao Javascript
+# Introdução ao Javascript - Geral
 
 ## O que é Javascript?
 
@@ -201,6 +201,6 @@ console.log(nao_inicializada, typeof(nao_inicializada)) // undefined undefined
 a = null
 console.log(a, typeof(a))//null object
 ```
-Para mais detalhes sobre `typeof(null)`, leia [artigo da Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
-**Tudo em JS que não é um dos tipos primitivos acima listados é objeto. Isto será estudado mais a frente.**
+
+Para mais detalhes sobre `typeof(null)`, leia [artigo da Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) **Tudo em JS que não é um dos tipos primitivos acima listados é objeto. Isto será estudado mais a frente.**
 

@@ -216,7 +216,7 @@ Note que esse é apenas um dos muitos usos para o _Spread Operator_. Caso você 
 
 ### _Deep Copy_
 
-Como já mencionado,  _Deep Copy_ é a cópia de todas as propriedades de todos os valores de um objeto, e de todos os outros objetos que são valores do objeto raiz. Infelizmente, realizar _Deep Copy_ de um objeto qualquer é algo bastante difícil de fazer, pois esse algoritmo teria que saber como lidar algumas situações bastante específicas e pouco intuitivas \(com por exemplo referências cíclicas, ou referências que aparecem em duas propriedades diferentes\). Entretanto,, há um truque que normalmente usamos quando precisamos copiar profundamente um objeto:
+Como já mencionado, _Deep Copy_ é a cópia de todas as propriedades de todos os valores de um objeto, e de todos os outros objetos que são valores do objeto raiz. Infelizmente, realizar _Deep Copy_ de um objeto qualquer é algo bastante difícil de fazer, pois esse algoritmo teria que saber como lidar algumas situações bastante específicas e pouco intuitivas \(com por exemplo referências cíclicas, ou referências que aparecem em duas propriedades diferentes\). Entretanto,, há um truque que normalmente usamos quando precisamos copiar profundamente um objeto:
 
 ```javascript
 const notebook = {
