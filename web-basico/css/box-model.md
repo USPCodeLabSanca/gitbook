@@ -59,11 +59,11 @@ img:hover {
 {% endtab %}
 
 {% tab title="Resultado 1" %}
-![](../../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image%20%286%29.png)
 {% endtab %}
 
 {% tab title="Resultado 2" %}
-![](../../.gitbook/assets/image%20%286%29.png)
+![](../../.gitbook/assets/image%20%287%29.png)
 {% endtab %}
 {% endtabs %}
 
