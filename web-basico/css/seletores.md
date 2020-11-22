@@ -4,7 +4,7 @@
 
 Você irá utlizar o mesmo **editor de texto** que você utiliza para escrever o HTML. Crie um novo arquivo na mesma pasta do seu HTML, porém agora a extensão deve ser ".css".
 
-Para conectar os dois arquivo \(HTML e CSS\), você precisará escrever na tag &lt;head&gt; do HTML o seguinte código:
+Para conectar os dois arquivos \(HTML e CSS\), você precisará escrever na tag &lt;head&gt; do HTML o seguinte código:
 
 ```markup
 <link rel="stylesheet" type="text/css" href="arquivo.css">
