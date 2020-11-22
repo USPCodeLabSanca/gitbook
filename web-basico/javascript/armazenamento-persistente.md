@@ -37,7 +37,7 @@ O único tipo de dado que pode ser inserido no _Local Storage_ é a String. Caso
 
 O _Local Storage_ de cada domínio é completamente isolado um do outro. Isto é, o _Local Storage_ da página "google.com" não tem acesso aos dados que foram gravados na página "youtube.com", e vice-versa. Entretanto, páginas com o mesmo domínio, mas caminhos diferentes tem acesso aos mesmos dados, isto é, scripts na página `meu-site.com/home` tem acesso aos dados gravados pela página `meu-site.com/contato`.
 
-O _Local Storage_ não tem nenhuma forma de controle de acesso aos seus dados. Qualquer script executando na sua página tem acesso ao que está no _Local Storage_. Os dados do _Local Storage_ não tem uma data de expiração, e vão persistir até o usuário limpar a cache ou o Browser decidir que os dados são muito velhos, e podem ser deletados.
+O _Local Storage_ não tem nenhuma forma de controle de acesso aos seus dados. Qualquer script executando na sua página tem acesso ao que está no _Local Storage_. Os dados do _Local Storage_ não tem uma data de expiração, e vão persistir até o usuário limpar a cache ou o Browser decidir que os dados são muito velhos e podem ser deletados.
 
 **Limitações**
 
@@ -75,7 +75,7 @@ console.log(document.cookie);
 // "nome1=valor1; nome2=valor2; nome3=valor3"
 ```
 
-O valor de `document.cookie` é uma string, composta por um conjunto de pares valor-chave com a sintaxe "`valor=chave`". Os pares valor-chave são separados por caracteres ";", e podem ou não ter um espaço depois do ";" \(depende do browser\).
+O valor de `document.cookie` é uma string, composta por um conjunto de pares valor-chave com a sintaxe "`valor=chave`". Os pares valor-chave são separados pelo caractere ";" e podem ou não ter um espaço depois do ";" \(depende do browser\).
 
 Para ler o valor dos cookies, é preciso manipular a string do `document.cookies`. Por exemplo:
 
@@ -101,7 +101,7 @@ Para se escrever um novo valor nos _Cookies_, é necessário apenas atribuir o n
 document.cookie = "novoNome=novoValor"
 ```
 
-Note que apesar de estarmos atribuindo uma nova string à variável `document.cookie`, não estamos sobrescrevendo todos os cookies da página, e sim criando um único novo cookie. Ao atribuir uma string à variável `document.cookie` só é possível modificar um único cookie por vez. Assim, se tivermos dois cookies já na página, e escrevermos `document.cookie = "novoNome=novoValor"`, não vamos sobrescrever os cookies anteriores.
+Note que, apesar de estarmos atribuindo uma nova string à variável `document.cookie`, não estamos sobrescrevendo todos os cookies da página, e sim criando um único novo cookie. Ao atribuir uma string à variável `document.cookie` só é possível modificar um único cookie por vez. Assim, se tivermos dois cookies já na página, e escrevermos `document.cookie = "novoNome=novoValor"`, não vamos sobrescrever os cookies anteriores.
 
 Além de uma chave e um valor, cookies também tem alguns valores especiais chamados "atributos". Esses valores são usados pra indicar quem pode acessar esse _Cookies_, e até quando eles são válidos. Um dos atributos mais famosos se chama "Max-Age". Esse atributo controla o tempo \(em segundos\) de expiração do cookie, isto é, por quanto tempo esse cookie é válido. Quando esse tempo acaba, o cookie é automaticamente deletado. Veja esse exemplo:
 
@@ -122,13 +122,13 @@ A única forma de se deletar um _Cookie_ é forçando ele a expirar, como por ex
 document.cookie = "cookieParaDeletar=valor; Max-age=0"
 ```
 
-Assim como os dados do _Local Storage_, os _Cookies_ de um domínio não podem ser acessados por outro domínio \(a não ser que explicitado através do atributo "Domain", que veremos em breve\), isto é, os _Cookies_ da página "google.com" não podem ser acessados pela página "youtube.com". Entretanto, páginas dentro de um mesmo domínio, mas caminhos diferentes tem acesso aos mesmos _Cookies_.
+Assim como os dados do _Local Storage_, os _Cookies_ de um domínio não podem ser acessados por outro domínio \(a não ser que explicitado através do atributo "Domain", que veremos em breve\), isto é, os _Cookies_ da página "google.com" não podem ser acessados pela página "youtube.com". Entretanto, páginas dentro de um mesmo domínio, mas com caminhos diferentes, tem acesso aos mesmos _Cookies_.
 
 **Uma peculiaridade dos Cookies**
 
 Toda requisição HTTP feita para um domínio envia no header "Cookie" a string do `document.cookie`, E toda resposta do servidor desse domínio pode conter um header "Set-Cookie", que vai escrever _Cookies_ no browser do seu usuário. Em sumo, o servidor que serve o seu site pode ler e escrever cookies no browser do seu usuário.
 
-Esse comportamento foi implementado para permitir que alguns sites que utilizam tecnologias como _PHP_ consigam guardar dados sobre o usuário no próprio browser do usuário, podendo então identificar o usuário através desses _Cookies_. É um comportamento não opcional \(sempre vai acontecer\), e sempre envia **Todos** os cookies.
+Esse comportamento foi implementado para permitir que alguns sites que utilizam tecnologias como _PHP_ consigam guardar dados sobre o usuário no próprio browser do usuário, podendo então identificar o usuário através desses _Cookies_. É um comportamento não opcional \(sempre vai acontecer\) e sempre envia **todos** os cookies.
 
 **Limitações**
 
@@ -147,7 +147,7 @@ document.cookie = "batata=tomate; Expires=" + expiração.toString();
 ```
 
 * **Max-Age:** Número de segundo para o _Cookie_ expirar, a partir de quando ele é criado. Exemplo de um cookie que expira em 10 segundos: `document.cookie = "batata=tomate; Max-Age=10"`
-* **Domain:** O domínio que pode acessar esse _Cookie_. Se nenhum domínio é especificado, usa o domínio do site atual, sem incluir subdomínios, logo uma página servida por "outro-site.meu-site.com" não teria acesso aos _Cookies_ de "meu-site.com" que não especificaram nenhum domínio no atributo `Domain`. Se um domínio foi especificado, então todos os subdomínios serão incluídos, isto é, um cookies atribuído para o domínio "meu-site.com" poderia ser acessado pelo "outro-site.meu-site.com". Um exemplo: `document.cookie = "batata=tomate; Domain=meu-site.com`
+* **Domain:** O domínio que pode acessar esse _Cookie_. Se nenhum domínio é especificado, usa o domínio do site atual, sem incluir subdomínios, logo uma página servida por "outro-site.meu-site.com" não teria acesso aos _Cookies_ de "meu-site.com" que não especificaram nenhum domínio no atributo `Domain`. Se um domínio foi especificado, então todos os subdomínios serão incluídos, isto é, um cookies atribuído para o domínio "meu-site.com" poderia ser acessado pelo "outro-site.meu-site.com". Um exemplo: `document.cookie = "batata=tomate; Domain=meu-site.com"`
 * **Path:** O caminho do site que tem acesso a esse _Cookie_. Se especificar algo como `document.cookie = "batata=tomate; Path=/about"`, o _Cookie_ poderá só ser acessado por páginas no dentro do caminho "/about" \(exemplo: "/about", "/about/something" ou "/about/something/cool" terão acesso.\).
 * **Secure:** Um _Cookie_ com atributo `Secure` só será enviado para o servidor se estiver sendo usado HTTPS, e não HTTP. Exemplo: `document.cookie = "batata=tomate; Secure"`
 * **HttpOnly:** Um _Cookie_ com o atributo `HttpOnly` não pode ser acessado pelo JavaScript de nenhuma página, consequentemente ele só ser lido pelo servidor, através do header "Cookie" das requisições HTTP. Exemplo: `document.cookie = "batata=tomate; HttpOnly"`
@@ -164,17 +164,17 @@ Cada uma dessas opções tem suas vantagens e desvantagens, e sua escolha vai ge
 
 _Cookies_ são bastante difíceis de manipular no browser, tanto na leitura quanto na escrita. As operações ao redor do `document.cookie` dependem de muita manipulação de strings, que abrem margem para possíveis bugs. Além disso, as limitações dos _Cookies_ são mais restritas que as do _Local Storage_ e do _Session Storage_.
 
-Entretanto, há um mecanismo implementado para os _Cookies_ que não tem equivalente para as outras opções: os atributos. Os atributos dos _Cookies_ permitem um controle bem maior sobre quem consegue acessar o que. Isso é extremamente importante quando estamos lidando com dados sensíveis dos nossos usuários, que não devem ser acessadas por ninguém além do usuário em si.
+Entretanto, há um mecanismo implementado para os _Cookies_ que não tem equivalente para as outras opções: os atributos. Os atributos dos _Cookies_ permitem um controle bem maior sobre quem consegue acessar o que. Isso é extremamente importante quando estamos lidando com dados sensíveis dos nossos usuários, que não devem ser acessados por ninguém além do usuário em si.
 
-A configuração ideal é sempre usar _Cookies_ com o atributo `Secure` ligado, e com o `SameSite` valendo `Lax` ou `Strict`. Caso seja um dado que só o servidor precisa ler, o atributo `HttpOnly` deve também ser ligado. Essas configurações ajudam a mitigar os efeitos de alguns ataques muito comuns na web \(exemplo: XSS \(Cross Site Scripting\) e CSRF \(Cross Site Request Forgery\)\). Esses ataque não serão estudados agora, mas é importante
+A configuração ideal é sempre usar _Cookies_ com o atributo `Secure` ligado e com o `SameSite` valendo `Lax` ou `Strict`. Caso seja um dado que só o servidor precisa ler, o atributo `HttpOnly` deve também ser ligado. Essas configurações ajudam a mitigar os efeitos de alguns ataques muito comuns na web, como por exemplo XSS \(Cross Site Scripting\) e CSRF \(Cross Site Request Forgery\). Esses ataques não serão estudados agora, mas é importante
 
 ### _Local Storage_
 
-Em contraste aos _Cookies_, o _Local Storage_ é mais simples de usar, e consegue guardar mais informações. Entretanto, como não há limitações sobre os seus recursos, qualquer script que executa na sua página tem acesso ao _Local Storage_, e pode ler e escrever nesses dados. Isso pode ser perigoso caso alguém consiga executar algum script malicioso na sua página \(através de técnicas como XSS\), e pode ser a causa de vazamento de dados de muitos usuários. Logo, o _Local Storage_ é ideal para guardar dados não sensíveis, como por exemplo a preferências de um usuário na página \(se ele prefere tema claro ou escuro, ou o volume que ele deixa os vídeos, etc...\).
+Em contraste aos _Cookies_, o _Local Storage_ é mais simples de usar, e consegue guardar mais informações. Entretanto, como não há limitações sobre os seus recursos, qualquer script que executa na sua página tem acesso ao _Local Storage_, e pode ler e escrever nesses dados. Isso pode ser perigoso caso alguém consiga executar algum script malicioso na sua página \(através de técnicas como XSS\), e pode ser a causa de vazamento de dados de muitos usuários. Logo, o _Local Storage_ é ideal para guardar dados não sensíveis, como por exemplo a preferências de um usuário na página \(se ele prefere tema claro ou escuro, o volume em que ele deixa os vídeos etc.\).
 
 ### _Session Storage_
 
-As vantagens e desvantagens do _Session Storage_ são idênticas às do _Local Storage_, com exceção do fato de que seus dados são mais frequentemente deletados. Por isso o _Session Storage_ tem esse nome: Os dados guardados nele são geralmente relacionados a sessão do usuário. Uma "Sessão" é uma visita do usuário à sua página, então os dados de uma sessão costumam ser válidos até quando o usuário fechar a página. Alguns exemplos desses dados são os itens dentro de um carrinho de compras, ou a página do produto que o usuário estava vendo.
+As vantagens e desvantagens do _Session Storage_ são idênticas às do _Local Storage_, com exceção do fato de que seus dados são mais frequentemente deletados. Por isso o _Session Storage_ tem esse nome: os dados guardados nele são geralmente relacionados a sessão do usuário. Uma "Sessão" é uma visita do usuário à sua página, então os dados de uma sessão costumam ser válidos até quando o usuário fechar a página. Alguns exemplos desses dados são os itens dentro de um carrinho de compras, ou a página do produto que o usuário estava vendo.
 
 ## Resumo do conteúdo
 
