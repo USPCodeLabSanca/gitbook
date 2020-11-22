@@ -87,7 +87,7 @@ Faça uma página HTML que exiba o seguinte resultado:
 
 ![](https://lh5.googleusercontent.com/eXT8vSGYp3171vJIcgWZRQ2n5gyapLpxfk76PoWsZRPZHCoBLFuJpD2KaqLJRZBpDrqbz0dy_0CXgdU422ww3-8NsYTGOUe5yzj7LilKS2Sdfm4dXegQ9FjPWHs_gz6iHxP4W5VVIuw)
 
-Obs: pode ser a foto de qualque cachorro.
+Obs: pode ser a foto de qualquer cachorro.
 {% endtab %}
 
 {% tab title="Resposta" %}
