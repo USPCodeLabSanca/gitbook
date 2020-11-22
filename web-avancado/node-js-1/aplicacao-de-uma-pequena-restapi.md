@@ -8,11 +8,13 @@ Uma restAPI é uma arquitetura que acessa vários endpoints \(caminhos de uma UR
 
 ## Gerenciadores de requisições
 
-Gerenciadores de requisições são plataformas que fazem requisições, eles servem para entender como sua aplicação se comporta quando se faz algumas requisições para as funcionalidades da API.
+Gerenciadores de requisições são plataformas que fazem requisições, eles servem para entender como sua aplicação se comporta quando se faz algumas requisições para as funcionalidades da API. Os mais conhecidos são o Postman, o Insomnia e o cURL \(que pode ser usado via linha de código\). 
+
+No nosso exemplo, iremos utilizar o postman, que pode ser instalado em: [https://www.postman.com/downloads/](https://www.postman.com/downloads/). 
 
 ## Exemplo
 
-A fim deste exemplo, a aplicação que será feita é uma lista encadeada que permite a inserção de novos itens\(ou nós\), e permite também que sejam visualizados ou deletados da lista.
+A fim deste exemplo, a aplicação que será feita é uma lista. Esta lista estará, inicialmente, vazia; então, será possível colocar itens nela, ver todos os itens da lista, acessar um item específico e deletar itens da lista.
 
 ### Configuração do repositório
 
@@ -214,7 +216,7 @@ Depois de adicionar mais alguns itens, podemos ver a lista inteira usando o mét
 
 ![Requisi&#xE7;&#xE3;o GET feita para ver a lista](../../.gitbook/assets/get_all.png)
 
-Se quisermos remover um dos itens, precisamos fazer a requisição DELETE na URL [http://localhost:5000/item/](http://localhost:5000/item/), mas para reconhecer qual item deve ser retirado, precisamos colocar um query string \(reconhecido pelo ? após a URL\). Como nosso identificador dos itens é o parâmetro title, nós colocamos qual item com o title deve ser retirado. Abaixo, mostramos um exemplo:
+Se quisermos remover um dos itens, precisamos fazer a requisição DELETE na URL [http://localhost:5000/item/](http://localhost:5000/item/), mas para reconhecer qual item deve ser retirado, precisamos colocar um query string \(reconhecido pelo ? após a URL, como explicado no capítulo "Revisão de HTTP"\). Como nosso identificador dos itens é o parâmetro title, nós colocamos qual item com o title deve ser retirado. Abaixo, mostramos um exemplo:
 
 ![Postman ap&#xF3;s uma requisi&#xE7;&#xE3;o DELETE](../../.gitbook/assets/delete_item.png)
 

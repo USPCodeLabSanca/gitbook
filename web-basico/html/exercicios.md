@@ -14,25 +14,25 @@ Faça uma página HTML que exiba o seguinte resultado:
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Exercício 1</title>
+      <title>Exercício 1</title>
 </head>
 <body>
-  <h1>No Meio do Caminho</h1>
-  <p>
+      <h1>No Meio do Caminho</h1>
+      <p>
         No meio do caminho tinha uma pedra<br>
         tinha uma pedra no meio do caminho<br>
         tinha uma pedra<br>
         no meio do caminho tinha uma pedra<br>
-    </p>
-    <p>
+      </p>
+      <p>
         Nunca me esquecerei desse acontecimento<br>
         na vida de minhas retinas tão fatigadas<br>
         Nunca me esquecerei que no meio do caminho<br>
         tinha uma pedra<br>
         tinha uma pedra no meio do caminho<br>
         no meio do caminho tinha uma pedra
-  </p>
-  <p>Carlos Drummond de Andrade</p>
+      </p>
+      <p>Carlos Drummond de Andrade</p>
 </body>
 </html>
 ```
@@ -102,10 +102,10 @@ Obs: pode ser a foto de qualque cachorro.
   <img src=".assets/cachorro" alt="um cachorro preto e branco utilizando um laço na cabeça">
   <p>
     Lições do melhor amigo.<br>
-        Se um cachorro fosse seu professor você aprenderia habilidades assim:<br>
-        - Quando alguém que você ama chegar em casa, corra ao seu encontro;<br>
-        - Não morda se um rosnado resolver a situação;<br>
-        - Não importa quantas vezes o outro magoar você, volte e faça as pazes.<br>
+    Se um cachorro fosse seu professor você aprenderia habilidades assim:<br>
+      - Quando alguém que você ama chegar em casa, corra ao seu encontro;<br>
+      - Não morda se um rosnado resolver a situação;<br>
+      - Não importa quantas vezes o outro magoar você, volte e faça as pazes.<br>
   </p>
 </body>
 </html>
