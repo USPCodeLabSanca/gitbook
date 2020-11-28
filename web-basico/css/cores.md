@@ -46,12 +46,12 @@ Essa estrutura é chamada de **conjunto de regras**. Vamos examinar cada element
 
 * **Seletor:** é responsável por selecionar o elemento a ser estilizado, nesse caso o &lt;p&gt;. Vamos apresentar os tipos de seletores e como eles funcionam na seção "Seletores".
 * **Propriedade:** é reponsável por escolher qual propriedade do elemento será alterado, nesse caso "color" é responsável pela cor do elemento. Vamos apresentar outras propriedades em "Propriedades mais usadas".
-* **Valor da propriedade:** é responsável por apresentar o valor da propriedade, nesse caso escolhemos "green" \(verde\) e, por isso, nosso parágrafo ficou verde.
+* **Valor da propriedade:** é responsável por apresentar o valor da propriedade, nesse caso escolhemos "green" \(verde\), por isso nosso parágrafo ficou verde.
 * **Declaração:** Uma declaração é composta por uma propriedade e seu respectivo valor. Um comando pode possuir mais de uma declaração.
 
 Outros elementos que valem ser destacados são:
 
 * Cada comando precisa estar dentro de chaves **`{}`** 
 * A propriedade e o valor da propriedades são separadas por dois pontos **`:`**
-* No fim de cada declaração é necessário colocar ponto e virgula **`;`**
+* No fim de cada declaração é necessário colocar dois pontos **`;`**
 
