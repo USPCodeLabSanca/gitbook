@@ -43,6 +43,7 @@
     * [Utilizando o NPM](web-avancado/node-js-1/utilizando-o-npm.md)
     * [Revisão de HTTP](web-avancado/node-js-1/revisao-de-http.md)
     * [Aplicação de uma pequena restAPI](web-avancado/node-js-1/aplicacao-de-uma-pequena-restapi.md)
+    * [Além do NodeJS](web-avancado/node-js-1/alem-do-nodejs.md)
 * [Web Scraping](web-scraping/README.md)
   * [Virtual Environments](web-scraping/virtual-environments.md)
   * [Python para Limpeza de Dados e Regex](web-scraping/web-scraping.md)
