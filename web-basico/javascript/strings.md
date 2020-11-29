@@ -26,6 +26,26 @@ Não há regra para utilizar uma ou outra. No geral, Strings de aspas simples de
 let text = "it's a good idea to use double quotes for english text."
 ```
 
+### \n, \t e caractere de escape
+
+Strings possuem caracteres especiais para formatação. Por exemplo, `\n`, que pula uma linha, e `\t`, que força uma tabulação. 
+
+Ainda é  possível escapar carateres especiais utilizando `\` , impedindo seu comportamento padrão. Por exemplo:
+
+* Imprimir, literalmente, o caractere `\n` \(Que normalmente imprimiria uma quebra de linha\) com `\\n`
+* Imprimir, literalmente, o caractere `\t` \(Que normalmente uma tabulação\) com `\\t`
+* Evitar que que `'` feche uma string aberta por aspas simples com `\'`
+
+```javascript
+let not_escaped = "O caractere \n pula linhas!"
+let escaped = "O caractere \\n pula linhas!"
+
+console.log(not_escaped)
+console.log(escaped)
+```
+
+![&#xC9; poss&#xED;vel escapar caracteres especiais utilizando \](../../.gitbook/assets/image%20%2811%29.png)
+
 ### Acessar caracteres de Strings
 
 É possível acessar caracteres de strings utilizando o operador `[]`
