@@ -48,7 +48,7 @@ console.log('Hello World!')
 {% endtab %}
 {% endtabs %}
 
-O código acima escreve \`Hello World!" no console do navegador.
+O código acima escreve \`Hello World!\` no console do navegador.
 
 ## Console
 
