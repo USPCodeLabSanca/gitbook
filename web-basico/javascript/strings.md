@@ -44,7 +44,7 @@ console.log(not_escaped)
 console.log(escaped)
 ```
 
-![&#xC9; poss&#xED;vel escapar caracteres especiais utilizando \](../../.gitbook/assets/image%20%2811%29.png)
+![&#xC9; poss&#xED;vel escapar caracteres especiais utilizando \](../../.gitbook/assets/image%20%2811%29%20%281%29.png)
 
 ### Acessar caracteres de Strings
 

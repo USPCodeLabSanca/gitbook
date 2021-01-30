@@ -1,6 +1,6 @@
 # Arrays
 
-Arrays, também conhecidos como vetores, são estruturas que armazenam dados de maneira sequencial. Além disso, elementos são indexados. Sua grande utilidade é armazenar, em uma única variável, uma série de elementos. 
+Arrays, também conhecidos como vetores, são estruturas que armazenam dados de maneira sequencial. Além disso, seus elementos são indexados. Sua grande utilidade é armazenar, em uma única variável, uma série de elementos. 
 
 ### Declaração
 

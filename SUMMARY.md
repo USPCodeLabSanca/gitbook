@@ -34,6 +34,7 @@
     * [Promises](web-basico/javascript/promises/README.md)
       * [Promises vs Callbacks](web-basico/javascript/promises/promises-vs-callbacks.md)
       * [Tratamento de erros com promises](web-basico/javascript/promises/promises-e-erros.md)
+    * [Async/Await](web-basico/javascript/async-await.md)
     * [Eventos](web-basico/javascript/eventos.md)
     * [Datas](web-basico/javascript/datas.md)
     * [Armazenamento persistente](web-basico/javascript/armazenamento-persistente.md)
