@@ -23,9 +23,24 @@ promessaDaLeitura.then((data) => {
 // })
 ```
 
-No exemplo acima, só há uma promise \(marcado pelo ".then"\), mas e se precisassemos utilizar a variável data em uma  outra próxima promise?
+No exemplo acima, só há uma promise \(marcado pelo ".then"\), mas e se precisássemos utilizar a variável data em uma  outra próxima promise?
 
 Isso criaria um encadeamento de promises uma dentro da outra, e, no final, teríamos infinitas promises uma dentro da outra.
+
+Algo como:
+
+```javascript
+f1.then((data1) => {
+    f2(data1).then((data2) => {
+        f3.then((data3) => {
+            console.log(data3)
+            //podendo continuar indefinidamente
+        })
+    })
+})
+```
+
+Para o código acima, dá-se o nome callback hell.
 
 E como podemos evitar isso? Usando **async/await**
 
