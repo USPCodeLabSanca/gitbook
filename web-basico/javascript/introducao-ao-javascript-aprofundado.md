@@ -77,7 +77,7 @@ Versões demoram para serem implementadas nos browsers. Ferramentas como o **Bab
 
   lança o seguinte erro:
 
-  ![](../../.gitbook/assets/js_intro_img6%20%281%29%20%281%29.png)
+  ![](../../.gitbook/assets/js_intro_img6%20%281%29%20%281%29%20%281%29.png)
 
   Variáveis declaradas com let geram menos efeitos colaterais no código, sendo portanto recomendadas.
 

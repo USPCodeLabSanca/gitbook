@@ -4,13 +4,13 @@ description: 'O que é o Event Loop, e como ele funciona'
 
 # Event Loop
 
-### O que é o _Event Loop_?
+## O que é o _Event Loop_?
 
 Um dos principais fatos sobre o JavaScript é que é uma linguagem inerentemente _Single Thread_ \(tradução: _Fio único_\), isto é, em qualquer instante apenas um comando pode estar sendo executado ao mesmo tempo. Essa é uma das características principais da linguagem, independente de onde ela esteja sendo executada. Além disso, o JavaScript é um linguagem _Assíncrona_, isto é, a ordem de execução das funções não é sempre bem definida. Isso quer dizer que dependendo de como o código for escrito, cada execução do código pode ter uma ordem diferente de execução de suas funções.
 
 Como o JavaScript é _Single Thread_ e _Assíncrono_, apenas uma função pode estar sendo executada em qualquer momento, mas a ordem de execução delas deve ser definida durante a execução do código. Assim, o _Event Loop_ \(tradução: _Ciclo de Eventos_\) é o mecanismo que o JavaScript usa para escolher qual será a próxima função a ser executada.
 
-### O problema
+## O problema
 
 Numa página web, quase sempre que o usuário faz uma ação, a interface deve ser atualizada de alguma forma. Seja para mudar a cor de um link que foi visitado, ou para descer o _scroll_ da página. Entretanto, em todos os _browsers_ modernos, a interface não pode ser atualizada enquanto houver código JavaScript sendo executado, e não se pode executar código JavaScript enquanto a interface estiver sendo atualizada \(os dois não podem ser feitos ao mesmo tempo\).
 
@@ -34,7 +34,7 @@ Assim, se nosso código JavaScript for muito demorado, a tela do usuário ficara
 
 No exemplo acima, quando o usuário clickar no botão, toda a interface ficará travada até a função "`click`" terminar, o que pode demorar múltiplos segundos
 
-### A solução
+## A solução
 
 Para mitigar o problema descrito acima, foi-se desenvolvida a ideia de "agendar" a execução de funções num momento futuro, liberando o _browser_ para atualizar a interface do usuário, ou executar outras partes do código JavaScript.
 
@@ -89,9 +89,9 @@ Veja esse outro exemplo, mas dessa vez fazendo uma requisição.
 
 Este é um exemplo um pouco mais complicado, mas que essencialmente faz a mesma coisa que o temporizador. Nesse caso, o código faz uma requisição para um servidor, e agenda a função "`responseReceived`" para ser executada quando uma resposta do servidor for recebida. Essa função, por sua vez, tenta extrair o corpo da resposta na forma de texto, e agenda a função "`responseTextFinished`" para ser executada quando esse texto estiver pronto. Durante todo esse processo, enquanto essas operações estavam sendo feitas, o _browser_ estava livre para atualizar a interface do usuário.
 
-### Como funciona
+## Como funciona
 
-#### As ferramentas
+### As ferramentas
 
 Para gerenciar as operações e funções agendadas, o browser usa três construtos: a "_Call Stack_", as "_Web APIs_" e a "_Queue_".
 
@@ -101,7 +101,7 @@ As _Web APIs_ são funções especiais que realizam tarefas complexas por trás 
 
 A _Queue_ \(tradução: _Fila_\) é uma fila de _callbacks_ que estão prontas para serem imediatamente executadas, mas que ainda estão aguardando uma oportunidade.
 
-#### O fluxo
+### O fluxo
 
 Tudo começa com a primeira execução do código JavaScript. Primeiro, o código que está escrito na página é embrulhado numa grande função e posto no início da _Call Stack_. Como a _Call Stack_ é a pilha que define qual função está sendo atualmente executada, o código fonte é executado, linha a linha.
 
@@ -128,7 +128,7 @@ function eventLoop () {
 }
 ```
 
-#### Um exemplo simples
+### Um exemplo simples
 
 Considere o código abaixo:
 
@@ -159,7 +159,7 @@ Fim do código principal
 Oi!
 ```
 
-#### Um exemplo mais complicado
+### Um exemplo mais complicado
 
 ```javascript
 console.log('Início');
@@ -186,7 +186,7 @@ Mas nesse exemplo há algo de mais interessante: são três requisições aconte
 
 Em casos como esse, quem terminar primeiro poderá empurrar a sua _callback_ para a _Queue_ primeiro. E a ordem de execução das _callbacks_ é a ordem de chegada delas na _Queue_. Mesmo que as três requisições terminem ao mesmo tempo, alguma delas será tratada primeiro, enquanto a _callback_ da outras espera na _Queue_ a _Call Stack_ se liberar.
 
-### Resumo
+## Resumo
 
 Neste capítulo, vimos:
 

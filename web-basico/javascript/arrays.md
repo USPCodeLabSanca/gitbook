@@ -58,8 +58,8 @@ console.log(my_array)
 
 É possível inserir elementos em um array utilizando:
 
-* `push`: Insere ao final
-* `unshift`: Insere ao início 
+* `push`: Insere no **final**
+* `unshift`: Insere no **início**
 
 ```javascript
 let my_array = ['b', 'c']
@@ -72,7 +72,7 @@ console.log(my_array)
 // Imprime ["a", "b", "c", "Z"]
 ```
 
-### length
+### Propriedade "length"
 
 Retorna o tamanho do array. 
 
@@ -82,11 +82,11 @@ console.log(my_array.length)
 // Imprime 3
 ```
 
-### Remover elementos
+### Removendo elementos
 
 É possível remover elementos utilizando:
 
-* `pop`remove o **último elemento** e o retorna
+* `pop`: Remove o **último elemento** e o retorna
 
 ```javascript
 let my_array = ['a', 'b', 'c']
@@ -95,7 +95,7 @@ my_array.pop()
 console.log(my_array) // Imprime ['a', 'b']
 ```
 
-* `shift`remove o **primeiro elemento** e o retorna
+* `shift`: Remove o **primeiro elemento** e o retorna
 
 ```javascript
 let my_array = ['a', 'b', 'c']
@@ -105,7 +105,7 @@ console.log(my_array)
 // Imprime ['b', 'c']
 ```
 
-### Gerar sub-arrays
+### Gerando sub-arrays
 
 O operador `slice(start, end)` corta o array a partir de um índice inicial e final. 
 
@@ -117,18 +117,18 @@ console.log(sub_array)
 // Imprime ["c", "d", "e"]
 ```
 
-É importante re-lembrar que arrays são indexados do 0.
+É importante relembrar que arrays são indexados a partir do 0.
 
-Além disso, `slice` inclui o elemento `start`, mas não o `end`. No exemplo acima, `my_array[2], "c"`, é incluído, mas`my_array[5], "f"`, não. 
+Além disso, `slice` inclui o elemento `start`, mas não o `end`. No exemplo acima, `my_array[2] ("c")`, é incluído, mas`my_array[5] ("f")`, não. 
 
-### Iterar sobre arrays
+### Iterando sobre arrays
 
-Uma das maiore utilidades de `for` é iterar sobre arrays. É possível utilizar o tamanho do array, `my_array.length`, para isto: 
+Uma das maiores utilidades do comando `for` é iterar sobre arrays. É possível utilizar o tamanho do array, `my_array.length`, para isto: 
 
 ```javascript
 let my_array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
-for(let i = 0; i < my_array.length; i++){
+for (let i = 0; i < my_array.length; i++) {
     my_array[i] = my_array[i]**2    
 }
 
@@ -141,12 +141,10 @@ Entretanto, como é uma tarefa muito comum **iterar sobre arrays e manipular o e
 ```javascript
 let my_array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
-for(number of my_array){
+for (number of my_array){
     number = number**2
 }
 
 console.log(my_array)
 ```
-
-NÃO FUNCIONOU T.T 
 
