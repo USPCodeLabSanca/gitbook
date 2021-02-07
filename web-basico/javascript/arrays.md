@@ -36,9 +36,9 @@ O operador `indexOf` permite encontrar a primeira ocorrência de um valor em um 
 
 ```javascript
 let my_array = ['a', 'b', 'c', 'd']
-b_index = my_array.indexOf('c')
+c_index = my_array.indexOf('c')
 
-console.log(b_index)
+console.log(c_index)
 // Imprime 2
 ```
 
