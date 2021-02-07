@@ -31,6 +31,7 @@
     * [Funções](web-basico/javascript/funcoes.md)
     * [Objetos](web-basico/javascript/objetos.md)
     * [Arrow Functions](web-basico/javascript/arrow-functions.md)
+    * [Event Loop](web-basico/javascript/event-loop.md)
     * [Promises](web-basico/javascript/promises/README.md)
       * [Promises vs Callbacks](web-basico/javascript/promises/promises-vs-callbacks.md)
       * [Tratamento de erros com promises](web-basico/javascript/promises/promises-e-erros.md)
