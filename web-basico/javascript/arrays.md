@@ -16,7 +16,7 @@ Também é possível inicializar um array com dados:
 let elements = ['a', 3, 85, 'maria']
 ```
 
-Outra propriedade interessante dos arrays em javascript e sua capacidade de armazenar elementos de diferentes tipos. É possível ter números e strings em um mesmo array. Além disso, arrays são indexados do 0. 
+Outra propriedade interessante dos arrays em javascript é a sua capacidade de armazenar elementos de diferentes tipos. É possível ter números e strings em um mesmo array. Além disso, arrays são indexados a partir do número 0. 
 
 ### Acessando elementos do via Index
 
