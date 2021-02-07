@@ -18,7 +18,7 @@ let elements = ['a', 3, 85, 'maria']
 
 Outra propriedade interessante dos arrays em javascript é a sua capacidade de armazenar elementos de diferentes tipos. É possível ter números e strings em um mesmo array. Além disso, arrays são indexados a partir do número 0. 
 
-### Acessando elementos do array via índice
+### Acessando elementos via índice
 
 É possível acessar o **i**ésimo elemento de um array por meio de seu índice `[i]`.
 
