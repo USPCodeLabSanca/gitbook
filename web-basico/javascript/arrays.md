@@ -54,7 +54,7 @@ console.log(my_array)
 // Imprime ['b', 'k']
 ```
 
-### Inserir Elementos
+### Inserindo elementos
 
 É possível inserir elementos em um array utilizando:
 
