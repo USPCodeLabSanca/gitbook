@@ -12,7 +12,7 @@ façaAlgo(function(resultado) {
 }, callbackErro);
 ```
 
-Para contornar esse (e outros) problema(s) foram idealizadas as promises que por meio do chamado chaining contornam o callback hell.
+Para contornar esse \(e outros\) problema\(s\) foram idealizadas as promises que por meio do chamado chaining contornam o callback hell.
 
 ```javascript
 façaAlgo()
@@ -84,3 +84,4 @@ new Promise(function(resolve, reject) {
   console.log(resultado); // 3
 });
 ```
+
