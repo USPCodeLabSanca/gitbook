@@ -6,7 +6,7 @@ description: 'O que é o Event Loop, e como ele funciona'
 
 ## O que é o _Event Loop_?
 
-Um dos principais fatos sobre o JavaScript é que é uma linguagem inerentemente _Single Thread_ \(tradução: _Fio único_\), isto é, em qualquer instante apenas um comando pode estar sendo executado ao mesmo tempo. Essa é uma das características principais da linguagem, independente de onde ela esteja sendo executada. Além disso, o JavaScript é um linguagem _Assíncrona_, isto é, a ordem de execução das funções não é sempre bem definida. Isso quer dizer que dependendo de como o código for escrito, cada execução do código pode ter uma ordem diferente de execução de suas funções.
+Um dos principais fatos sobre o JavaScript é que é uma linguagem inerentemente _Single Thread_ \(tradução: _fio único_\), isto é, em qualquer instante apenas um comando pode estar sendo executado ao mesmo tempo. Essa é uma das características principais da linguagem, independente de onde ela esteja sendo executada. Além disso, o JavaScript é um linguagem _Assíncrona_, isto é, a ordem de execução das funções não é sempre bem definida. Isso quer dizer que dependendo de como o código for escrito, cada execução do código pode ter uma ordem diferente de execução de suas funções.
 
 Como o JavaScript é _Single Thread_ e _Assíncrono_, apenas uma função pode estar sendo executada em qualquer momento, mas a ordem de execução delas deve ser definida durante a execução do código. Assim, o _Event Loop_ \(tradução: _Ciclo de Eventos_\) é o mecanismo que o JavaScript usa para escolher qual será a próxima função a ser executada.
 
@@ -32,7 +32,7 @@ Assim, se nosso código JavaScript for muito demorado, a tela do usuário ficara
 </html>
 ```
 
-No exemplo acima, quando o usuário clickar no botão, toda a interface ficará travada até a função "`click`" terminar, o que pode demorar múltiplos segundos
+No exemplo acima, quando o usuário clickar no botão, toda a interface ficará travada até a função `click` terminar, o que pode demorar múltiplos segundos
 
 ## A solução
 
@@ -60,7 +60,7 @@ Assim, algumas funções disponibilizadas pelo _browser_ recebem outras funçõe
 </html>
 ```
 
-Aqui, quando o usuário clickar no botão, o código vai esperar 5 segundos para mostrar um alerta. Enquanto esse tempo passa, a interface do usuário não ficara travada ou irresponsiva. Isso é porque a função "`setTimeout`" apenas "agenda" a execução da sua _callback_ para quando o temporizador de 5 segundos terminar.
+Aqui, quando o usuário clickar no botão, o código vai esperar 5 segundos para mostrar um alerta. Enquanto esse tempo passa, a interface do usuário não ficara travada ou irresponsiva. Isso é porque a função `setTimeout` apenas "agenda" a execução da sua _callback_ para quando o temporizador de 5 segundos terminar.
 
 Veja esse outro exemplo, mas dessa vez fazendo uma requisição.
 
@@ -87,7 +87,7 @@ Veja esse outro exemplo, mas dessa vez fazendo uma requisição.
 </html>
 ```
 
-Este é um exemplo um pouco mais complicado, mas que essencialmente faz a mesma coisa que o temporizador. Nesse caso, o código faz uma requisição para um servidor, e agenda a função "`responseReceived`" para ser executada quando uma resposta do servidor for recebida. Essa função, por sua vez, tenta extrair o corpo da resposta na forma de texto, e agenda a função "`responseTextFinished`" para ser executada quando esse texto estiver pronto. Durante todo esse processo, enquanto essas operações estavam sendo feitas, o _browser_ estava livre para atualizar a interface do usuário.
+Este é um exemplo um pouco mais complicado, mas que essencialmente faz a mesma coisa que o temporizador. Nesse caso, o código faz uma requisição para um servidor, e agenda a função `responseReceived` para ser executada quando uma resposta do servidor for recebida. Essa função, por sua vez, tenta extrair o corpo da resposta na forma de texto, e agenda a função `responseTextFinished` para ser executada quando esse texto estiver pronto. Durante todo esse processo, enquanto essas operações estavam sendo feitas, o _browser_ estava livre para atualizar a interface do usuário.
 
 ## Como funciona
 
@@ -97,7 +97,7 @@ Para gerenciar as operações e funções agendadas, o browser usa três constru
 
 A _Call Stack_ \(tradução: _Pilha de chamadas_\) é uma pilha de funções que estão sendo executadas no atual instante. Quando uma função do JavaScript é chamada, ela é posta no topo da _Call Stack_. Quando uma função do JavaScript termina de executar, ela é removida da _Call Stack_. Se a _Call Stack_ estiver vazia, quer dizer que nenhuma função está sendo executada no momento.
 
-As _Web APIs_ são funções especiais que realizam tarefas complexas por trás dos panos. A maior parte dessas funções são implementadas de forma que utilizam eficientemente os recursos do computador. Essas funções não pertencem ao JavaScript em si, mas são disponibilizadas pelo ambiente de execução \(no nosso caso, o _browser_\). Exemplos de _Web APIs_ são: "`fetch`", "`setTimeout`" ou "`setInterval`". Você pode ver uma lista das _Web APIs_ mais amplamente implementadas nos _browsers_ modernos [aqui](https://developer.mozilla.org/en-US/docs/Web/API).
+As _Web APIs_ são funções especiais que realizam tarefas complexas por trás dos panos. A maior parte dessas funções são implementadas de forma que utilizam eficientemente os recursos do computador. Essas funções não pertencem ao JavaScript em si, mas são disponibilizadas pelo ambiente de execução \(no nosso caso, o _browser_\). Exemplos de _Web APIs_ são: `fetch`, `setTimeout` ou `setInterval`. Você pode ver uma lista das _Web APIs_ mais amplamente implementadas nos _browsers_ modernos [aqui](https://developer.mozilla.org/en-US/docs/Web/API).
 
 A _Queue_ \(tradução: _Fila_\) é uma fila de _callbacks_ que estão prontas para serem imediatamente executadas, mas que ainda estão aguardando uma oportunidade.
 
@@ -145,13 +145,13 @@ setTimeout(sayHi, 5000);
 console.log('Fim do código principal');
 ```
 
-Nesse exemplo, a primeira coisa que acontece é o código ser imediatamente movido para a _Call Stack_, e ser imediatamente executado. Assim, a primeira linha imprime a palavra "Início". Na terceira linha, declaramos a função "`sayHi`". Na oitava linha, fazemos uma chamada para a _Web API_ "`setTimeout`", que agenda a _callback_ "`sayHi`" para ser executada em 5 segundos. Por fim, na décima linha, imprime-se a string "Fim do código principal".
+Nesse exemplo, a primeira coisa que acontece é o código ser imediatamente movido para a _Call Stack_, e ser imediatamente executado. Assim, a primeira linha imprime a palavra "Início". Na terceira linha, declaramos a função `sayHi`. Na oitava linha, fazemos uma chamada para a _Web API_ `setTimeout`, que agenda a _callback_ `sayHi` para ser executada em 5 segundos. Por fim, na décima linha, imprime-se a string "Fim do código principal".
 
-Ao finalizar a execução desse código, a _Call Stack_ ficará vazia, e o _Event Loop_ começará o seu trabalho de constantemente verificar se há algo na _Queue_, pronto para mover para a _Call Stack_. Nesse caso, a única coisa que o nosso código ainda está fazendo é esperar a _Web API_ do "`setTimeout`" terminar a contagem do temporizador de 5 segundos, enquanto a _Call Stack_ e a _Queue_ ficam vazias. Logo, pelos próximo 5 segundos, nada acontece.
+Ao finalizar a execução desse código, a _Call Stack_ ficará vazia, e o _Event Loop_ começará o seu trabalho de constantemente verificar se há algo na _Queue_, pronto para mover para a _Call Stack_. Nesse caso, a única coisa que o nosso código ainda está fazendo é esperar a _Web API_ do `setTimeout` terminar a contagem do temporizador de 5 segundos, enquanto a _Call Stack_ e a _Queue_ ficam vazias. Logo, pelos próximo 5 segundos, nada acontece.
 
-Passados os 5 segundos, a _Web API_ do "`setTimeout`" termina o seu trabalho e move a _callback_ "`sayHi`" para a _Queue_. O _Event Loop_, que durante todo este tempo estava esperando algo aparecer na _Queue_, finalmente vê que a _Call Stack_ está vazia e que há algo na _Queue_. Assim, o _Event Loop_ move a _callback_ "`sayHi`" da _Queue_ para a _Call Stack_ e a executa.
+Passados os 5 segundos, a _Web API_ do `setTimeout` termina o seu trabalho e move a _callback_ `sayHi` para a _Queue_. O _Event Loop_, que durante todo este tempo estava esperando algo aparecer na _Queue_, finalmente vê que a _Call Stack_ está vazia e que há algo na _Queue_. Assim, o _Event Loop_ move a _callback_ `sayHi` da _Queue_ para a _Call Stack_ e a executa.
 
-Finalmente, com a função "`sayHi`" na _Call Stack_ e sendo executada, o `console.log` da linha 4 é executado, e a string "Oi!" aparece no _console_. Assim, a impressão final deste código é:
+Finalmente, com a função `sayHi` na _Call Stack_ e sendo executada, o `console.log` da linha 4 é executado, e a string "Oi!" aparece no _console_. Assim, a impressão final deste código é:
 
 ```text
 Início
