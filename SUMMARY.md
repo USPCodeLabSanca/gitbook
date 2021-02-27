@@ -21,6 +21,7 @@
     * [Anatomia de um comando](web-basico/css/cores.md)
     * [Seletores](web-basico/css/box-model.md)
     * [Tamanho de um elemento](web-basico/css/tamanho-de-um-elemento.md)
+    * [Grid](web-basico/css/grid.md)
   * [Javascript](web-basico/javascript/README.md)
     * [Introdução ao Javascript - Geral](web-basico/javascript/introducao-ao-javascript.md)
     * [Introdução ao Javascript - Aprofundado](web-basico/javascript/introducao-ao-javascript-aprofundado.md)
