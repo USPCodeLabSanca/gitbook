@@ -149,3 +149,36 @@ estudante1.estudar();
 // Estudando Administração.
 ```
 
+### Polimorfismo
+
+Polimorfismo significa "varias formas" em grego. Em POO, diferentes objetos chamando o mesmo método e recebendo respostas adequadas para cada tipo de objeto é chamado de polimorfismo.
+
+```javascript
+class Estudante extends Pessoa {
+  constructor(nome, idade, curso) {
+    super(nome, idade);
+    this._curso = curso;
+  }
+  
+  get curso() {
+    return this._curso;
+  }
+  
+  estudar() {
+    console.log(`Estudando ${this._curso}`)
+  }
+  
+  seApresentar() {
+    console.log(`Olá, meu nome é ${this._nome}, tenho ${this._idade} anos e faço ${this._curso}.`);
+  }
+}
+
+const estudante1 = new Estudante('Josias', 34, 'Administração');
+const pessoa1 = new Pessoa('Flávia', 23);
+
+pessoa1.seApresentar();
+// Olá, meu nome é Flávia e tenho 23 anos.
+estudante1.seApresentar();
+// Olá, meu nome é Josias, tenho 34 anos e faço Administração.
+```
+
