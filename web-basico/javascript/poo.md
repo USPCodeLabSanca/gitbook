@@ -127,33 +127,12 @@ Muitas vezes os objetos acabam sendo bem similares, compartilhando uma lógica c
 ```javascript
 class Estudante extends Pessoa {
   constructor(nome, idade, curso) {
-    this._nome = nome;
-    this._idade = idade;
+    super(nome, idade);
     this._curso = curso;
-  }
-  
-  get nome() {
-    return this._nome;
-  }
-  
-  get idade() {
-    return this._idade;
   }
   
   get curso() {
     return this._curso;
-  }
-  
-  fazerAniversario() {
-    this._idade++;
-  }
-  
-  seApresentar() {
-    if (Math.random() < 0.5) {
-      console.log(`Olá, meu nome é ${this._nome} e tenho ${this._idade} anos.`);
-    } else {
-      console.log(`Oii, me chamo ${this._nome} e tenho ${this._idade} anos.`);
-    }
   }
   
   estudar() {
@@ -163,7 +142,7 @@ class Estudante extends Pessoa {
 
 const estudante1 = new Estudante('Josias', 34, 'Administração');
 
-pessoa1.seApresentar();
+estudante1.seApresentar();
 // Olá, meu nome é Josias e tenho 34 anos.
 
 estudante1.estudar();
