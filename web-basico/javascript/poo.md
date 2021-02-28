@@ -1,0 +1,81 @@
+# POO
+
+## O que é POO?
+
+POO \(Programação Orientada a Objetos\) é um paradigma de programação que busca utilizar objetos para representar coisas do mundo real dentro de um programa, facilitando o entendimento e acesso a funcionalidades do código.
+
+Um dos exemplos mais utilizados para demostrar conceitos de POO é modelar a classe Pessoa.
+
+### O que é uma classe?
+
+Classe é como uma planta arquitetônica, assim como podemos construir diferentes casas utilizando uma mesma planta, com uma classe podemos instanciar vários objetos de Pessoa seguindo uma estrutura básica predefinida.
+
+No Javascript podemos definir uma classe da seguinte forma:
+
+```javascript
+class Pessoa {
+  constructor(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+  }
+
+  seApresentar() {
+    console.log(`Olá, meu nome é ${this.nome}.`);
+  }
+}
+```
+
+Agora que temos uma classe Pessoa podemos instanciar \(criar\) objetos a partir dela.
+
+```javascript
+const pessoa1 = new Pessoa('Josias', 34);
+const pessoa2 = new Pessoa('Flávia', 23);
+
+pessoa1.seApresentar();
+// Olá, meu nome é Josias.
+
+
+pessoa2.seApresentar();
+// Olá, meu nome é Flávia.
+```
+
+## Princípios de POO
+
+### Encapsulamento
+
+Encapsulamento consiste em esconder informações que não devem ser acessadas de forma direta mas sim por meio de funções auxiliares que definem regras de como esse informação deve ser manipulada e visualizada.
+
+```javascript
+class Pessoa {
+  constructor(nome, idade) {
+    this._nome = nome;
+    this._idade = idade;
+  }
+  
+  get nome() {
+    return this._nome;
+  }
+  
+  get idade() {
+    return this._idade;
+  }
+  
+  fazerAniversario() {
+    this._idade++;
+  }
+  
+  seApresentar() {
+    console.log(`Olá, meu nome é ${this._nome} e tenho ${this._idade} anos.`);
+  }
+}
+
+const pessoa1 = new Pessoa('Josias', 34);
+
+pessoa1.fazerAniversario();
+
+pessoa1.seApresentar();
+// Olá, meu nome é Josias e tenho 35 anos.
+```
+
+
+

@@ -31,6 +31,7 @@
     * [Arrays](web-basico/javascript/arrays.md)
     * [Funções](web-basico/javascript/funcoes.md)
     * [Objetos](web-basico/javascript/objetos.md)
+    * [POO](web-basico/javascript/poo.md)
     * [Arrow Functions](web-basico/javascript/arrow-functions.md)
     * [Event Loop](web-basico/javascript/event-loop.md)
     * [Promises](web-basico/javascript/promises/README.md)
