@@ -122,7 +122,7 @@ pessoa1.seApresentar();
 
 ### Herança
 
-Muitas vezes os objetos acabam sendo bem similares, compartilhando uma lógica comum porem sem ser exatamente iguais. Uma forma de reusar essa lógica comum extraindo a lógica unica para uma classe a parte é chama de herança. Esse processo consiste em criar uma classe filha que deriva de uma classe pai.
+Muitas vezes os objetos acabam sendo bem similares, compartilhando uma lógica comum porem sem ser exatamente iguais. Uma forma de reutilizar essa lógica comum extraindo a lógica única para uma classe a parte é chama de herança. Esse processo consiste em criar uma classe filha que deriva de uma classe pai.
 
 ```javascript
 class Estudante extends Pessoa {
@@ -151,7 +151,7 @@ estudante1.estudar();
 
 ### Polimorfismo
 
-Polimorfismo significa "varias formas" em grego. Em POO, diferentes objetos chamando o mesmo método e recebendo respostas adequadas para cada tipo de objeto é chamado de polimorfismo.
+Polimorfismo significa "várias formas" em grego. Em POO, diferentes objetos chamando o mesmo método e recebendo respostas adequadas para cada objeto é chamado de polimorfismo.
 
 ```javascript
 class Estudante extends Pessoa {
