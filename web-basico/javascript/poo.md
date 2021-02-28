@@ -120,3 +120,53 @@ pessoa1.seApresentar();
 // Oii, me chamo Josias e tenho 35 anos.
 ```
 
+### Herança
+
+Muitas vezes os objetos acabam sendo bem similares, compartilhando uma lógica comum porem sem ser exatamente iguais. Uma forma de reusar essa lógica comum extraindo a lógica unica para uma classe a parte é chama de herança. Esse processo consiste em criar uma classe filha que deriva de uma classe pai.
+
+```javascript
+class Estudante extends Pessoa {
+  constructor(nome, idade, curso) {
+    this._nome = nome;
+    this._idade = idade;
+    this._curso = curso;
+  }
+  
+  get nome() {
+    return this._nome;
+  }
+  
+  get idade() {
+    return this._idade;
+  }
+  
+  get curso() {
+    return this._curso;
+  }
+  
+  fazerAniversario() {
+    this._idade++;
+  }
+  
+  seApresentar() {
+    if (Math.random() < 0.5) {
+      console.log(`Olá, meu nome é ${this._nome} e tenho ${this._idade} anos.`);
+    } else {
+      console.log(`Oii, me chamo ${this._nome} e tenho ${this._idade} anos.`);
+    }
+  }
+  
+  estudar() {
+    console.log(`Estudando ${this._curso}`)
+  }
+}
+
+const estudante1 = new Estudante('Josias', 34, 'Administração');
+
+pessoa1.seApresentar();
+// Olá, meu nome é Josias e tenho 34 anos.
+
+estudante1.estudar();
+// Estudando Administração.
+```
+
