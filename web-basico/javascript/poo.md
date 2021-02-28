@@ -77,5 +77,46 @@ pessoa1.seApresentar();
 // Olá, meu nome é Josias e tenho 35 anos.
 ```
 
+### Abstração
 
+Abstração significa esconder detalhes de implementação, mostrando apenas o essencial para o mundo externo ao objeto.
+
+```javascript
+class Pessoa {
+  constructor(nome, idade) {
+    this._nome = nome;
+    this._idade = idade;
+  }
+  
+  get nome() {
+    return this._nome;
+  }
+  
+  get idade() {
+    return this._idade;
+  }
+  
+  fazerAniversario() {
+    this._idade++;
+  }
+  
+  seApresentar() {
+    if (Math.random() < 0.5) {
+      console.log(`Olá, meu nome é ${this._nome} e tenho ${this._idade} anos.`);
+    } else {
+      console.log(`Oii, me chamo ${this._nome} e tenho ${this._idade} anos.`);
+    }
+  }
+}
+
+const pessoa1 = new Pessoa('Josias', 34);
+
+pessoa1.fazerAniversario();
+
+pessoa1.seApresentar();
+// Olá, meu nome é Josias e tenho 35 anos.
+
+pessoa1.seApresentar();
+// Oii, me chamo Josias e tenho 35 anos.
+```
 
