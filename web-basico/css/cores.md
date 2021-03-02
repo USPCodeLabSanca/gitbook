@@ -40,7 +40,7 @@ Se compararmos o resultado sem CSS e com CSS podemos observar que na última aba
 
 Agora vamos observar nosso CSS de perto:
 
-![](../../.gitbook/assets/image%20%2810%29.png)
+![](../../.gitbook/assets/image%20%2812%29.png)
 
 Essa estrutura é chamada de **conjunto de regras**. Vamos examinar cada elemento.
 

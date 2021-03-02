@@ -1,16 +1,16 @@
 # Tamanho de um elemento
 
-O layout do CSS é baseado no **modelo de caixas.** Isso significa que podemos pensar em seus elementos como caixas que colocamos uma em cima da outra, e que modificamos sua cor, tamanho, posição entre outras características. 
+O layout do CSS é baseado no **modelo de caixas.** Isso significa que podemos pensar em seus elementos como caixas que colocamos uma em cima da outra ou uma dentro da outra, e que modificamos sua cor, tamanho, posição entre outras características. 
 
 Todos os elementos possuem 3 propriedades:
 
-* _padding:_ o espaço ao redor do conteúdo até o _border_ .
+* _padding:_ o espaço ao redor do conteúdo \(_content_\) até o _border_ .
 * _border:_ uma linha \(borda\) entre o _padding_ e _margin._
 * _margin:_ espaço externo \(expansão\) do elemento.
 
-Abaixo temos um exemplo genérico:
+Abaixo temos um exemplo genérico, retirado de [W3Schools](https://www.w3schools.com/css/css_boxmodel.asp):
 
-![](https://lh5.googleusercontent.com/M3WvG6GO-DxNqqGAtMbt8FtNzANWoRS9QmMlOdJRNnnW6KjlxkNGGgHuLkiAaU2hw9no__4FncjzWpRuwycq6OlU_cBvSSS49D6WA5pUs1eAFIuB005Rhc5iNN4B6iP-4Umg1li-c8E)
+![](../../.gitbook/assets/image%20%2810%29.png)
 
 Abaixo temos um exemplo prático. Na aba "HTML" temos o código em HTML, em "CSS" o código em CSS e em "Resultado" temos a página resultante.
 
@@ -78,5 +78,27 @@ Outra parte que você provavelmente reparou foi que em `<p>` está escrito `padd
 
 Você pode aplicar essas definições nas três propriedades: _padding_, _border_, _margin_.
 
+#### Altura e Largura de um elemento
 
+Podemos também definir a altura e largura de um elemento com os comandos `height` e `width` respectivamente. Quando fazemos isso, estamos definindo somente o tamanho do conteúdo \(_content_\). O tamanho total do elemento é soma de todas as suas propriedades.
+
+Por exemplo,
+
+```css
+p{
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    border: dashed blueviolet 1px;
+    height: 30px;
+}
+```
+
+O tamanho total desse elemento é 82px.
+
+* Margin = 0 px 
+* Padding = 50px \(bottom\) 
+* Border = 2px \(top + bottom\) 
+* Height = 30px
+* Total = 82px
 
