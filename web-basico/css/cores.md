@@ -36,16 +36,16 @@ p {
 {% endtab %}
 {% endtabs %}
 
-Se compararmos o resultado sem CSS e com CSS podemos observar que na útima aba o parágrafo está verde.
+Se compararmos o resultado sem CSS e com CSS podemos observar que na última aba o parágrafo está verde.
 
 Agora vamos observar nosso CSS de perto:
 
-![](../../.gitbook/assets/image.png)
+![](../../.gitbook/assets/image%20%2810%29.png)
 
 Essa estrutura é chamada de **conjunto de regras**. Vamos examinar cada elemento.
 
 * **Seletor:** é responsável por selecionar o elemento a ser estilizado, nesse caso o &lt;p&gt;. Vamos apresentar os tipos de seletores e como eles funcionam na seção "Seletores".
-* **Propriedade:** é reponsável por escolher qual propriedade do elemento será alterado, nesse caso "color" é responsável pela cor do elemento. Vamos apresentar outras propriedades em "Propriedades mais usadas".
+* **Propriedade:** é responsável por escolher qual propriedade do elemento será alterado, nesse caso "color" é responsável pela cor do elemento. Vamos apresentar outras propriedades em "Propriedades mais usadas".
 * **Valor da propriedade:** é responsável por apresentar o valor da propriedade, nesse caso escolhemos "green" \(verde\) e, por isso, nosso parágrafo ficou verde.
 * **Declaração:** Uma declaração é composta por uma propriedade e seu respectivo valor. Um comando pode possuir mais de uma declaração.
 
