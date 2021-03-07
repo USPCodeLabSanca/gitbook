@@ -40,22 +40,22 @@ const promise = new Promise(function(resolve, reject) {
 });
 
 promise.then(function(resultado) {
-  consol.log(resultado); // 1
+  console.log(resultado); // 1
   return resultado + 1;
 });
 
 promise.then(function(resultado) {
-  consol.log(resultado); // 1
+  console.log(resultado); // 1
   return resultado + 1;
 });
 
 promise.then(function(resultado) {
-  consol.log(resultado); // 1
+  console.log(resultado); // 1
   return resultado + 1;
 });
 ```
 
-Como não esta sendo feito o chaining e sim apenas adicionando varios .then na promise acima a execução desses .then são feitas de forma independente.
+Como não esta sendo feito o chaining e sim apenas adicionando varios .then\(\) na promise, a execução desses .then\(\) é feita de forma independente.
 
 Tambem é possivel retornar uma promise dentro de outra promise.
 
