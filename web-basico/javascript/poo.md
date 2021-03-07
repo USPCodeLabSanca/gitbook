@@ -43,7 +43,7 @@ pessoa2.seApresentar();
 
 ### Encapsulamento
 
-Encapsulamento consiste em esconder informações que não devem ser acessadas de forma direta mas sim por meio de funções auxiliares que definem regras de como esse informação deve ser manipulada e visualizada.
+Encapsulamento consiste em esconder informações que não devem ser acessadas de forma direta mas sim por meio de funções auxiliares que definem regras de como essa informação deve ser manipulada e visualizada.
 
 ```javascript
 class Pessoa {
@@ -122,7 +122,7 @@ pessoa1.seApresentar();
 
 ### Herança
 
-Muitas vezes os objetos acabam sendo bem similares, compartilhando uma lógica comum porem sem ser exatamente iguais. Uma forma de reutilizar essa lógica comum extraindo a lógica única para uma classe a parte é chama de herança. Esse processo consiste em criar uma classe filha que deriva de uma classe pai.
+Muitas vezes os objetos acabam sendo bem similares, compartilhando uma lógica comum, porém sem serem exatamente iguais. Uma forma de reutilizar essa lógica comum, extraindo a lógica única para uma classe à parte, é chama de **herança**. Esse processo consiste em criar uma classe filha que deriva de uma classe pai.
 
 ```javascript
 class Estudante extends Pessoa {
@@ -151,7 +151,7 @@ estudante1.estudar();
 
 ### Polimorfismo
 
-Polimorfismo significa "várias formas" em grego. Em POO, diferentes objetos chamando o mesmo método e recebendo respostas adequadas para cada objeto é chamado de polimorfismo.
+O termo **polimorfismo** é originário do grego e significa "muitas formas" \(_poli_ = muitas, _morphos_ = formas\). Em POO, isso ocorre quando diferentes objetos chamam o mesmo método e recebem respostas adequadas para o contexto de cada um deles.
 
 ```javascript
 class Estudante extends Pessoa {
