@@ -1,6 +1,6 @@
 # Chaining
 
-Um dos maiores problemas com o uso de callbacks em operações assíncronas é o conhecido como callback hell. Ele acaba tornando seu código horizontal dificultando a legibilidade.
+Um dos maiores problemas com o uso de callbacks em operações assíncronas é o conhecido como _**callback hell**_. Ele acaba tornando seu código horizontal, dificultando a legibilidade.
 
 ```javascript
 façaAlgo(function(resultado) {
