@@ -151,7 +151,7 @@ estudante1.estudar();
 
 ### Polimorfismo
 
-O termo **polimorfismo** é originário do grego e significa "muitas formas" \(_poli_ = muitas, _morphos_ = formas\). Em POO, isso ocorre quando diferentes objetos chamam o mesmo método e recebem respostas adequadas para o contexto de cada um deles.
+O termo **polimorfismo** é originário do grego e significa "muitas formas" \(_poli_ = muitas, _morphos_ = formas\). Em POO, isso ocorre quando diferentes objetos chamam o mesmo método e recebem respostas adequadas ao contexto de cada um.
 
 ```javascript
 class Estudante extends Pessoa {
