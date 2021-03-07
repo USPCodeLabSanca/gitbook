@@ -28,7 +28,7 @@ façaAlgo()
 .catch(callbackErro);
 ```
 
-Mesmo com o exemplo acima sendo pequeno fica claro o ganho de legibilidade com o uso de chaining em promises ao inves do callback hell.
+Mesmo com o exemplo acima sendo pequeno, fica claro o ganho de legibilidade com o uso de **chaining** em Promises ao invés do callback hell.
 
 Um erro comum é tentar fazer promise chaining adicionando varios .then a uma mesma promise.
 
