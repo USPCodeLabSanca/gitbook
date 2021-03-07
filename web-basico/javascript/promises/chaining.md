@@ -77,8 +77,8 @@ new Promise(function(resolve, reject) {
 
   return new Promise(function (resolve, reject) {
     return setTimeout(function() {
-      resolve(resultado + 1), 1);
-    }
+      resolve(resultado + 1)
+    }, 1);
   });
 }).then(function(resultado) {
   console.log(resultado); // 3
