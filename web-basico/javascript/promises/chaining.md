@@ -62,14 +62,14 @@ Tambem é possivel retornar uma promise dentro de outra promise.
 ```javascript
 new Promise(function(resolve, reject) {
   setTimeout(function() {
-    resolve(1);
+    return resolve(1);
   }, 1);
 }).then(function(resultado) {
   console.log(resultado); // 1
 
   return new Promise(function(resolve, reject) {
     return setTimeout(function() {
-      resolve(resultado + 1)
+      return resolve(resultado + 1);
     }, 1);
   });
 }).then(function(resultado) {
@@ -77,7 +77,7 @@ new Promise(function(resolve, reject) {
 
   return new Promise(function (resolve, reject) {
     return setTimeout(function() {
-      resolve(resultado + 1)
+      return resolve(resultado + 1);
     }, 1);
   });
 }).then(function(resultado) {
