@@ -115,7 +115,7 @@ function eventLoop () {
         // Sempre antes de olhar para a Queue, verifica se a interface precisa ser atualizada.
         if (shouldUpdateUserInterface()) updateUserInterface();
 
-        // Apenas age se houver elementos na Queue e se a callStack esiver vazia.
+        // Apenas age se houver elementos na Queue e se a callStack estiver vazia.
         if (queue.isNotEmpty() && callStack.isEmpty()) {
             // Transfere o elemento do início da Queue para a Call Stack.
             queue.sendFirstElementToCallStack();
@@ -184,7 +184,7 @@ Neste exemplo fazemos 3 requisições HTTP diferentes para o nosso servidor, imp
 
 Mas nesse exemplo há algo de mais interessante: são três requisições acontecendo ao mesmo tempo, sem ter ideia de qual vai acabar primeiro. É possível que as duas primeiras levem 3 segundos enquanto a terceira leve 15 segundos. É possível que todas terminem no mesmo exato momento. É possível que uma termine enquanto a _callback_ da outra está sendo executada. São inúmeras possibilidades.
 
-Em casos como esse, quem terminar primeiro poderá empurrar a sua _callback_ para a _Queue_ primeiro. E a ordem de execução das _callbacks_ é a ordem de chegada delas na _Queue_. Mesmo que as três requisições terminem ao mesmo tempo, alguma delas será tratada primeiro, enquanto a _callback_ da outras espera na _Queue_ a _Call Stack_ se liberar.
+Em casos como esse, quem terminar primeiro poderá empurrar a sua _callback_ para a _Queue_ primeiro. E a ordem de execução das _callbacks_ é a ordem de chegada delas na _Queue_. Mesmo que as três requisições terminem ao mesmo tempo, alguma delas será tratada primeiro, enquanto a _callback_ da outras espera na _Queue_ a _Call Stack_ estar liberada.
 
 ## Resumo
 
