@@ -23,7 +23,7 @@ promessaDaLeitura.then((data) => {
 // })
 ```
 
-No exemplo acima, só há uma promise \(marcado pelo ".then"\), mas e se precisássemos utilizar a variável data em uma  outra próxima promise?
+No exemplo acima, só há uma promise \(marcado pelo ".then"\), mas e se precisássemos utilizar a variável data em uma outra próxima promise?
 
 Isso criaria um encadeamento de promises uma dentro da outra, e, no final, teríamos infinitas promises uma dentro da outra.
 
@@ -40,7 +40,7 @@ f1.then((data1) => {
 })
 ```
 
-Para o código acima, dá-se o nome callback hell.
+Para o código acima, dá-se o nome de **callback hell**.
 
 E como podemos evitar isso? Usando **async/await**
 
