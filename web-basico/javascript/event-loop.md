@@ -97,7 +97,7 @@ Para gerenciar as operações e funções agendadas, o browser usa três constru
 
 A _Call Stack_ \(tradução: _Pilha de chamadas_\) é uma pilha de funções que estão sendo executadas no atual instante. Quando uma função do JavaScript é chamada, ela é posta no topo da _Call Stack_. Quando uma função do JavaScript termina de executar, ela é removida da _Call Stack_. Se a _Call Stack_ estiver vazia, quer dizer que nenhuma função está sendo executada no momento.
 
-As _Web APIs_ são funções especiais que realizam tarefas complexas por trás dos panos. A maior parte dessas funções são implementadas de forma a utilizar eficientemente os recursos do computador. Essas funções não pertencem ao JavaScript em si, mas são disponibilizadas pelo ambiente de execução \(no nosso caso, o _browser_\). Exemplos de _Web APIs_ são: `fetch`, `setTimeout` ou `setInterval`. Você pode ver uma lista das _Web APIs_ mais amplamente implementadas nos _browsers_ modernos [aqui](https://developer.mozilla.org/en-US/docs/Web/API).
+As _Web APIs_ são funções especiais que realizam tarefas complexas por trás dos panos. A maior parte dessas funções são implementadas de forma que utilizam eficientemente os recursos do computador. Essas funções não pertencem ao JavaScript em si, mas são disponibilizadas pelo ambiente de execução \(no nosso caso, o _browser_\). Exemplos de _Web APIs_ são: `fetch`, `setTimeout` ou `setInterval`. Você pode ver uma lista das _Web APIs_ mais amplamente implementadas nos _browsers_ modernos [aqui](https://developer.mozilla.org/en-US/docs/Web/API).
 
 A _Queue_ \(tradução: _Fila_\) é uma fila de _callbacks_ que estão prontas para serem imediatamente executadas, mas que ainda estão aguardando uma oportunidade.
 
@@ -107,7 +107,7 @@ Tudo começa com a primeira execução do código JavaScript. Primeiro, o códig
 
 Eventualmente, algumas linhas fazem chamadas a algumas _Web APIs_. Por exemplo, podem-se ter sido feitas chamadas de `setTimeout`, ou `fetch`. Essas _Web APIs_ sempre recebem uma _callback_ e alguns outros parâmetros. Essas _callbacks_ vão ser "guardadas" até que a _Web API_ termine a sua tarefa. Uma vez que essa tarefa é terminada, a sua callback é imediatamente enviada para o fim da _Queue_.
 
-Por último vem o trabalho do _Event Loop_. Pode-se pensar nele como um _loop_ infinito que constantemente verifica se a interface do usuário precisa ser atualizada, se há algo na _Queue_ esperando para ser executado e se a _Call Stack_ está vazia. A sua lógica pode ser bem descrita de acordo com o seguinte pseudo-código:
+Por último vem o trabalho do _Event Loop_. Pode-se pensar nele como um _loop_ infinito que constantemente verifica se a interface do usuário precisa ser atualizada, se há algo na _Queue_ esperando para ser executado, e se a _Call Stack_ está vazia. A sua lógica pode ser bem descrita de acordo com o seguinte pseudo-código:
 
 ```javascript
 function eventLoop () {
@@ -115,7 +115,7 @@ function eventLoop () {
         // Sempre antes de olhar para a Queue, verifica se a interface precisa ser atualizada.
         if (shouldUpdateUserInterface()) updateUserInterface();
 
-        // Apenas age se houver elementos na Queue e se a callStack estiver vazia.
+        // Apenas age se houver elementos na Queue e se a callStack esiver vazia.
         if (queue.isNotEmpty() && callStack.isEmpty()) {
             // Transfere o elemento do início da Queue para a Call Stack.
             queue.sendFirstElementToCallStack();
@@ -184,7 +184,7 @@ Neste exemplo fazemos 3 requisições HTTP diferentes para o nosso servidor, imp
 
 Mas nesse exemplo há algo de mais interessante: são três requisições acontecendo ao mesmo tempo, sem ter ideia de qual vai acabar primeiro. É possível que as duas primeiras levem 3 segundos enquanto a terceira leve 15 segundos. É possível que todas terminem no mesmo exato momento. É possível que uma termine enquanto a _callback_ da outra está sendo executada. São inúmeras possibilidades.
 
-Em casos como esse, quem terminar primeiro poderá empurrar a sua _callback_ para a _Queue_ primeiro. E a ordem de execução das _callbacks_ é a ordem de chegada delas na _Queue_. Mesmo que as três requisições terminem ao mesmo tempo, alguma delas será tratada primeiro, enquanto a _callback_ da outras espera na _Queue_ a _Call Stack_ estar liberada.
+Em casos como esse, quem terminar primeiro poderá empurrar a sua _callback_ para a _Queue_ primeiro. E a ordem de execução das _callbacks_ é a ordem de chegada delas na _Queue_. Mesmo que as três requisições terminem ao mesmo tempo, alguma delas será tratada primeiro, enquanto a _callback_ da outras espera na _Queue_ a _Call Stack_ se liberar.
 
 ## Resumo
 
