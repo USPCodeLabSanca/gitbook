@@ -97,7 +97,7 @@ Para gerenciar as operações e funções agendadas, o browser usa três constru
 
 A _Call Stack_ \(tradução: _Pilha de chamadas_\) é uma pilha de funções que estão sendo executadas no atual instante. Quando uma função do JavaScript é chamada, ela é posta no topo da _Call Stack_. Quando uma função do JavaScript termina de executar, ela é removida da _Call Stack_. Se a _Call Stack_ estiver vazia, quer dizer que nenhuma função está sendo executada no momento.
 
-As _Web APIs_ são funções especiais que realizam tarefas complexas por trás dos panos. A maior parte dessas funções são implementadas de forma que utilizam eficientemente os recursos do computador. Essas funções não pertencem ao JavaScript em si, mas são disponibilizadas pelo ambiente de execução \(no nosso caso, o _browser_\). Exemplos de _Web APIs_ são: `fetch`, `setTimeout` ou `setInterval`. Você pode ver uma lista das _Web APIs_ mais amplamente implementadas nos _browsers_ modernos [aqui](https://developer.mozilla.org/en-US/docs/Web/API).
+As _Web APIs_ são funções especiais que realizam tarefas complexas por trás dos panos. A maior parte dessas funções são implementadas de forma a utilizar eficientemente os recursos do computador. Essas funções não pertencem ao JavaScript em si, mas são disponibilizadas pelo ambiente de execução \(no nosso caso, o _browser_\). Exemplos de _Web APIs_ são: `fetch`, `setTimeout` ou `setInterval`. Você pode ver uma lista das _Web APIs_ mais amplamente implementadas nos _browsers_ modernos [aqui](https://developer.mozilla.org/en-US/docs/Web/API).
 
 A _Queue_ \(tradução: _Fila_\) é uma fila de _callbacks_ que estão prontas para serem imediatamente executadas, mas que ainda estão aguardando uma oportunidade.
 
