@@ -4,7 +4,7 @@ description: Como fazer requisições usando um comando simples?
 
 # Conversando com um servidor
 
-Há infinitas maneiras de fazer requisições em Javascript, porém, neste capítulo, mostraremos uma das maneiras mais simples de executar requisições.
+Há infinitas maneiras de fazer requisições HTTP em Javascript, porém, neste capítulo, mostraremos uma das maneiras mais simples de executar requisições.
 
 Para tal, iremos utilizar a função fetch. Esssa função faz requisições, seja de qualquer método HTTP, e retorna uma promise que teremos que lidar.
 
