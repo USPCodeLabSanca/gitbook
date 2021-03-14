@@ -107,7 +107,7 @@ Tudo começa com a primeira execução do código JavaScript. Primeiro, o códig
 
 Eventualmente, algumas linhas fazem chamadas a algumas _Web APIs_. Por exemplo, podem-se ter sido feitas chamadas de `setTimeout`, ou `fetch`. Essas _Web APIs_ sempre recebem uma _callback_ e alguns outros parâmetros. Essas _callbacks_ vão ser "guardadas" até que a _Web API_ termine a sua tarefa. Uma vez que essa tarefa é terminada, a sua callback é imediatamente enviada para o fim da _Queue_.
 
-Por último vem o trabalho do _Event Loop_. Pode-se pensar nele como um _loop_ infinito que constantemente verifica se a interface do usuário precisa ser atualizada, se há algo na _Queue_ esperando para ser executado, e se a _Call Stack_ está vazia. A sua lógica pode ser bem descrita de acordo com o seguinte pseudo-código:
+Por último vem o trabalho do _Event Loop_. Pode-se pensar nele como um _loop_ infinito que constantemente verifica se a interface do usuário precisa ser atualizada, se há algo na _Queue_ esperando para ser executado e se a _Call Stack_ está vazia. A sua lógica pode ser bem descrita de acordo com o seguinte pseudo-código:
 
 ```javascript
 function eventLoop () {
