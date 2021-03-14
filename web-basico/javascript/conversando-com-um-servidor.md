@@ -1,14 +1,14 @@
 ---
-description: Como fazer requisições usando um comando simples?
+description: Como fazer requisições HTTP usando um comando simples?
 ---
 
 # Conversando com um servidor
 
-Há infinitas maneiras de fazer requisições HTTP em Javascript, porém, neste capítulo, mostraremos uma das maneiras mais simples de executar requisições.
+Há infinitas maneiras de fazer requisições HTTP em Javascript. Neste capítulo mostraremos uma das maneiras mais simples de se fazer isso.
 
-Para tal, iremos utilizar a função fetch. Esssa função faz requisições, seja de qualquer método HTTP, e retorna uma promise que teremos que lidar.
+Para tal, iremos utilizar a função `fetch`. Essa função faz requisições, de qualquer método HTTP, e retorna uma promise com a qual teremos que lidar.
 
-Nosso exemplo iremos tirar imagens de uma API pública, na seguinte URL: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com).
+Neste exemplo iremos consumir imagens de uma API pública disponível na seguinte URL: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com).
 
 Primeiramente, iremos criar uma função:
 
@@ -33,29 +33,26 @@ Primeiramente, iremos criar uma função:
 
 {% tab title="example.js" %}
 ```javascript
-// Criar uma constante para a URL 
-//que iremos realizar a requisição.
+// Cria uma constante para a URL 
+// em que iremos realizar a requisição.
 const URL = 'https://jsonplaceholder.typicode.com'
 
 const getPhotos = async () => {
-
     const response = await fetch(`${URL}/photos`)
-
     return response.json()
 }
 ```
 {% endtab %}
 {% endtabs %}
 
-Após tal coisa, iremos adicionar uma resposta para lidar com a promise da função getPhotos\(\)
+Após isso, iremos adicionar uma resposta para lidar com a promise da função `getPhotos()`:
 
 ```javascript
 getPhotos()
 .then((res) => {
-
     let body = document.getElementsByTagName('body')[0]
 
-    for(let i = 0; i < 150; i++){
+    for (let i = 0; i < 150; i++) {
        let img = document.createElement('img')
        img.src = res[i].url
        img.width = 300
@@ -71,5 +68,5 @@ Com isso, teremos um resultado parecido com isto:
 
 ![Resultado do exemplo](../../.gitbook/assets/example01.png)
 
-Dessa forma, e com as dicas dadas, você poderá realizar qualquer requisição de forma simples.
+Dessa forma, e com as dicas dadas, você poderá realizar qualquer requisição HTTP de forma simples.
 
