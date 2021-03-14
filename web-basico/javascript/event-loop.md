@@ -1,5 +1,5 @@
 ---
-description: 'O que é o Event Loop, e como ele funciona'
+description: O que é o Event Loop e como ele funciona
 ---
 
 # Event Loop
