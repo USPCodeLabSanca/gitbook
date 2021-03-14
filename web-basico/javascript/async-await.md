@@ -59,5 +59,5 @@ const functionOne = async () => {
 
 Nesse exemplo, a função _functionOne_ foi marcada para ser uma função "async" \(assíncrona\), e, dessa forma, qualquer função chamada com o "await" dentro dela irá fazer com que a _functionOne_ espere \(tradução de _await_\) até que essa outra função \(por exemplo, a _functionTwo_\) termine sua operação assíncrona e retorne seu valor final para que a função-pai \(_functionOne_\) continue a sua execução. 
 
-Então se, por exemplo, a _functionTwo_ for uma função que lê um determinado arquivo, a _functionOne_ irá ficar parada naquela linha, esperando até que a _functionTwo_ termine a sua execução e retorne o que tiver de retornar.
+Então se, por exemplo, a _functionTwo_ for uma função que lê um determinado arquivo, a _functionOne_ irá ficar parada naquela linha, esperando até que a _functionTwo_ termine a sua execução e retorne o que tiver de retornar, antes de prosseguir para a próxima linha de código.
 
