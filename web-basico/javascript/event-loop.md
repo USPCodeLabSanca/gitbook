@@ -12,9 +12,9 @@ Como o JavaScript é _single thread_ e _assíncrono_, apenas uma função pode e
 
 ## O problema
 
-Numa página web, quase sempre que o usuário faz uma ação, a interface deve ser atualizada de alguma forma. Seja para mudar a cor de um link que foi visitado, ou para descer o _scroll_ da página. Entretanto, em todos os _browsers_ modernos, a interface não pode ser atualizada enquanto houver código JavaScript sendo executado, e não se pode executar código JavaScript enquanto a interface estiver sendo atualizada \(os dois não podem ser feitos ao mesmo tempo\).
+Numa página web, quase sempre que o usuário faz uma ação, a interface deve ser atualizada de alguma forma. Seja para mudar a cor de um link que foi visitado ou para descer o _scroll_ da página. Entretanto, em todos os _browsers_ modernos, a interface não pode ser atualizada enquanto houver código JavaScript sendo executado, e não se pode executar código JavaScript enquanto a interface estiver sendo atualizada \(os dois não podem ser feitos ao mesmo tempo\).
 
-Assim, se nosso código JavaScript for muito demorado, a tela do usuário ficara travada e irresponsiva, causando uma péssima experiência. Veja um exemplo de código que tem esse comportamento:
+Assim, se nosso código JavaScript for muito demorado, a tela do usuário ficará travada e irresponsiva, causando uma péssima experiência. Veja um exemplo de código que tem esse comportamento:
 
 ```markup
 <html>
@@ -32,13 +32,13 @@ Assim, se nosso código JavaScript for muito demorado, a tela do usuário ficara
 </html>
 ```
 
-No exemplo acima, quando o usuário clickar no botão, toda a interface ficará travada até a função `click` terminar, o que pode demorar múltiplos segundos
+No exemplo acima, quando o usuário clicar no botão, toda a interface ficará travada até a função `click` terminar, o que pode demorar múltiplos segundos.
 
 ## A solução
 
-Para mitigar o problema descrito acima, foi-se desenvolvida a ideia de "agendar" a execução de funções num momento futuro, liberando o _browser_ para atualizar a interface do usuário, ou executar outras partes do código JavaScript.
+Para mitigar o problema descrito acima, foi-se desenvolvida a ideia de "agendar" a execução de funções num momento futuro, liberando o _browser_ para atualizar a interface do usuário ou executar outras partes do código JavaScript.
 
-No caso do exemplo descrito no problema, a maior parte da "demora" numa requisição HTTP vem da espera pela resposta, e enquanto se espera por essa resposta outra parte do código poderia estar sendo executada, ou a interface do usuário poderia estar sendo atualizada. Outro exemplo parecido é num temporizador, onde uma função só deve ser executada depois de uma quantidade determinada de tempo. Enquanto se espera para executar essa função, o _browser_ poderia ser liberado para terminar outras tarefas.
+No caso do exemplo descrito no problema, a maior parte da "demora" numa requisição HTTP vem da espera pela resposta, e enquanto se espera por essa resposta outra parte do código poderia estar sendo executada \(ou a interface do usuário poderia estar sendo atualizada\). Outro exemplo parecido é num temporizador, onde uma função só deve ser executada depois de uma quantidade determinada de tempo. Enquanto se espera para executar essa função, o _browser_ poderia ser liberado para terminar outras tarefas.
 
 Assim, algumas funções disponibilizadas pelo _browser_ recebem outras funções como argumento \(também conhecidas como _Callbacks_\), que serão executadas apenas quando a operação da primeira função terminar. Veja esse exemplo:
 
@@ -60,7 +60,7 @@ Assim, algumas funções disponibilizadas pelo _browser_ recebem outras funçõe
 </html>
 ```
 
-Aqui, quando o usuário clickar no botão, o código vai esperar 5 segundos para mostrar um alerta. Enquanto esse tempo passa, a interface do usuário não ficara travada ou irresponsiva. Isso é porque a função `setTimeout` apenas "agenda" a execução da sua _callback_ para quando o temporizador de 5 segundos terminar.
+Aqui, quando o usuário clicar no botão, o código vai esperar 5 segundos para mostrar um alerta. Enquanto esse tempo passa, a interface do usuário não ficara travada ou irresponsiva. Isso é porque a função `setTimeout` apenas "agenda" a execução da sua _callback_ para quando o temporizador de 5 segundos terminar.
 
 Veja esse outro exemplo, mas dessa vez fazendo uma requisição.
 
