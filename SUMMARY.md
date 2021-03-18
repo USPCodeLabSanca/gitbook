@@ -35,6 +35,7 @@
     * [POO](web-basico/javascript/poo.md)
     * [Arrow Functions](web-basico/javascript/arrow-functions.md)
     * [Event Loop](web-basico/javascript/event-loop.md)
+    * [Tratamento de erros](web-basico/javascript/tratamento-de-erros.md)
     * [Promises](web-basico/javascript/promises/README.md)
       * [Chaining](web-basico/javascript/promises/chaining.md)
       * [Promises vs Callbacks](web-basico/javascript/promises/promises-vs-callbacks.md)
