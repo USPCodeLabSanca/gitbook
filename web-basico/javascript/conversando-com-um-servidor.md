@@ -4,9 +4,26 @@ description: Como fazer requisições HTTP usando um comando simples?
 
 # Conversando com um servidor
 
+## A função fetch
+
 Há infinitas maneiras de fazer requisições HTTP em Javascript. Neste capítulo mostraremos uma das maneiras mais simples de se fazer isso.
 
 Para tal, iremos utilizar a função `fetch`. Essa função faz requisições, de qualquer método HTTP, e retorna uma promise com a qual teremos que lidar.
+
+### Definição da função
+
+A função `fetch` vai aceitar um ou dois parâmetros como entrada, ela tem a seguinte cara:
+
+```javascript
+fetch("URL");
+
+fetch("URL", options); // Options é um objeto
+```
+
+* No primeiro formato a função vai fazer requisição ao servidor utilizando o método `GET` \(é como se a função entrasse na página web igual um usuário normal\).
+* No segundo formato é possível especificar diferentes configurações, como o método \(GET, PUT, POST, etc\), headers, mode e outros que é possível encontrar em: [https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch)
+
+## Exemplo
 
 Neste exemplo iremos consumir imagens de uma API pública disponível na seguinte URL: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com).
 

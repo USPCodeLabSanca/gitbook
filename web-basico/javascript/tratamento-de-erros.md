@@ -10,39 +10,13 @@ O tratamento de erros no código é importante para impedir que a execução do 
 
 ## Situações de usos mais comum
 
-Em algumas situações é bastante comum ter que tratar os erros, dado que podem ocorrer em uma alta frequência.
+??
 
-### Requisições e async/await
+### Requisições
 
-Em requisições usando a função `fetch(URL)` podemos tratar o erro diretamente com o bloco `try/catch` e posteriormente retornar o nosso valor desejado. Segue o exemplo:
-
-```javascript
-function fazRequisicao(algumaCoisa) {
-    let req = fetch(`API.URL/BLA/${algumaCoisa}`);
-    
-    return req;
-}
-
-async function trataOErroERequisita(algumaCoisa) {
-    try {
-        return await fazRequisicao(algumaCoisa);
-    } catch {
-        return {"status": "notOk"};
-    }
-}
-
-async function teste() {
-    let valorEncontrado = await trataOErroERequisita("teste");
-    
-    console.log(valorEncontrado);
-}
-```
-
-Verifique que a primeira função `fazRequisicao`, vai ser responsável por usar a função `fetch` na API e retornar uma `promise` com a resposta, caso acontença um erro no `fetch`, iremos tratar ele e retornar um objeto em que podemos utilizar no nosso código.
+### Async/await
 
 ### NaN
-
-??
 
 ## try e catch
 
@@ -97,18 +71,6 @@ Como não podemos converter um número para letras maiúsculas \(só seria poss�
 
 Nome do erro: TypeError, descrição: num.toUpperCase is not a function
 {% endhint %}
-
-### catch sem o parâmetro
-
-É possível utilizar o bloco try/catch sem precisar colocar um parâmetro no catch, caso não seja necesário utilizar o erro. Segue o exemplo:
-
-```javascript
-try {
-    fazAlgumaCoisa();
-} catch {
-    fazOutraCoisa(); // Sem usar o parâmetro error
-}
-```
 
 ## finally
 
