@@ -77,6 +77,8 @@ pessoa1.seApresentar();
 // Olá, meu nome é Josias e tenho 35 anos.
 ```
 
+No exemplo acima é possível notar o uso do carácter \_ como prefixo do nome das variáveis nome e idade. É convencionado que variáveis que começam com o underline são consideradas privadas, isto é, não devem ser acessadas diretamente pelo programador, apenas pelo uso dos setters e getters.  
+
 ### Abstração
 
 Abstração significa esconder detalhes de implementação, mostrando apenas o essencial para o mundo externo ao objeto.
