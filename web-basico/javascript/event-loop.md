@@ -6,7 +6,7 @@ description: O que é o Event Loop e como ele funciona
 
 ## O que é o _Event Loop_?
 
-Um dos principais fatos sobre o JavaScript é que ele é uma linguagem inerentemente _single thread_ \(tradução: _fio único_\), isto é, em qualquer instante de tempo apenas um comando pode estar sendo executado. Essa é uma das características principais da linguagem, independente de onde ela esteja sendo executada. Além disso, o JavaScript é uma linguagem _assíncrona_, isto é, a ordem de execução das funções não é sempre bem definida. Isso quer dizer que, dependendo de como o código for escrito, cada execução do código pode ter uma ordem diferente de execução de suas funções.
+Um dos principais fatos sobre o JavaScript é que ele é uma linguagem inerentemente [_single thread_](https://pt.wikipedia.org/wiki/Thread_%28computa%C3%A7%C3%A3o%29), isto é, em qualquer instante de tempo apenas um comando pode estar sendo executado. Essa é uma das características principais da linguagem, independente de onde ela esteja sendo executada. Além disso, o JavaScript é uma linguagem _assíncrona_, isto é, a ordem de execução das funções não é sempre bem definida. Isso quer dizer que, dependendo de como o código for escrito, cada execução do código pode ter uma ordem diferente de execução de suas funções.
 
 Como o JavaScript é _single thread_ e _assíncrono_, apenas uma função pode estar sendo executada em qualquer momento, mas a ordem de execução delas deve ser definida durante a execução do código. Assim, o _Event Loop_ \(tradução: _Ciclo de Eventos_\) é o mecanismo que o JavaScript usa para escolher qual será a próxima função a ser executada.
 
@@ -119,11 +119,11 @@ function eventLoop () {
         if (queue.isNotEmpty() && callStack.isEmpty()) {
             // Transfere o elemento do início da Queue para a Call Stack.
             queue.sendFirstElementToCallStack();
-
-            // Executa a função no topo da Call Stack.
-            // Note que quando essa função terminar de executar, ela será automaticamente removida da Call Stack, deixando-a vazia de novo.
-            callStack.executeFunctionOnTop();
         }
+
+        // Executa a função no topo da Call Stack.
+        // Note que quando essa função terminar de executar, ela será automaticamente removida da Call Stack, deixando-a vazia de novo.
+        callStack.executeFunctionOnTop();
     }
 }
 ```
