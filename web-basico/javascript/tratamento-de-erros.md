@@ -10,13 +10,57 @@ O tratamento de erros no código é importante para impedir que a execução do 
 
 ## Situações de usos mais comum
 
-??
+Em algumas situações é bastante comum ter que tratar os erros, dado que podem ocorrer em uma alta frequência.
 
-### Requisições
+### Requisições e async/await
 
-### Async/await
+Em requisições usando a função `fetch(URL)` podemos tratar o erro diretamente com o bloco `try/catch` e posteriormente retornar o nosso valor desejado. Segue o exemplo:
+
+```javascript
+function fazRequisicao(algumaCoisa) {
+    let req = fetch(`API.URL/BLA/${algumaCoisa}`);
+    
+    return req;
+}
+
+async function trataOErroERequisita(algumaCoisa) {
+    try {
+        return await fazRequisicao(algumaCoisa);
+    } catch {
+        return {"status": "notOk"};
+    }
+}
+
+async function teste() {
+    let valorEncontrado = await trataOErroERequisita("teste");
+    
+    console.log(valorEncontrado);
+}
+```
+
+Verifique que a primeira função `fazRequisicao`, vai ser responsável por usar a função `fetch` na API e retornar uma `promise` com a resposta, caso acontença um erro no `fetch`, iremos tratar ele e retornar um objeto em que podemos utilizar no nosso código.
 
 ### NaN
+
+O tratamento de valores NaN \(Not a Number\) pode ser feito utilizando a função `isNaN(x)`, essa função recebê o parametro `x` e verifica se o valor é um número ou não.
+
+Um exemplo de utilização é na criação de uma calculadora em javascript. Quando é feito uma divisão é importante verificar caso a divisão resulte em `NaN`, como no caso da divisão por zero, podemos evitar isso seguindo o exemplo abaixo:
+
+```javascript
+// Faz divisão como: a/b
+function dividir(a, b) {
+    let resultado = a / b;
+    
+    // Caso o resultado seja NaN retorna 0
+    if (isNaN(resultado))
+        return 0;
+    
+    // Caso contrário, retorna o valor da divisão
+    return resultado;
+}
+```
+
+No exemplo acima podemos contornar possíveis mal funcionamento da nossa calculadora retornado um resultado númerico, ao contrário de resultar apenas `NaN`.
 
 ## try e catch
 
@@ -71,6 +115,18 @@ Como não podemos converter um número para letras maiúsculas \(só seria poss�
 
 Nome do erro: TypeError, descrição: num.toUpperCase is not a function
 {% endhint %}
+
+### catch sem o parâmetro
+
+É possível utilizar o bloco try/catch sem precisar colocar um parâmetro no catch, caso não seja necesário utilizar o erro. Segue o exemplo:
+
+```javascript
+try {
+    fazAlgumaCoisa();
+} catch {
+    fazOutraCoisa(); // Sem usar o parâmetro error
+}
+```
 
 ## finally
 
