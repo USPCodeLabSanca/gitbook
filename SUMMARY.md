@@ -15,6 +15,7 @@
       * [Organização](web-basico/html/principais-tags/organizacao.md)
       * [Multimídia](web-basico/html/principais-tags/multimidia.md)
     * [A estrutura básica](web-basico/html/a-estrutura-basica.md)
+    * [Como construir um bom HTML](web-basico/html/como-construir-um-bom-html.md)
     * [Exercícios](web-basico/html/exercicios.md)
   * [CSS](web-basico/css/README.md)
     * [O que é CSS?](web-basico/css/seletores.md)
