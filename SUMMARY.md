@@ -45,6 +45,7 @@
     * [Datas](web-basico/javascript/datas.md)
     * [Conversando com um servidor](web-basico/javascript/conversando-com-um-servidor.md)
     * [Armazenamento persistente](web-basico/javascript/armazenamento-persistente.md)
+    * [Módulos \(em ES6\)](web-basico/javascript/modulos-em-es6.md)
 * [Desenvolvimento Web Avançado](web-avancado/README.md)
   * [Node JS](web-avancado/node-js-1/README.md)
     * [Introdução ao Node](web-avancado/node-js-1/node-js.md)
