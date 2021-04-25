@@ -22,6 +22,7 @@
     * [Anatomia de um comando](web-basico/css/cores.md)
     * [Seletores](web-basico/css/box-model.md)
     * [Tamanho de um elemento](web-basico/css/tamanho-de-um-elemento.md)
+    * [Principais propriedades](web-basico/css/principais-propriedades.md)
     * [Flexbox](web-basico/css/flexbox.md)
     * [Grid](web-basico/css/grid.md)
   * [Javascript](web-basico/javascript/README.md)

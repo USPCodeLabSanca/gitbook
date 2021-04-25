@@ -12,3 +12,5 @@ Para conectar os dois arquivos \(HTML e CSS\), você precisará escrever na tag 
 
 O atributo "href" deve conter o caminho para seu arquivo CSS.
 
+
+
