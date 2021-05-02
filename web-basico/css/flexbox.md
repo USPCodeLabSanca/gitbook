@@ -158,3 +158,62 @@ Os itens são posicionados a partir do fim no eixo y.
 {% endtab %}
 {% endtabs %}
 
+Abaixo temos um exemplo completo de como essas propriedades podem ser usadas. Na primeira aba temos o código em HTML, na segunda o CSS e por último a página resultante. 
+
+{% tabs %}
+{% tab title="HTML" %}
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Flexbox</title>
+</head>
+<body>
+    <div id="Exe1">
+        <p>Caixa 1</p>
+        <p>Caixa 2</p>
+        <p>Caixa 3</p>
+    </div>
+
+    <div id="Exe2">
+        <p>Caixa 1</p>
+        <p>Caixa 2</p>
+        <p>Caixa 3</p>
+        <p>Caixa 4</p>
+        <p>Caixa 5</p>
+        <p>Caixa 6</p>
+        <p>Caixa 7</p>
+    </div>
+</body>
+</html>
+```
+{% endtab %}
+
+{% tab title="CSS" %}
+```css
+p {
+    border: mediumvioletred 2px solid;
+}
+
+#Exe1 {
+    border: black 2px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#Exe2 {
+    border: black 2px solid;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+```
+{% endtab %}
+
+{% tab title="Resultado" %}
+![](../../.gitbook/assets/image%20%2816%29.png)
+{% endtab %}
+{% endtabs %}
+
