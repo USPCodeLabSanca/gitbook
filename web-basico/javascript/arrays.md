@@ -136,16 +136,17 @@ console.log(my_array)
 // Imprime [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144]
 ```
 
-Entretanto, como é uma tarefa muito comum **iterar sobre arrays e manipular o elemento atual da iteração**, foi criado um método para isto, o `for(elem of array)`: 
+Entretanto, como é uma tarefa muito comum **iterar sobre arrays e manipular o elemento atual da iteração**, foi criado um método para isto, o `for(elem of array),`porém, diferente do anterior, o elemento original não permanece no array original, tendo que criar um array auxiliar para mostrar o resultado: 
 
 ```javascript
 let my_array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+let new_array = []
 
 for (number of my_array){
-    number = number**2
+    new_array.push(number**2)
 }
 
-console.log(my_array)
+console.log(new_array)
 ```
 
 Importante notar que essa maneira de iterar sobre  vários elementos não é uma exclusividade da definição do array, além de existir algumas outra maneiras de iterar sobre um array \(como a função map\).
