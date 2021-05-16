@@ -148,3 +148,5 @@ for (number of my_array){
 console.log(my_array)
 ```
 
+Importante notar que essa maneira de iterar sobre  vários elementos não é uma exclusividade da definição do array, além de existir algumas outra maneiras de iterar sobre um array \(como a função map\).
+
