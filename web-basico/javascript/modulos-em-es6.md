@@ -13,7 +13,7 @@ Para exportar módulos em JS, a maneira mais simples é exportar um único objet
 {% tabs %}
 {% tab title="export" %}
 ```javascript
-export default func1(x, y){
+export func1(x, y){
     console.log(x*y)
 }
 ```
@@ -54,14 +54,14 @@ export class C1{
 import { C1 } from 'classes';
 
 const c1 = new C1('arg2');
-dev.arg1;
+c1.arg1;
 ```
 {% endtab %}
 {% endtabs %}
 
 #### Default
 
-A exportação padrão só é permitida uma vez por script, ela é feita utilizando a keyword `export default`, ela é muito útil para definirmos um exportação padrão de um módulo. Um exemplo prático é você ter um arquivo `utlils-string.js` com várias funções que fazem alguma coisa com string que são utilizadas em vários arquivos.
+A exportação padrão só é permitida uma vez por script, ela é feita utilizando a keyword `export default`, ela é muito útil para definirmos um exportação padrão de um módulo. Um exemplo prático é você ter um arquivo com várias funções que fazem alguma coisa com string que são utilizadas em vários arquivos.
 
 Um exemplo de `export default` em uma função é feito abaixo:
 
