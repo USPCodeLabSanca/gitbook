@@ -8,7 +8,7 @@ Nesse contexto vai ser apresentado algumas boas práticas que você pode levar e
 
 ### Identação
 
-João é um cara que está aprendendo HTML, ele deseja aprender para criar o seu próprio portófolio. João é um cientista de dados que só sabe um pouco de Python e manja bastante de R, para ele HTML é algo totalmente novo e ainda tá pegando o jeito.
+João é um cara que está aprendendo HTML, ele deseja aprender para criar o seu próprio portfólio. João é um cientista de dados que só sabe um pouco de Python e manja bastante de R, para ele HTML é algo totalmente novo e ainda tá pegando o jeito.
 
 João está fazendo uma página em HTML que já tem mais de 300 linhas, ele vê a página dele e acha GENIAL, tanto que ele apresenta ela para um amigo programador. O amigo vai ver o código-fonte da página e se impressiona em como está difícil entender como funciona. Simplesmente o código é grande, está mal identado e vira um bicho de sete cabeças para entender toda a genialidade de João.
 
@@ -54,7 +54,7 @@ Esse código bem identado é da seguinte forma:
 </footer>
 ```
 
-Olhe como o detalhe de acrescentar o TAB entre as tags já deixa o código bem mais legível e facilita bastante a compreensão. Imagine tentar entender um código-fonte de 1000 linhas sem estar "identado"? Não vai ser pouco complexo, **mas uma nível de complexidade ENORME!**
+Olhe como o detalhe de acrescentar o TAB entre as tags já deixa o código bem mais legível e facilita bastante a compreensão. Imagine tentar entender um código-fonte de 1000 linhas sem estar "identado"? Seria muito complicado e tedioso de entender o código.
 
 #### Uso do espaço
 
@@ -93,7 +93,7 @@ Mesmo que você queira usar, prefira por poucos e breves comentários.
 
 ### Controle na quantidade de divs
 
-É muito fácil e comum fazermos um uso exagerado de divs para estilizar e estruturar os componentes da página. Para evitar esses usos exagerados devemos usar as diversas tags do HTML para evitar criar uma lista longa de divs.
+É muito fácil e comum fazermos um uso exagerado de divs para estilizar e estruturar os componentes da página. Para evitar esses usos exagerados devemos usar as diversas tags do HTML para evitar criar uma lista longa de divs. Uma boa forma é utilizar as tags que deixam a semântica do site bem compreensível, como separar o site com `<section>, <article>, <footer>`, etc. Essa página fala mais sobre: [https://blog.geekhunter.com.br/voce-conhece-html-semantico/](https://blog.geekhunter.com.br/voce-conhece-html-semantico/)
 
 Segue o exemplo com o uso de uma enorme quantidade de divs para uma postagem de um site de notícias:
 
@@ -134,16 +134,16 @@ Talvez você esteja apenas tentando criar uma página simples e que não vá ter
 ```markup
 <html>
     <h1>Faça o seu login:</h1>
-    <forms action="login.php">
+    <form action="login.php">
         <span>Email:</span>
         <input type="text" />
         <span>Senha:</span>
         <input type="password" />
-    </forms>
+    </form>
 </html>
 ```
 
-Mesmo que a sua página seja simples como essa, você ainda pode encontrar em alguns navegadores por não ter usado toda a estrutura do HTML. A sua página também nem se quer vai ter um título devido a ausência da tag `<title>`.
+Mesmo que a sua página seja simples como essa, ainda é necesário que você use toda a semântica do html, já que faltam elementos fundamentais como `<title> no <header>`, já que sua página nem se quer tem um título na aba do navegador.
 
 No caso de criar uma página simples, não deixe de ser perfeccionista! Use toda a estrutura que o HTML pode proporcionar ao seu código, ter uma página com toda a estrutura do HTML facilita para as engines de busca para entender a sua página e também garante que vai funcionar em todo lugar.
 

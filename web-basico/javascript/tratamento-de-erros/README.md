@@ -17,15 +17,9 @@ Em algumas situações é bastante comum ter que tratar os erros, dado que podem
 Em requisições usando a função `fetch(URL)` podemos tratar o erro diretamente com o bloco `try/catch` e posteriormente retornar o nosso valor desejado. Segue o exemplo:
 
 ```javascript
-function fazRequisicao(algumaCoisa) {
-    let req = fetch(`API.URL/BLA/${algumaCoisa}`);
-    
-    return req;
-}
-
 async function trataOErroERequisita(algumaCoisa) {
     try {
-        return await fazRequisicao(algumaCoisa);
+        return await fetch(`API.URL/BLA/${algumaCoisa}`);
     } catch {
         return {"status": "notOk"};
     }
@@ -145,7 +139,11 @@ try {
 }
 ```
 
-Como no exemplo inicial do servidor de login da Netflix, agora o servidor pode tentar fazer o login e em caso de erro tratar ele, até que posteriormente ele pode finalizar o login e logar o usuário no site.
+Uma forma de usar o `try, catch e finally` é pensando em um servidor de login, como o da Netflix:
+
+* O usuário tenta logar no servidor;
+* Se acontecer um erro no backend podemos tratar ele diretamente no `catch`.
+* E no `finally` podemos logar o usuário tratando o erro caso tenha acontecido.
 
 ## throw
 
