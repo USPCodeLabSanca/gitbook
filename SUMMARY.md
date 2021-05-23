@@ -28,6 +28,7 @@
   * [Javascript](web-basico/javascript/README.md)
     * [Introdução ao Javascript - Geral](web-basico/javascript/introducao-ao-javascript.md)
     * [Introdução ao Javascript - Aprofundado](web-basico/javascript/introducao-ao-javascript-aprofundado.md)
+    * [O que é o DOM e como manipulá-lo](web-basico/javascript/o-que-e-o-dom-e-como-manipula-lo.md)
     * [Estruturas de Decisão](web-basico/javascript/estruturas-de-decisao-e-repeticao.md)
     * [Laços de Repetição](web-basico/javascript/lacos-de-repeticao.md)
     * [Strings](web-basico/javascript/strings.md)
