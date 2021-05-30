@@ -19,8 +19,6 @@ Uma das formas mais utilizadas para se acessar um elemento do HTML da página é
 O seu parâmetro "id" é uma String, nessa string deve ser colocada a id do element HTML que se deseja buscar. Caso esteja definido na página o método retorna o elemento, caso contrário retorna NULL.
 
 {% hint style="warning" %}
-O parâmetro id é case-sentive, ou seja, para ele é importante as letras máisculas e mínusclas, logo uma id como "algumaid" é diferente "algumaID" \(observe a 
-
 O parâmetro **“id” é case-sentive**, ou seja, para ele é importante se as letras são maiúsculas ou minúsculas, logo um “id” como `"algumaid"` difere de `"algumaID"`.
 {% endhint %}
 
@@ -58,9 +56,51 @@ document.getElementById("teste").innerHTML = "O texto do elemento com id = intro
 
 ### document.getElementByClassName
 
+\[texto\]
+
+{% tabs %}
+{% tab title="HTML" %}
+```markup
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Minha página</title>
+    </head>
+    <body>
+    <p id="algumaID">
+        Um texto bonito aqui.
+    </p>
+    <p id="teste">
+        Essa div vai ser alterada...
+    </p>
+    <script>
+        // Disponível na aba "Javascript"
+    </script>
+    </body>
+</html>
+```
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+var elementos = document.getElementByClassName("algumaclasse");
+
+for (let elemento in elementos) {
+    console.log(`Foi encontrado o elemento com id ${elemento.?} com a classe especificada`)
+}
+```
+{% endtab %}
+{% endtabs %}
+
+\[exemplo com document.getElementById\]
+
 ### document.getElementsByTagName
 
+\[texto\]
+
 ### document.querySelector
+
+\[texto\]
 
 ## Acessar e Alterar propriedades de elementos do DOM
 
@@ -68,7 +108,11 @@ document.getElementById("teste").innerHTML = "O texto do elemento com id = intro
 
 ### .innerText
 
+O innerText \[texto\]
+
 ### .innerHTML
+
+\[texto\]
 
 ### tagName
 
