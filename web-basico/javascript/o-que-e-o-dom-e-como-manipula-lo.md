@@ -10,7 +10,7 @@ O DOM \(Document Object Model\) é uma interface API para as páginas web. Ele p
 
 ## Como referenciar elementos do DOM
 
-\[texto aqui\]
+Esta seção apresentarará como encontrar elementos de uma página web com o JavaScript, é possível procurar os elementos pelas suas tags, ids, classes. Ainda é possível alterar as propriedades dos elementos, como seu estilo, seu texto e até seu HTML.
 
 ### document.getElementById
 
@@ -56,7 +56,14 @@ document.getElementById("teste").innerHTML = "O texto do elemento com id = intro
 
 ### document.getElementByClassName
 
-\[texto\]
+Outra forma de procurar elementos é utilizando o `document.getElementByClassName(nome)`, essa função quando utilizada retorna todos os elementos que encontrar que tiver as classes que estiverem no parâmetro nome.
+
+{% hint style="info" %}
+O parâmetro nome vai ser utilizado para pesquisar as classes da seguinte forma:
+
+* `document.getElementByClassName("azul")`: vai procurar elementos que contenham a classe azul.
+* `document.getElementByClassName("azul verde")`: vai procurar elementos que contenham a classe azul e verde.
+{% endhint %}
 
 {% tabs %}
 {% tab title="HTML" %}
@@ -67,11 +74,11 @@ document.getElementById("teste").innerHTML = "O texto do elemento com id = intro
         <title>Minha página</title>
     </head>
     <body>
-    <p id="algumaID">
-        Um texto bonito aqui.
+    <p class="azul">
+        Uma div azul.
     </p>
-    <p id="teste">
-        Essa div vai ser alterada...
+    <p class="azul verde">
+        Uma com tons de azul e verde.
     </p>
     <script>
         // Disponível na aba "Javascript"
@@ -83,7 +90,7 @@ document.getElementById("teste").innerHTML = "O texto do elemento com id = intro
 
 {% tab title="Javascript" %}
 ```javascript
-var elementos = document.getElementByClassName("algumaclasse");
+var elementos = document.getElementByClassName("azul");
 
 for (let elemento in elementos) {
     console.log(`Foi encontrado o elemento com id ${elemento.?} com a classe especificada`)
@@ -108,7 +115,38 @@ for (let elemento in elementos) {
 
 ### .innerText
 
-O innerText \[texto\]
+O innerText é usado para obter o texto de algum elemento ou fazer a alteração. Observe o exemplo abaixo:
+
+{% tabs %}
+{% tab title="HTML" %}
+```markup
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Minha página</title>
+    </head>
+    <body>
+    <p id="algumaID">
+        Um texto bonito aqui.
+    </p>
+    <script>
+        // Disponível na aba JavaScript
+    </script>
+    </body>
+</html>
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+var elemento = document.getElementById("algumaID")
+
+console.log(elemento.innerText) // Output: Um texto bonito aqui.
+
+element.innerText = "Outro texto bonito." // O elemento sofrerá alteração no seu texto da página web
+```
+{% endtab %}
+{% endtabs %}
 
 ### .innerHTML
 
