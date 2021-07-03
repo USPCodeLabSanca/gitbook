@@ -48,5 +48,5 @@ A primeira palavra do comando é `@media`, ela sinaliza a declaração de uma Me
 }
 ```
 
-Acredito que com esse exemplo fica claro o uso de media queries para adaptar nosso grid a diferentes tamanhos de tela. Outra aplicação bem utilizada para as queries é mostrar ou não alguma parte da página por meio do `display: hidden;`.
+Acredito que com esse exemplo fica claro o uso de media queries para adaptar nosso grid a diferentes tamanhos de tela. Outra aplicação bem utilizada para as queries é mostrar ou não alguma parte da página por meio do `display: none;`.
 
