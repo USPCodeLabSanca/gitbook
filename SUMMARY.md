@@ -25,6 +25,7 @@
     * [Principais propriedades](web-basico/css/principais-propriedades.md)
     * [Flexbox](web-basico/css/flexbox.md)
     * [Grid](web-basico/css/grid.md)
+    * [Responsividade na Web](web-basico/css/responsividade-na-web.md)
   * [Javascript](web-basico/javascript/README.md)
     * [Introdução ao Javascript - Geral](web-basico/javascript/introducao-ao-javascript.md)
     * [Introdução ao Javascript - Aprofundado](web-basico/javascript/introducao-ao-javascript-aprofundado.md)
