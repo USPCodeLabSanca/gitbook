@@ -1,14 +1,14 @@
 # Responsividade na Web
 
-Com certeza você já deve ter ouvido falar em design responsivo e entenda que ele indica se um site é acessível de forma satisfatória em dispositivos com diferentes tamanhos de tela mas voce sabe quais são os fundamentos que devem ser aplicados durante o desenvolvimento para tornar uma página responsiva?
+Com certeza você já deve ter ouvido falar em design responsivo e entenda que ele indica se um site é acessível de forma satisfatória em dispositivos com diferentes tamanhos de tela, mas você sabe quais são os fundamentos que devem ser aplicados durante o desenvolvimento para que uma página seja responsiva?
 
-Primeiro vamos citar todos fundamentos com uma breve explicação e mais abaixo dar detalhes sobre eles.
+Primeiro vamos citar todos fundamentos com uma breve explicação e mais abaixo dar detalhes sobre cada um deles.
 
-1. Grids flexíveis: Organizam a estrutura do site buscando por meio de linhas e colunas de conteúdo mostrar de forma satisfatória as informações de um site.
+**1. Grids flexíveis:** Organizam a estrutura do site buscando por meio de linhas e colunas mostrar de forma satisfatória as informações de um site.
 
-2. Imagens flexíveis: As imagens devem ser mostradas com seu tamanho original em telas grandes e caso necessário eles devem ser diminuídas para caber em telas menores.
+**2. Imagens flexíveis:** As imagens devem ser mostradas com seu tamanho original em telas grandes e caso necessário eles devem ser diminuídas para caber em telas menores.
 
-3. Media Queries: Funcionam como uma especie de if para estilos de uma página. Aqui vamos utilizá-las pensando apenas em condicionais para tamanho de tela porem eles tem algumas funções bem interessantes que fogem um pouco do escopo desse tópico.
+**3. Media Queries:** Funcionam como uma especie de _if_ para estilos de uma página. Aqui vamos utilizá-las pensando apenas em condicionais para tamanho de tela porem elas tem algumas funções bem interessantes que fogem um pouco do escopo desse tópico.
 
 ## Grids Flexíveis
 
