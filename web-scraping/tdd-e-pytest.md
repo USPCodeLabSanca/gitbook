@@ -1,2 +1,0 @@
-# TDD e Pytest
-
