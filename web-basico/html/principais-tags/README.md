@@ -4,8 +4,6 @@ Os próximos tópicos irão mostrar as principais tags que são utilizadas. Voc�
 
 ## Sumário
 
-[comentário]: <> (O sumário não funciona!)
-
 * Básicas
   * &lt;html&gt;
   * &lt;head&gt;
