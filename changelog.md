@@ -28,14 +28,46 @@ By: Arthur "*Setembru*"
 
 - correções textuais
 
-#### Preciso alterar outras coisas
+#### Entrada de dados
 
-- Entrada de dados
-- Listas
-- Multimídia
-- Estrutura básica
-- Como construir um bom HTML
-- O que é CSS?
-- Seletores
-- Flexbox
-- Grid (e está mal explicado)
+- correções textuais
+
+#### Listas
+
+- correções textuais
+- desambiguação
+
+#### Multimídia
+
+- correções textuais
+
+#### Estrutura básica
+
+- correções textuais
+
+#### Como construir um bom HTML
+
+- adequação do texto
+- correções textuais
+
+
+### CSS
+
+#### O que é CSS?
+
+- correções textuais
+
+#### Seletores
+
+- adequação do texto
+- correções textuais
+
+#### Flexbox
+
+- correções textuais
+
+#### Grid
+
+- adequação do texto
+- correções textuais
+- algumas alterações
