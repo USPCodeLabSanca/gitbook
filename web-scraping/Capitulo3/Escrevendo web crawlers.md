@@ -3,7 +3,7 @@ description: Escrevendo web crawlers
 ---
 
 # Introdução
-Nos capítulos anteriores, o Web Scraping foi mostrado de forma mais "artificial", em sites mais simples e portanto distantes do cotidiano, compostos por páginas únicas. 
+Nos capítulos anteriores, o Web Scraping foi mostrado de forma mais "artificial", em sites mais simples e compostos por páginas únicas. 
 Neste capítulo, veremos scrapers sendo utilizados em problemas do mundo real.
 
 # Percorrendo um único domínio
@@ -21,3 +21,43 @@ for link in bs.find_all('a'):
   print(link.attrs['href'])
 
 ```
+Analisando a lista gerada, vemos que alguns itens indesejados apareceram, como links para caixas de texto e até para rodapés:
+
+```html
+//wikimediafoundation.org/wiki/Privacy_policy
+//en.wikipedia.org/wiki/Wikipedia:Contact_us
+```
+
+Os links que estávamos procurando - os que apontam para outras páginas de artigo - têm as seguintes características em comum:
+
+-Estão na div com id bodyContent;
+-Os  URLs não contém dois-pontos;
+-Os URLs começam com /wiki/.
+
+Com esse padrão em mente, podemos revisar o código usando a expressão regular ^(/wiki/)((?!:).)*$"):
+
+```python
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import re
+
+html = urlopen('http://en.wikipedia.org/wiki/Kevin_Bacon')
+bs = BeautifulSoup(html, 'html.parser')
+for link in bs.find('div', {'id':'bodyContent'}).find_all(
+  'a', href=re.compile('^(/wiki/)((?!:).)*$')):
+  if 'href' in link.attrs:
+    print(link.attrs['href'])
+```
+Executando esse código, obtemos uma lista de todos os URLs de artigo para os quais o artigo inicial da Wikipedia aponta. Embora interessante, essa ideia pode ser inútil na prática. Portanto, podemos fazer uma atualização:
+
+
+-Função getLinks que recebe um URL de um artigo no formato /wiki/<nome> e devolve uma lista com os URLS de outros artigos associados;
+-Função principal que chame getLinks, escolha um link aleatório na página e chame getLinks novamente, até que o programa seja interrompido ou nada seja encontrado.
+
+```python
+  
+  
+  
+  
+ 
+
