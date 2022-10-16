@@ -30,9 +30,9 @@ Analisando a lista gerada, vemos que alguns itens indesejados apareceram, como l
 
 Os links que estávamos procurando - os que apontam para outras páginas de artigo - têm as seguintes características em comum:
 
--Estão na div com id bodyContent
--Os  URLs não contém dois-pontos
--Os URLs começam com /wiki/
+- Estão na div com id bodyContent
+- Os  URLs não contém dois-pontos
+- Os URLs começam com /wiki/
 
 Com esse padrão em mente, podemos revisar o código usando a expressão regular ^(/wiki/)((?!:).)*$"):
 
@@ -51,12 +51,32 @@ for link in bs.find('div', {'id':'bodyContent'}).find_all(
 Executando esse código, obtemos uma lista de todos os URLs de artigo para os quais o artigo inicial da Wikipedia aponta. Embora interessante, essa ideia pode ser inútil na prática. Portanto, podemos fazer uma atualização:
 
 
--Função getLinks que recebe um URL de um artigo no formato /wiki/<nome> e devolve uma lista com os URLS de outros artigos associados
--Função principal que chame getLinks, escolha um link aleatório na página e chame getLinks novamente, até que o programa seja interrompido ou nada seja encontrado
+- Função getLinks que recebe um URL de um artigo no formato /wiki/<nome> e devolve uma lista com os URLS de outros artigos associados
+- Função principal que chame getLinks, escolha um link aleatório na página e chame getLinks novamente, até que o programa seja interrompido ou nada seja encontrado
 
 ```python
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import datetime
+import random
+import re
   
-  
+random.seed(datetime.datetime.now())
+def getLinks(articleUrl):
+  html = urlopen('http://en.wikipedia.org{}'.format(articleUrl))
+  bs = BeautifulSoup(html, 'html.parser')
+  return bs.find('div', {'id':'bodyContent'}).find_all('a',
+    href=re.compile('^(/wiki/)((?!:).)*$'))
+
+links = getLinks('/wiki/Kevin_Bacon')
+while len(links) > 0:
+  newArticle = links[random.randint(0, len(links)-1)].attrs['href']
+  print(newArticle)
+  links = getLinks(newArticle)
+```
+O corpo principal do programa define uma lista de tags de links. Depois, o laço encontra uma tag de link aleatória para outro artigo na página, extraindo o href dela, exibindo a página e obtendo uma nova lista de links.
+
+# Rastreando um site completo
   
   
  
