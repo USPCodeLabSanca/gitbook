@@ -70,9 +70,9 @@ Nesse caso, um erro de HTTP será devolvido. Esse erro pode ser
 from urllib.request import urlopen
 from urllib.error import HTTPError
 try:
-html = urlopen('http://www.pythonscraping.com/pages/page1.html')
+    html = urlopen('http://www.pythonscraping.com/pages/page1.html')
 except HTTPError as e:
-print(e) -> devolve null, executa um break ou algum outro "Plano B"
+    print(e) -> devolve null, executa um break ou algum outro "Plano B"
 else: -> o programa continua. Nota: se você retornar ou executar um break no catch da exceção, não será necessário usar a instrução "else"
 ```
 Se um código de erro HTTP for devolvido, o programa agora exibirá o erro e não executará o resto do programa que está na instrução else.
@@ -85,13 +85,13 @@ from urllib.request import urlopen
 from urllib.error import HTTPError
 from urllib.error import URLError
 try:
-html = urlopen('https://pythonscrapingthisurldoesnotexist.com')
+    html = urlopen('https://pythonscrapingthisurldoesnotexist.com')
 except HTTPError as e:
-print(e)
+    print(e)
 except URLError as e:
-print('The server could not be found!')
+    print('The server could not be found!')
 else:
-print('It Worked!')
+    print('It Worked!')
 ```
 
 ### O conteúdo da página não ser exatamente o que você esperava
@@ -114,14 +114,14 @@ AttributeError: 'NoneType' object has no attribute 'someTag'
 Então, como é possível se proteger nessas duas situações? O modo mais fácil é verificar as duas situações explicitamente:
 ``` python
 try:
-badContent = bs.nonExistingTag.anotherTag
+    badContent = bs.nonExistingTag.anotherTag
 except AttributeError as e:
-print('Tag was not found')
+    print('Tag was not found')
 else:
-if badContent == None:
-print ('Tag was not found')
-else:
-print(badContent)
+    if badContent == None:
+        print ('Tag was not found')
+    else:
+        print(badContent)
 ``` 
 
 ## Reorganizando o código
@@ -133,19 +133,19 @@ from urllib.request import urlopen
 from urllib.error import HTTPError
 from bs4 import BeautifulSoup
 def getTitle(url):
-try:
-html = urlopen(url)
-except HTTPError as e:
-return None
-try:
-bs = BeautifulSoup(html.read(), 'html.parser')
-title = bs.body.h1
-except AttributeError as e:
-return None
-return title
+    try:
+        html = urlopen(url)
+    except HTTPError as e:
+        return None
+    try:
+        bs = BeautifulSoup(html.read(), 'html.parser')
+        title = bs.body.h1
+    except AttributeError as e:
+        return None
+    return title
 title = getTitle('http://www.pythonscraping.com/pages/page1.html')
 if title == None:
-print('Title could not be found')
+    print('Title could not be found')
 else:
-print(title)
+    print(title)
 ```
