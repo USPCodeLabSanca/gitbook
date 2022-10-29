@@ -1,6 +1,6 @@
 # Principais tags
 
-Os próximos tópicos irão mostrar as princinpais tags que são utilizadas. Você pode conferir a lista completa de tags que existem em: [https://www.w3schools.com/tags/](https://www.w3schools.com/tags/)
+Os próximos tópicos irão mostrar as principais tags que são utilizadas. Você pode conferir a lista completa de tags que existem em: [https://www.w3schools.com/tags/](https://www.w3schools.com/tags/)
 
 ## Sumário
 

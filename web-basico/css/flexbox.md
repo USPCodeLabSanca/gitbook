@@ -1,8 +1,8 @@
 # Flexbox
 
-O Flexbox é um modelo de layout que permite organizar os elementos espacialmente dentro da sua interface. Nesse artigo vamos descrever suas principais propriedades, para mais informação  recomendamos esse [guia](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+O Flexbox é um modelo de layout que permite organizar os elementos espacialmente dentro da sua interface. Nesse artigo vamos descrever suas principais propriedades, para mais informações recomendamos esse [guia](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
-Antes de entrarmos nas propriedades precisamos definir um elemento como fl_ex,_ isso significa que todos os elementos dentro dele \(que vamos chamar de _contêiner_ \) irão seguir as propriedades do contêiner. Abaixo mostramos como definir um elemento como _flex_.
+Antes de falarmos sobre as propriedades, precisamos definir um elemento como _flex_, isso significa que todos os elementos dentro dele \(que vamos chamar de *container* \) irão seguir as propriedades do contêiner. Abaixo, mostramos como definir um elemento como _flex_:
 
 ```css
 .container {
@@ -10,7 +10,7 @@ Antes de entrarmos nas propriedades precisamos definir um elemento como fl_ex,_ 
 }
 ```
 
-### **f**lex-direction
+### flex-direction
 
 Essa propriedade irá definir a direção em que os itens serão posicionados. Os valores da propriedades podem ser:
 
@@ -42,7 +42,7 @@ Os itens serão posicionados de baixo para cima.
 {% endtab %}
 {% endtabs %}
 
-### **justify-content**
+### justify-content
 
 Essa propriedade irá definir o alinhamento dos itens. Os valores da propriedades podem ser:
 
@@ -80,15 +80,15 @@ Os itens serão alinhados de modo que fiquem divididos na linha com espaços igu
 {% endtab %}
 
 {% tab title="space-evenly" %}
-Os itens serão alinhados de modo que fiquem divididos de modo que dois itens sempre tenham o mesmo espaço entre eles.
+Os itens serão alinhados de modo que fiquem divididos, de modo que dois itens sempre tenham o mesmo espaço entre eles.
 
 ![](https://lh3.googleusercontent.com/INYy0wt_lWQD-uymKWUqBy3ADgJTw_sQIeOn3KAXjniicMaoshtExNBhbQ1K3JsvmHrct5cDQ1KK_0FL7yT0NOnac9-Zbfdv3PORnA1GqFGmvMixkt-bRZzika-82k8CinIzat5cH5U)
 {% endtab %}
 {% endtabs %}
 
-### **flex-wrap**
+### flex-wrap
 
-Por padrão todos elementos alinhados em uma linha, é possível modificar isso ****com a propriedade flex-wrap. Os valores da propridade podem ser:
+Por padrão, todos elementos são alinhados em uma linha, é possível modificar isso com a propriedade `flex-wrap`. Os valores da propridade podem ser:
 
 {% tabs %}
 {% tab title="nowrap" %}
@@ -110,13 +110,13 @@ Os itens irão para a próxima linha conforme necessário, porém do fim para o 
 {% endtab %}
 {% endtabs %}
 
-### **align-content**
+### align-content
 
-Organiza a distribuição dos itens no eixo y.
+Organiza a distribuição dos itens verticalmente (no eixo *y*).
 
 {% tabs %}
 {% tab title="stretch" %}
-Distribui os itens de modo que ocupem todo o espaço disponível do eixo y. \(opção padrão\).
+Distribui os itens de modo que ocupem todo o espaço disponível do eixo *y* \(opção padrão\).
 
 ![](https://lh5.googleusercontent.com/b7DV6ndyZbwLHUP0WDBcKPY2ZYnYfTp0TGd4EMyxDuKnJrv7IIM8wWEaBHSZJS-VjNduypbjV7TF3aNueVCfx2Nd0c43WHT3EF5D64DDsMfeGP14tCJmxBiLXyMd9mjkITDRtxLFo0A)
 
@@ -124,7 +124,7 @@ Distribui os itens de modo que ocupem todo o espaço disponível do eixo y. \(op
 {% endtab %}
 
 {% tab title="space-around" %}
-Os itens são distribuídos igualmente e o espaço entre eles são iguais no eixo y.
+Os itens são distribuídos igualmente e o espaço entre eles são iguais no eixo *y*.
 
 ![](https://lh3.googleusercontent.com/D-Pkisp2UHv10EvCk33Vl7qWbaptN6SjKIjAV8ee3VCOMcDDUqRmrEg7zERXKniSsysxGVJ2r4A-rp0CtE4aZc9POCt_Kqb58-wRUEpFY5Ytcr91aNd-qvqsJvkuQWRjVdO-y5MyO6o)
 
@@ -132,13 +132,13 @@ Os itens são distribuídos igualmente e o espaço entre eles são iguais no eix
 {% endtab %}
 
 {% tab title="space-between" %}
-Os itens são distribuídos igualmente no eixo y.
+Os itens são distribuídos igualmente no eixo *y*.
 
 ![](https://lh3.googleusercontent.com/xLnuOFQseN_hWNdTcoVl99Ttuak-Cxn2HVtquyvwAMYzPZWGi7wjseFrUgR2yQJyrBmFOP085zUwisQS1U0mQ-1qU8M0WvHWVVrYwQl7TEuBYjxRZMegXLac-EAL5SXJHurM_hH4Kc0)
 {% endtab %}
 
 {% tab title="center" %}
-Os itens são posicionados no centro do eixo y.
+Os itens são posicionados no centro do eixo *y*.
 
 ![](https://lh5.googleusercontent.com/flkx0jNgZhKZw33XZ5R19ZD5liplimd_g9igKXGajbkeZgq-zbuGj71GrytUjgzsUzsmoNCGuFB87D-pyMi_LSibo4fRjXy0gORuw_yLt9eVaHGVxZa7T4o3Ti1SIfLuozcm8aAewYs)
 
@@ -146,13 +146,13 @@ Os itens são posicionados no centro do eixo y.
 {% endtab %}
 
 {% tab title="flex-start" %}
-Os itens são posicionados a partir do começo no eixo y.
+Os itens são posicionados a partir do começo no eixo *y*.
 
 ![](https://lh3.googleusercontent.com/I6jFzLwImOLifigfH8k0brWZqDVW1pqWMMKPjl6AaeDtuvJEOslhLzoISWBv0N4JKkD4BIa7keavBbHI0HIS1u6sUtYNO-HPtL9qKyfscEma7omxvfgO3lqAGVjQuwZLa-ZhLEPxV-c)
 {% endtab %}
 
 {% tab title="flex-end" %}
-Os itens são posicionados a partir do fim no eixo y.
+Os itens são posicionados a partir do fim no eixo *y*.
 
 ![](https://lh6.googleusercontent.com/6jjEmw2b07p47yABQh-TStsJb7CQ9fh0RNoGrk0NhtkbdBQnGRJ4uE9NkPfDs78qiaWnW5s5v2f1ONJQawfz88CpKAntjEbOv6z-f2rQ5KgJaCUowkzkvvh8o7fs34rNXsC22bxbmjo)
 {% endtab %}
